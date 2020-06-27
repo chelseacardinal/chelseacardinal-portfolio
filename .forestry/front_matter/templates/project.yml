@@ -12,7 +12,15 @@ fields:
   default: New Project
 - name: category
   type: tag_list
-  default: []
+  default:
+  - magazines
+  - " identity"
+  - covers
+  - posters
+  - books
+  - art
+  - events/live
+  - illustration
   label: Category
   description: Add a project category
 - name: color
