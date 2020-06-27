@@ -1,4 +1,58 @@
 ---
 label: Project
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: Enter your project title
+  default: New Project
+- name: category
+  type: tag_list
+  default: []
+  label: Category
+  description: Add a project category
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html
+  label: Description
+  description: Enter your project description here.
+- name: image_gallery
+  type: field_group_list
+  fields:
+  - name: images
+    type: file
+    config:
+      maxSize: 1
+    label: Images
+    description: Upload your image here
+  - name: caption
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: html
+    label: Caption
+    description: Enter image caption here.
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Image Gallery
+  description: Enter your image and captions here.
+- name: color
+  type: color
+  label: Color
+  config:
+    required: true
+    color_format: Hex
+  description: Select project color here.
