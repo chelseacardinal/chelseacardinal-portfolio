@@ -14,6 +14,13 @@ fields:
   default: []
   label: Category
   description: Add a project category
+- name: color
+  type: color
+  label: Color
+  config:
+    required: true
+    color_format: Hex
+  description: Select project color here.
 - name: description
   type: textarea
   default: ''
@@ -27,11 +34,11 @@ fields:
 - name: image_gallery
   type: field_group_list
   fields:
-  - name: images
+  - name: image
     type: file
     config:
       maxSize: 1
-    label: Images
+    label: Image
     description: Upload your image here
   - name: caption
     type: textarea
@@ -49,10 +56,3 @@ fields:
     labelField: 
   label: Image Gallery
   description: Enter your image and captions here.
-- name: color
-  type: color
-  label: Color
-  config:
-    required: true
-    color_format: Hex
-  description: Select project color here.
