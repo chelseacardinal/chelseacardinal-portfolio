@@ -1,0 +1,10 @@
+---
+label: About
+hide_body: true
+fields:
+- type: textarea
+  name: bio
+  label: bio
+- type: text
+  name: color
+  label: color
