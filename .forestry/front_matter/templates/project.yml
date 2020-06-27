@@ -6,7 +6,7 @@ fields:
 - name: title
   type: text
   config:
-    required: true
+    required: false
   label: Title
   description: Enter your project title
   default: New Project
@@ -19,7 +19,7 @@ fields:
   type: color
   label: Color
   config:
-    required: true
+    required: false
     color_format: Hex
   description: Select project color here.
 - name: description
@@ -43,7 +43,7 @@ fields:
     description: Upload your image here
   - name: caption
     type: textarea
-    default: ''
+    default: New image caption
     config:
       required: false
       wysiwyg: true
