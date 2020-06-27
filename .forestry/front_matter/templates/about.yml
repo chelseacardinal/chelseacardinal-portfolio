@@ -4,7 +4,17 @@ hide_body: true
 fields:
 - type: textarea
   name: bio
-  label: bio
-- type: text
-  name: color
-  label: color
+  label: Bio
+  description: This is the part where you write about yourself.
+  config:
+    wysiwyg: true
+    schema:
+      format: html
+- name: color
+  type: color
+  label: Color
+  config:
+    required: false
+    color_format: Hex
+  description: Set a custom background color
+  default: "#FFD0D0"
