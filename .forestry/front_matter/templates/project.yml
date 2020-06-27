@@ -14,7 +14,7 @@ fields:
   type: tag_list
   default:
   - magazines
-  - " identity"
+  - identity
   - covers
   - posters
   - books
