@@ -58,4 +58,5 @@ fields:
   label: Image Gallery
   description: Enter your image and captions here.
 pages:
+- content/projects/new-project-2.md
 - content/projects/new-project.md
