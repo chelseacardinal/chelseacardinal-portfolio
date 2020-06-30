@@ -70,5 +70,10 @@ fields:
   config: {}
   label: List of images
   description: Just testing this here
+- name: single_image
+  type: file
+  config:
+    maxSize: 64
+  label: Single Image
 pages:
 - content/projects/new-4.md
