@@ -65,5 +65,10 @@ fields:
     labelField: 
   label: Image Gallery
   description: Enter your image and captions here.
+- name: list_of_images
+  type: image_gallery
+  config: {}
+  label: List of images
+  description: Just testing this here
 pages:
 - content/projects/new-4.md
