@@ -15,5 +15,6 @@ image_gallery:
 list_of_images:
 - "/content/assets/test.png"
 - "/content/assets/screen-shot-2020-06-17-at-5-50-14-pm.png"
+single_image: "/content/assets/forks.jpg"
 
 ---
