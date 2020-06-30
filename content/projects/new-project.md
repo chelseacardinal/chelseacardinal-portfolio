@@ -1,5 +1,5 @@
 ---
-title: New Project
+title: New Project Test
 category:
 - magazines
 - identity
