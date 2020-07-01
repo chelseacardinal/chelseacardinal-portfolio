@@ -2,13 +2,6 @@
 title: New Project Test
 category:
 - magazines
-- identity
-- covers
-- posters
-- books
-- art
-- events/live
-- illustration
 color: "#F8E71C"
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
