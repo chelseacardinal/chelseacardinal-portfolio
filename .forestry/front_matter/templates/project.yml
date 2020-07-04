@@ -3,6 +3,16 @@ label: Project
 hide_body: true
 display_field: title
 fields:
+- name: date
+  type: datetime
+  label: Date
+  description: Date this project was created
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
 - name: title
   type: text
   config:
