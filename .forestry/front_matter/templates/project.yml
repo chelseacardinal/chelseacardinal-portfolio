@@ -69,6 +69,11 @@ fields:
         format: html
     label: Caption
     description: Enter image caption here.
+  - name: featured_image
+    type: boolean
+    label: Featured Image
+    description: This is the image that will appear when the user hovers over the
+      project title on the home page.
   config:
     min: 
     max: 
