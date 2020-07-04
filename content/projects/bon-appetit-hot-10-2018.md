@@ -13,7 +13,9 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 image_gallery:
 - image: "../assets/test-slide-1.jpg"
   caption: New image caption 1
+  featured_image: false
 - image: "../assets/test-slide-2.jpg"
   caption: New image caption 2
+  featured_image: true
 
 ---
