@@ -75,5 +75,3 @@ fields:
     labelField: 
   label: Image Gallery
   description: Enter your image and captions here.
-pages:
-- content/projects/new-project-test-copy.md
