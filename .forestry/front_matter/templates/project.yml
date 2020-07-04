@@ -81,5 +81,5 @@ fields:
   label: Image Gallery
   description: Enter your image and captions here.
 pages:
-- content/projects/bon-appetit-hot-10-2018-copy.md
 - content/projects/bon-appetit-hot-10-2018.md
+- content/projects/bon-appetit-hot-10-2019.md
