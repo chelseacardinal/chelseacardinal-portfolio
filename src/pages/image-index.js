@@ -13,11 +13,11 @@ const variantsOuterWrap = {
   },
   visible: {
     opacity: 1,
-    transition: { delay: 1, duration: 0.5 } 
+    transition: { delay: 1, duration: 0.5 },
   },
   out: {
     opacity: 0,
-    transition: {duration: 0.5 } 
+    transition: { duration: 0.5 },
   },
 }
 
@@ -51,7 +51,7 @@ const variantsInner = {
   },
 }
 
-const Index = ({ data, exit }) => {
+const ImageIndex = ({ data, exit }) => {
   const [about, setAbout] = useState(false)
 
   const projects = data.allMarkdownRemark.edges
@@ -87,7 +87,7 @@ const Index = ({ data, exit }) => {
         <Nav
           about={() => setAbout(!about)}
           animationTime={animationTime}
-          imageIndex={true}
+          imageIndex={false}
           category={projects}
           filterProject={filterProject}
         />
@@ -100,12 +100,14 @@ const Index = ({ data, exit }) => {
         >
           <ul key="index">
             <AnimatePresence>{about && <About />}</AnimatePresence>
-            <AnimatePresence initial={false} onExitComplete={() => setProjectList(storeList)}>
+            <AnimatePresence
+              initial={false}
+              onExitComplete={() => setProjectList(storeList)}
+            >
               {projectList &&
                 projectList.map((project, i) => {
                   return (
                     <motion.li
-                      className={project.node.frontmatter.category[0]}
                       key={project.node.id}
                       style={{
                         color: project.node.frontmatter.color || "#000000",
@@ -117,28 +119,47 @@ const Index = ({ data, exit }) => {
                       exit="out"
                     >
                       <motion.div
+                        className="inner-info-wrap"
                         variants={variantsInner}
                         transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
                         exit="out"
                       >
-                        <p>{project.node.frontmatter.category[0]}</p>
-                      </motion.div>
-                      <TransitionLink
-                        to={`${project.node.fields.slug}`}
-                        exit={{ length: 2.25 }}
-                        entry={{ delay: 1.7 }}
-                      >
-                        <motion.h2
-                          variants={variantsInner}
-                          transition={{
-                            duration: 0.5,
-                            delay: 0.4 + i * 0.2,
-                          }}
-                          exit="out"
+                        <p>{project.node.frontmatter.category}</p>
+
+                        <TransitionLink
+                          to={`${project.node.fields.slug}`}
+                          exit={{ length: 2.25 }}
+                          entry={{ delay: 1.7 }}
                         >
-                          {project.node.frontmatter.title}
-                        </motion.h2>
-                      </TransitionLink>
+                          <h2>{project.node.frontmatter.title}</h2>
+                        </TransitionLink>
+                      </motion.div>
+                      <motion.div
+                        className="inner-image-wrap"
+                        variants={variantsInner}
+                        transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
+                        exit="out"
+                      >
+                        {project.node.frontmatter.image_gallery.map(
+                          (item, index) => {
+                            return (
+                              <figure key={index}>
+                                <div className="wrapper">
+                                  <img
+                                    src={item.image.childImageSharp.fluid.src}
+                                    sizes={item.image.childImageSharp.sizes}
+                                    alt=""
+                                    srcSet={
+                                      item.image.childImageSharp.fluid.srcset
+                                    }
+                                  />
+                                </div>
+                                <figcaption>{item.caption}</figcaption>
+                              </figure>
+                            )
+                          }
+                        )}
+                      </motion.div>
                     </motion.li>
                   )
                 })}
@@ -150,10 +171,10 @@ const Index = ({ data, exit }) => {
   )
 }
 
-export default Index
+export default ImageIndex
 
 export const data = graphql`
-  query IndexQuery {
+  query ImageIndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       edges {
         node {
@@ -167,6 +188,21 @@ export const data = graphql`
             category
             color
             description
+            image_gallery {
+              image {
+                childImageSharp {
+                  fluid(maxHeight: 159) {
+                    aspectRatio
+                    presentationWidth
+                    presentationHeight
+                    ...GatsbyImageSharpFluid
+                  }
+                  fixed(height: 159) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
+            }
           }
         }
       }

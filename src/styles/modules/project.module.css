@@ -1,0 +1,65 @@
+/* .project-page-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+} */
+
+.project-container {
+  width: 100%;
+  height: calc(100vh - 65px);
+  display: flex;
+  font-family: freight-text-pro, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19.5px;
+  color: #000000;
+  overflow: hidden;
+}
+
+.project-container p:first-of-type {
+  flex: 0 0 213px;
+  padding: 0 20px 0 0;
+}
+
+.project-container .image-overflow {
+  flex-grow: 1;
+  display: flex;
+  overflow-y: auto;
+  height: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-container .image-overflow::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.project-container .image-overflow figure {
+  display: block;
+  margin-right: 30px;
+  height: 100%;
+  width: auto;
+  scroll-snap-align: start;
+}
+
+.project-container .image-overflow figure .wrapper {
+  /* flex: 1 1 40%; */
+  height: 93%;
+  min-height: 665px;
+  max-height: 813px;
+  width: auto;
+}
+
+.project-container .image-overflow figure .wrapper img {
+  height: 100%;
+  width: auto;
+}
+
+.project-container .image-overflow figure figcaption {
+  margin: 7px 0 0;
+}

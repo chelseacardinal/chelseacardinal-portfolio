@@ -7,9 +7,7 @@ import React from "react"
 const NotFoundPage = () => {
   // const siteTitle = data.site.siteMetadata.title
 
-  return (
-   <div>404</div>
-  )
+  return <div>404</div>
 }
 
 export default NotFoundPage
@@ -24,8 +22,10 @@ export default NotFoundPage
 //   }
 // `
 
-{/* <Layout location={location} title={siteTitle}>
+{
+  /* <Layout location={location} title={siteTitle}>
       <SEO title="404: Not Found" />
       <h1>Not Found</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Layout> */}
+    </Layout> */
+}
