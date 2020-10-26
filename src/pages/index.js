@@ -13,11 +13,11 @@ const variantsOuterWrap = {
   },
   visible: {
     opacity: 1,
-    transition: { delay: 1, duration: 0.5 } 
+    transition: { delay: 1, duration: 0.5 },
   },
   out: {
     opacity: 0,
-    transition: {duration: 0.5 } 
+    transition: { duration: 0.5 },
   },
 }
 
@@ -53,16 +53,17 @@ const variantsInner = {
 
 const Index = ({ data, exit }) => {
   const [about, setAbout] = useState(false)
-
   const projects = data.allMarkdownRemark.edges
   const [projectList, setProjectList] = useState(projects)
   const [storeList, setStoreList] = useState(projects)
+  const [imageIndex, setImageIndex] = useState({ index: 0, visible: false })
   const [animationTime, setanimationTime] = useState(
     1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
   )
   // const siteTitle = data.site.siteMetadata.title
   // const animationTime =
   //   1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
+  // console.log(projectList)
 
   const filterProject = name => {
     setProjectList([])
@@ -81,6 +82,14 @@ const Index = ({ data, exit }) => {
     )
   }
 
+  // const setIndex = i => {
+  //   console.log(i)
+  //   i.toString()
+  //   if (i >= 0) {
+  //     setImageIndex(i)
+  //   }
+  // }
+
   return (
     <>
       <TransitionWrap>
@@ -98,9 +107,35 @@ const Index = ({ data, exit }) => {
           exit="out"
           className="container"
         >
+          {imageIndex.visible && (
+            <div className="feature-image-overlay">
+              <img
+                src={
+                  projectList[0] &&
+                  projectList[0].node.frontmatter.image_gallery[0].image
+                    .childImageSharp.fluid.src
+                }
+                sizes={
+                  projectList[0] &&
+                  projectList[0].node.frontmatter.image_gallery[0].image
+                    .childImageSharp.sizes
+                }
+                srcSet={
+                  projectList[0] &&
+                  projectList[0].node.frontmatter.image_gallery[0].image
+                    .childImageSharp.fluid.srcset
+                }
+                alt=""
+              />
+            </div>
+          )}
+
           <ul key="index">
             <AnimatePresence>{about && <About />}</AnimatePresence>
-            <AnimatePresence initial={false} onExitComplete={() => setProjectList(storeList)}>
+            <AnimatePresence
+              initial={false}
+              onExitComplete={() => setProjectList(storeList)}
+            >
               {projectList &&
                 projectList.map((project, i) => {
                   return (
@@ -124,6 +159,10 @@ const Index = ({ data, exit }) => {
                         <p>{project.node.frontmatter.category[0]}</p>
                       </motion.div>
                       <TransitionLink
+                        onMouseEnter={() =>
+                          setImageIndex({ index: i.toString(), visible: true })
+                        }
+                        onMouseLeave={() => setImageIndex({ visible: false })}
                         to={`${project.node.fields.slug}`}
                         exit={{ length: 2.25 }}
                         entry={{ delay: 1.7 }}
@@ -167,6 +206,21 @@ export const data = graphql`
             category
             color
             description
+            image_gallery {
+              image {
+                childImageSharp {
+                  fluid(maxHeight: 504) {
+                    aspectRatio
+                    presentationWidth
+                    presentationHeight
+                    ...GatsbyImageSharpFluid
+                  }
+                  fixed(height: 504) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
+            }
           }
         }
       }

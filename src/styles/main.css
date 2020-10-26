@@ -60,13 +60,33 @@ strong {
 
 body {
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
   width: 100%;
   height: 100%;
   padding: 0 28px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.container .feature-image-overlay {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  max-height: 504px;
+  height: 100%;
+  width: auto;
+  z-index: 2;
+  filter: drop-shadow(-6px 6px 4px rgba(0, 0, 0, 0.25));
+}
+
+.container .feature-image-overlay img {
+  height: 100%;
+  width: auto;
 }
 
 .container ul li {
@@ -163,7 +183,7 @@ nav.project .wrapper > *:first-child {
 }
 
 nav.project .wrapper h2 {
-  font-family: "freight-big-pro", 'Times New Roman', Times, serif;
+  font-family: "freight-big-pro", "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 37px;

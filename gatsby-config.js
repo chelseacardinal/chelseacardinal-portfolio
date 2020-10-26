@@ -12,7 +12,8 @@ module.exports = {
     },
   },
   plugins: [
-    "gatsby-transformer-yaml",
+    `gatsby-transformer-json`,
+    `gatsby-transformer-yaml`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-postcss`,
