@@ -82,14 +82,6 @@ const Index = ({ data, exit }) => {
     )
   }
 
-  // const setIndex = i => {
-  //   console.log(i)
-  //   i.toString()
-  //   if (i >= 0) {
-  //     setImageIndex(i)
-  //   }
-  // }
-
   return (
     <>
       <TransitionWrap>
@@ -107,28 +99,33 @@ const Index = ({ data, exit }) => {
           exit="out"
           className="container"
         >
-          {imageIndex.visible && (
-            <div className="feature-image-overlay">
-              <img
-                src={
-                  projectList[0] &&
-                  projectList[0].node.frontmatter.image_gallery[0].image
-                    .childImageSharp.fluid.src
-                }
-                sizes={
-                  projectList[0] &&
-                  projectList[0].node.frontmatter.image_gallery[0].image
-                    .childImageSharp.sizes
-                }
-                srcSet={
-                  projectList[0] &&
-                  projectList[0].node.frontmatter.image_gallery[0].image
-                    .childImageSharp.fluid.srcset
-                }
-                alt=""
-              />
-            </div>
-          )}
+          <div className="feature-image-overlay">
+            {projectList &&
+              projectList.map((project, i) => {
+                return (
+                  <img
+                    key={project.node.id}
+                    style={{display: imageIndex.index === project.node.id ? "block" : "none"}}
+                    src={
+                      project &&
+                      project.node.frontmatter.image_gallery[0].image
+                        .childImageSharp.fluid.src
+                    }
+                    sizes={
+                      project &&
+                      project.node.frontmatter.image_gallery[0].image
+                        .childImageSharp.sizes
+                    }
+                    srcSet={
+                      project &&
+                      project.node.frontmatter.image_gallery[0].image
+                        .childImageSharp.fluid.srcset
+                    }
+                    alt=""
+                  />
+                )
+              })}
+          </div>
 
           <ul key="index">
             <AnimatePresence>{about && <About />}</AnimatePresence>
@@ -160,7 +157,7 @@ const Index = ({ data, exit }) => {
                       </motion.div>
                       <TransitionLink
                         onMouseEnter={() =>
-                          setImageIndex({ index: i.toString(), visible: true })
+                          setImageIndex({ index: project.node.id, visible: true })
                         }
                         onMouseLeave={() => setImageIndex({ visible: false })}
                         to={`${project.node.fields.slug}`}
