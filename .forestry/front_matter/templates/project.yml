@@ -81,6 +81,7 @@ fields:
   label: Image Gallery
   description: Enter your image and captions here.
 pages:
+- content/projects/atlas-rock-center.md
 - content/projects/bon-appetit-hot-10-2018.md
 - content/projects/bon-appetit-hot-10-2019.md
 - content/projects/bon-appetit-special-issue.md
