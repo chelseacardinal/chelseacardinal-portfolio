@@ -10,6 +10,15 @@ const variants = {
   visible: {
     height: "89vh",
     transition: {
+      ease: "easeInOut",
+      duration: 0.5,
+      when: "beforeChildren",
+    },
+  },
+  visibleMobile: {
+    height: "83vh",
+    transition: {
+      ease: "easeInOut",
       duration: 0.5,
       when: "beforeChildren",
     },
@@ -17,6 +26,7 @@ const variants = {
   out: {
     height: "0vh",
     transition: {
+      ease: "easeInOut",
       duration: 0.5,
       when: "afterChildren",
     },
@@ -33,14 +43,18 @@ const variantsInner = {
       duration: 0.2,
     },
   },
+  visibleMobile: {
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+    },
+  },
   out: {
     opacity: 0,
   },
 }
 
-const About = props => {
-  const about = props
-  console.log(about)
+const About = ({ width }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -57,7 +71,7 @@ const About = props => {
           className={Styles.about}
           variants={variants}
           initial="hidden"
-          animate="visible"
+          animate={width > 844 ? "visible" : "visibleMobile" }
           exit="out"
         >
           <motion.p variants={variantsInner}>{data.aboutJson.bio}</motion.p>

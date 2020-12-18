@@ -1,11 +1,10 @@
 import React, { useState } from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Nav from "../components/nav"
-import TransitionWrap from "../components/transitionWrap"
 import About from "../components/about"
 import "../styles/main.css"
-import TransitionLink from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
+import useWindowSize from "../utils/useWindowSize"
 
 const variantsOuterWrap = {
   hidden: {
@@ -51,15 +50,15 @@ const variantsInner = {
   },
 }
 
-const ImageIndex = ({ data, exit }) => {
+const ImageIndex = ({ data }) => {
   const [about, setAbout] = useState(false)
-
   const projects = data.allMarkdownRemark.edges
   const [projectList, setProjectList] = useState(projects)
   const [storeList, setStoreList] = useState(projects)
   const [animationTime, setanimationTime] = useState(
     1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
   )
+  const { width } = useWindowSize()
   // const siteTitle = data.site.siteMetadata.title
   // const animationTime =
   //   1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
@@ -68,8 +67,8 @@ const ImageIndex = ({ data, exit }) => {
     setProjectList([])
     let newList
     if (name !== "all") {
-      newList = projects.filter(
-        project => project.node.frontmatter.category[0] === name
+      newList = projects.filter(project =>
+        project.node.frontmatter.category.includes(name)
       )
       setStoreList(newList)
     } else if (name === "all") {
@@ -83,13 +82,13 @@ const ImageIndex = ({ data, exit }) => {
 
   return (
     <>
-      <TransitionWrap>
         <Nav
           about={() => setAbout(!about)}
           animationTime={animationTime}
           imageIndex={false}
           category={projects}
           filterProject={filterProject}
+          width={width}
         />
         <motion.div
           variants={variantsOuterWrap}
@@ -124,15 +123,13 @@ const ImageIndex = ({ data, exit }) => {
                         transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
                         exit="out"
                       >
-                        <p>{project.node.frontmatter.category}</p>
+                        <p>{project.node.frontmatter.category.join(", ")}</p>
 
-                        <TransitionLink
+                        <Link
                           to={`${project.node.fields.slug}`}
-                          exit={{ length: 2.25 }}
-                          entry={{ delay: 1.7 }}
                         >
                           <h2>{project.node.frontmatter.title}</h2>
-                        </TransitionLink>
+                        </Link>
                       </motion.div>
                       <motion.div
                         className="inner-image-wrap"
@@ -166,7 +163,6 @@ const ImageIndex = ({ data, exit }) => {
             </AnimatePresence>
           </ul>
         </motion.div>
-      </TransitionWrap>
     </>
   )
 }

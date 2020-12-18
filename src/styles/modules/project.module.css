@@ -22,7 +22,7 @@
   padding: 0 20px 0 0;
 }
 
-.project-container .image-overflow {
+.project-container .image-overflow, .scroll-content {
   flex-grow: 1;
   display: flex;
   overflow-y: auto;
@@ -35,6 +35,8 @@
 }
 
 .project-container .image-overflow::-webkit-scrollbar {
+  display: none;
+  -webkit-appearance: none;
   width: 0;
   height: 0;
 }

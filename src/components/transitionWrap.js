@@ -1,16 +1,13 @@
 import React from "react"
-import { TransitionState } from "gatsby-plugin-transition-link"
 import { AnimatePresence } from "framer-motion"
 
-const TransitionWrap = props => {
+const TransitionWrap = ({ children, location }) => {
   return (
-    <TransitionState>
-      {({ mount }) => {
-        return (
-          <AnimatePresence initial={false}>{mount && <>{props.children}</>}</AnimatePresence>
-        )
-      }}
-    </TransitionState>
+    <>
+      <AnimatePresence initial={false} exitBeforeEnter>
+        <main key={location.pathname}>{children}</main>
+      </AnimatePresence>
+    </>
   )
 }
 

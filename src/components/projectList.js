@@ -1,5 +1,5 @@
 import React from "react"
-import TransitionLink from "gatsby-plugin-transition-link"
+import { Link } from "gatsby"
 import { motion } from "framer-motion"
 
 const variantsList = {
@@ -54,11 +54,7 @@ const ProjectList = ({ projects }) => {
             >
               <p>{project.node.frontmatter.category}</p>
             </motion.div>
-            <TransitionLink
-              to={`${project.node.fields.slug}`}
-              exit={{ length: 0.5, state: { pass: -100 } }}
-              entry={{ delay: 0.5 }}
-            >
+            <Link to={`${project.node.fields.slug}`}>
               <motion.h2
                 variants={variantsInner}
                 transition={{
@@ -68,7 +64,7 @@ const ProjectList = ({ projects }) => {
               >
                 {project.node.frontmatter.title}
               </motion.h2>
-            </TransitionLink>
+            </Link>
           </motion.li>
         )
       })}

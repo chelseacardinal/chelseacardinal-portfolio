@@ -1,11 +1,10 @@
 import React, { useState } from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Nav from "../components/nav"
-import TransitionWrap from "../components/transitionWrap"
 import About from "../components/about"
 import "../styles/main.css"
-import TransitionLink from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
+import useWindowSize from "../utils/useWindowSize"
 
 const variantsOuterWrap = {
   hidden: {
@@ -39,6 +38,24 @@ const variantsList = {
   },
 }
 
+const variantsMobileList = {
+  hidden: {
+    x: 0,
+    width: "0%",
+  },
+  visible: {
+    x: 0,
+    width: "100%",
+  },
+  out: {
+    x: "100vw",
+    transition: {
+      duration: 0.45,
+      when: "afterChildren",
+    },
+  },
+}
+
 const variantsInner = {
   hidden: {
     opacity: 0,
@@ -51,7 +68,11 @@ const variantsInner = {
   },
 }
 
-const Index = ({ data, exit }) => {
+const Index = ({ data }) => {
+  // const siteTitle = data.site.siteMetadata.title
+  // const animationTime =
+  //   1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
+
   const [about, setAbout] = useState(false)
   const projects = data.allMarkdownRemark.edges
   const [projectList, setProjectList] = useState(projects)
@@ -60,17 +81,14 @@ const Index = ({ data, exit }) => {
   const [animationTime, setanimationTime] = useState(
     1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
   )
-  // const siteTitle = data.site.siteMetadata.title
-  // const animationTime =
-  //   1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
-  // console.log(projectList)
+  const { width } = useWindowSize()
 
   const filterProject = name => {
     setProjectList([])
     let newList
     if (name !== "all") {
-      newList = projects.filter(
-        project => project.node.frontmatter.category[0] === name
+      newList = projects.filter(project =>
+        project.node.frontmatter.category.includes(name)
       )
       setStoreList(newList)
     } else if (name === "all") {
@@ -84,13 +102,13 @@ const Index = ({ data, exit }) => {
 
   return (
     <>
-      <TransitionWrap>
         <Nav
           about={() => setAbout(!about)}
           animationTime={animationTime}
           imageIndex={true}
           category={projects}
           filterProject={filterProject}
+          width={width}
         />
         <motion.div
           variants={variantsOuterWrap}
@@ -99,89 +117,149 @@ const Index = ({ data, exit }) => {
           exit="out"
           className="container"
         >
-          <div className="feature-image-overlay">
-            {projectList &&
-              projectList.map((project, i) => {
-                return (
-                  <img
-                    key={project.node.id}
-                    style={{display: imageIndex.index === project.node.id ? "block" : "none"}}
-                    src={
-                      project &&
-                      project.node.frontmatter.image_gallery[0].image
-                        .childImageSharp.fluid.src
-                    }
-                    sizes={
-                      project &&
-                      project.node.frontmatter.image_gallery[0].image
-                        .childImageSharp.sizes
-                    }
-                    srcSet={
-                      project &&
-                      project.node.frontmatter.image_gallery[0].image
-                        .childImageSharp.fluid.srcset
-                    }
-                    alt=""
-                  />
-                )
-              })}
-          </div>
+          {width > 844 && (
+            <div className="feature-image-overlay">
+              {projectList &&
+                projectList.map((project, i) => {
+                  return (
+                    <img
+                      key={project.node.id}
+                      style={{
+                        display:
+                          imageIndex.index === project.node.id
+                            ? "block"
+                            : "none",
+                      }}
+                      src={
+                        project &&
+                        project.node.frontmatter.image_gallery[0].image
+                          .childImageSharp.fluid.src
+                      }
+                      sizes={
+                        project &&
+                        project.node.frontmatter.image_gallery[0].image
+                          .childImageSharp.sizes
+                      }
+                      srcSet={
+                        project &&
+                        project.node.frontmatter.image_gallery[0].image
+                          .childImageSharp.fluid.srcset
+                      }
+                      alt=""
+                    />
+                  )
+                })}
+            </div>
+          )}
 
           <ul key="index">
-            <AnimatePresence>{about && <About />}</AnimatePresence>
+            <AnimatePresence>{about && <About width={width} />}</AnimatePresence>
             <AnimatePresence
               initial={false}
               onExitComplete={() => setProjectList(storeList)}
             >
-              {projectList &&
-                projectList.map((project, i) => {
-                  return (
-                    <motion.li
-                      className={project.node.frontmatter.category[0]}
-                      key={project.node.id}
-                      style={{
-                        color: project.node.frontmatter.color || "#000000",
-                      }}
-                      variants={variantsList}
-                      initial="hidden"
-                      animate="visible"
-                      transition={{ duration: 1.5, delay: i * 0.2 }}
-                      exit="out"
-                    >
-                      <motion.div
-                        variants={variantsInner}
-                        transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
+              {width > 844
+                ? projectList &&
+                  projectList.map((project, i) => {
+                    return (
+                      <motion.li
+                        className={project.node.frontmatter.category[0]}
+                        key={project.node.id}
+                        style={{
+                          color: project.node.frontmatter.color || "#000000",
+                        }}
+                        variants={variantsList}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 1.5, delay: i * 0.2 }}
                         exit="out"
                       >
-                        <p>{project.node.frontmatter.category[0]}</p>
-                      </motion.div>
-                      <TransitionLink
-                        onMouseEnter={() =>
-                          setImageIndex({ index: project.node.id, visible: true })
-                        }
-                        onMouseLeave={() => setImageIndex({ visible: false })}
-                        to={`${project.node.fields.slug}`}
-                        exit={{ length: 2.25 }}
-                        entry={{ delay: 1.7 }}
-                      >
-                        <motion.h2
+                        <motion.div
                           variants={variantsInner}
-                          transition={{
-                            duration: 0.5,
-                            delay: 0.4 + i * 0.2,
-                          }}
+                          transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
                           exit="out"
                         >
-                          {project.node.frontmatter.title}
-                        </motion.h2>
-                      </TransitionLink>
-                    </motion.li>
-                  )
-                })}
+                          <p>{project.node.frontmatter.category.join(", ")}</p>
+                        </motion.div>
+                        <Link
+                          onMouseEnter={() =>
+                            setImageIndex({
+                              index: project.node.id,
+                              visible: true,
+                            })
+                          }
+                          onMouseLeave={() => setImageIndex({ visible: false })}
+                          to={`${project.node.fields.slug}`}
+                        >
+                          <motion.h2
+                            variants={variantsInner}
+                            transition={{
+                              duration: 0.5,
+                              delay: 0.4 + i * 0.2,
+                            }}
+                            exit="out"
+                          >
+                            {project.node.frontmatter.title}
+                          </motion.h2>
+                        </Link>
+                      </motion.li>
+                    )
+                  })
+                : projectList &&
+                  projectList.map((project, i) => {
+                    return (
+                      <motion.li
+                        key={project.node.id}
+                        style={{
+                          color: project.node.frontmatter.color || "#000000",
+                        }}
+                        variants={variantsMobileList}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 0.45, delay: i * 0.2 }}
+                        exit="out"
+                      >
+                        <motion.div
+                          className="inner-info-wrap"
+                          variants={variantsInner}
+                          transition={{ duration: 0.35, delay: 0.4 + i * 0.2 }}
+                          exit="out"
+                        >
+                          <p>{project.node.frontmatter.category}</p>
+                          <h2>{project.node.frontmatter.title}</h2>
+                        </motion.div>
+                        <motion.div
+                          className="inner-image-wrap"
+                          variants={variantsInner}
+                          transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
+                          exit="out"
+                        >
+                          {project.node.frontmatter.image_gallery.map(
+                            (item, index) => {
+                              return (
+                                <figure key={index}>
+                                  <div className="wrapper">
+                                    <img
+                                      src={item.image.childImageSharp.fluid.src}
+                                      sizes={item.image.childImageSharp.sizes}
+                                      alt=""
+                                      srcSet={
+                                        item.image.childImageSharp.fluid.srcset
+                                      }
+                                    />
+                                  </div>
+                                  <figcaption>{item.caption}</figcaption>
+                                </figure>
+                              )
+                            }
+                          )}
+                        </motion.div>
+                      </motion.li>
+                    )
+                  })}
             </AnimatePresence>
           </ul>
         </motion.div>
-      </TransitionWrap>
     </>
   )
 }

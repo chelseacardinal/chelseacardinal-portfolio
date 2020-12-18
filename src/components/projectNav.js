@@ -1,5 +1,5 @@
 import React from "react"
-import TransitionLink from "gatsby-plugin-transition-link"
+import { Link } from "gatsby"
 import { motion } from "framer-motion"
 import X from "../images/x.svg"
 
@@ -64,7 +64,7 @@ const projectNav = props => {
           animate="visible"
           exit="out"
         >
-          {props.category ? props.category : "category"}
+          {props.category ? props.category.join(", ") : "category"}
         </motion.span>
 
         <motion.h2
@@ -81,13 +81,9 @@ const projectNav = props => {
           animate="visible"
           exit="out"
         >
-          <TransitionLink
-            to="/"
-            exit={{ length: 1.65 }}
-            entry={{ delay: 1.65 }}
-          >
+          <Link to="/">
             <img src={X} alt="close project" />
-          </TransitionLink>
+          </Link>
         </motion.span>
       </div>
     </motion.nav>

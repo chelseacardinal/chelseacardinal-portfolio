@@ -1,5 +1,5 @@
-import React from "react"
-import TransitionLink from "gatsby-plugin-transition-link"
+import React, { useState } from "react"
+import { Link } from "gatsby"
 import { motion } from "framer-motion"
 
 const variantsList = {
@@ -48,6 +48,16 @@ const variantsInner = {
 }
 
 const Nav = props => {
+  const [mobileMenu, setMobileMenu] = useState(false)
+  const categoriesArrays = props.category.map(
+    (project, i) => project.node.frontmatter.category
+  )
+  const categoriesRaw = [].concat.apply([], categoriesArrays)
+  const categories = [...new Set(categoriesRaw)]
+  function mobileMenuButtons(filter) {
+    props.filterProject(filter)
+    setMobileMenu(!mobileMenu)
+  }
   return (
     <motion.nav
       variants={variantsList}
@@ -64,23 +74,22 @@ const Nav = props => {
           animate="visible"
           exit="out"
         >
-          <button>Studio of Chelsea Cardinal</button>
+          <h1>
+            <button>Studio of Chelsea Cardinal</button>
+          </h1>
         </motion.div>
         <motion.ul
           variants={variantsInner}
           initial="hidden"
           animate="visible"
           exit="out"
+          className="desktop-menu"
         >
-          {props.category.map((project, i) => {
+          {categories.map((category, i) => {
             return (
               <li key={i}>
-                <button
-                  onClick={() =>
-                    props.filterProject(project.node.frontmatter.category[0])
-                  }
-                >
-                  {project.node.frontmatter.category}
+                <button onClick={() => props.filterProject(category)}>
+                  {category}
                 </button>
               </li>
             )
@@ -89,19 +98,47 @@ const Nav = props => {
             <button onClick={() => props.filterProject("all")}>all</button>
           </li>
         </motion.ul>
+
+        <motion.ul
+          initial={false}
+          animate={{ y: mobileMenu ? "0%" : "-100%" }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.35,
+          }}
+          className="mobile-menu"
+        >
+          {categories.map((category, i) => {
+            return (
+              <li key={i}>
+                <button onClick={() => mobileMenuButtons(category)}>
+                  {category}
+                </button>
+              </li>
+            )
+          })}
+          <li>
+            <button onClick={() => mobileMenuButtons("all")}>all</button>
+          </li>
+        </motion.ul>
+        <motion.button
+          initial={false}
+          animate={{ rotate: mobileMenu ? 45 : 0 }}
+          transition={{ ease: "easeInOut", duration: 0.25 }}
+          className="mobile-menu-btn"
+          onClick={() => setMobileMenu(!mobileMenu)}
+        >
+          <span>+</span>
+        </motion.button>
         <motion.span
           variants={variantsInner}
           initial="hidden"
           animate="visible"
           exit="out"
         >
-          <TransitionLink
-            to={props.imageIndex ? "/image-index" : "/"}
-            exit={{ length: 1.65 }}
-            entry={{ delay: 1.65 }}
-          >
+          <Link to={props.imageIndex ? "/image-index" : "/"}>
             {props.imageIndex ? "— image index" : "— titles"}
-          </TransitionLink>
+          </Link>
         </motion.span>
       </motion.div>
     </motion.nav>

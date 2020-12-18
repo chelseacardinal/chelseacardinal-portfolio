@@ -1,9 +1,33 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { graphql } from "gatsby"
-import TransitionWrap from "../components/transitionWrap"
 import ProjectNav from "../components/projectNav"
 import "../styles/project.css"
+// import 'smooth-scrollbar/dist/smooth-scrollbar.css';
 import { motion } from "framer-motion"
+import Scrollbar from "react-smooth-scrollbar"
+import SmoothScrollbar, { ScrollbarPlugin } from "smooth-scrollbar"
+
+// SmoothScrollbar.use(OverscrollPlugin)
+// import Scrollbar from 'smooth-scrollbar';
+// import locomotiveScroll from "locomotive-scroll";
+
+class HorizontalScrollPlugin extends ScrollbarPlugin {
+  static pluginName = "horizontalScroll"
+
+  transformDelta(delta, fromEvent) {
+    if (!/wheel/.test(fromEvent.type)) {
+      return delta
+    }
+
+    const { x, y } = delta
+
+    return {
+      y: 0,
+      x: Math.abs(x) > Math.abs(y) ? x : y,
+    }
+  }
+}
+SmoothScrollbar.use(HorizontalScrollPlugin)
 
 const variants = {
   hidden: {
@@ -27,41 +51,38 @@ const variants = {
 
 const Project = props => {
   const project = props.data.markdownRemark.frontmatter
-  console.log(project)
+  // const scrollRef = React.createRef()
+  // useEffect(() => {})
   return (
-    <TransitionWrap>
-      <div className="project-page-wrap">
-        <ProjectNav category={project.category} title={project.title} />
-        <div className="container">
-          <motion.div
-            className="project-container"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            exit="out"
-          >
-            <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
-            <div className="image-overflow">
-              {project.image_gallery.map((item, index) => {
-                return (
-                  <figure key={index}>
-                    <div className="wrapper">
-                      <img
-                        src={item.image.childImageSharp.fluid.src}
-                        sizes={item.image.childImageSharp.sizes}
-                        alt=""
-                        srcSet={item.image.childImageSharp.fluid.srcset}
-                      />
-                    </div>
-                    <figcaption>{item.caption}</figcaption>
-                  </figure>
-                )
-              })}
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </TransitionWrap>
+    <>
+      <ProjectNav category={project.category} title={project.title} />
+      <motion.div
+        className="project-container"
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        exit="out"
+      >
+        <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
+        <Scrollbar>
+          {project.image_gallery.map((item, index) => {
+            return (
+              <figure key={index}>
+                <div className="wrapper">
+                  <img
+                    src={item.image.childImageSharp.fluid.src}
+                    sizes={item.image.childImageSharp.sizes}
+                    alt=""
+                    srcSet={item.image.childImageSharp.fluid.srcset}
+                  />
+                </div>
+                <figcaption>{item.caption}</figcaption>
+              </figure>
+            )
+          })}
+        </Scrollbar>
+      </motion.div>
+    </>
   )
 }
 

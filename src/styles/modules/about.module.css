@@ -6,14 +6,24 @@
 }
 
 .about p {
-    width: 100%;
-    max-width: 969px;
-    height: auto;
-    overflow: hidden;
-    font-family: "freight-big-pro", 'Times New Roman', Times, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 37px;
-    line-height: 46px;
-    color: #393939;
+  width: 100%;
+  max-width: 969px;
+  height: auto;
+  overflow: hidden;
+  font-family: "freight-big-pro", "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 37px;
+  line-height: 46px;
+  color: #393939;
+}
+
+@media only screen and (max-width: 844px) {
+  .about {
+    padding: 0 12px 0 0;
   }
+  .about p {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
