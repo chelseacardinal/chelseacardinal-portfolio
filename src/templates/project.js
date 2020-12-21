@@ -1,15 +1,12 @@
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import ProjectNav from "../components/projectNav"
 import "../styles/project.css"
-// import 'smooth-scrollbar/dist/smooth-scrollbar.css';
 import { motion } from "framer-motion"
 import Scrollbar from "react-smooth-scrollbar"
 import SmoothScrollbar, { ScrollbarPlugin } from "smooth-scrollbar"
-
 // SmoothScrollbar.use(OverscrollPlugin)
-// import Scrollbar from 'smooth-scrollbar';
-// import locomotiveScroll from "locomotive-scroll";
+
 
 class HorizontalScrollPlugin extends ScrollbarPlugin {
   static pluginName = "horizontalScroll"
@@ -71,9 +68,9 @@ const Project = props => {
                 <div className="wrapper">
                   <img
                     src={item.image.childImageSharp.fluid.src}
-                    sizes={item.image.childImageSharp.sizes}
+                    sizes={item.image.childImageSharp.fluid.sizes}
                     alt=""
-                    srcSet={item.image.childImageSharp.fluid.srcset}
+                    srcSet={item.image.childImageSharp.fluid.srcSet}
                   />
                 </div>
                 <figcaption>{item.caption}</figcaption>

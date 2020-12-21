@@ -144,10 +144,10 @@ const ImageIndex = ({ data }) => {
                                 <div className="wrapper">
                                   <img
                                     src={item.image.childImageSharp.fluid.src}
-                                    sizes={item.image.childImageSharp.sizes}
+                                    sizes={item.image.childImageSharp.fluid.sizes}
                                     alt=""
                                     srcSet={
-                                      item.image.childImageSharp.fluid.srcset
+                                      item.image.childImageSharp.fluid.srcSet
                                     }
                                   />
                                 </div>

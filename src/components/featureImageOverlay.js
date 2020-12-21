@@ -20,12 +20,12 @@ const featureImageOverlay = ({ projectList }) => {
               sizes={
                 project &&
                 project.node.frontmatter.image_gallery[0].image.childImageSharp
-                  .sizes
+                  .fluid.sizes
               }
               srcSet={
                 project &&
                 project.node.frontmatter.image_gallery[0].image.childImageSharp
-                  .fluid.srcset
+                  .fluid.srcSet
               }
               alt=""
             />

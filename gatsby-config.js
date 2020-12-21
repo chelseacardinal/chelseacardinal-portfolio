@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Studio of Chelsea Cardinal`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Chelsea Cardinal`,
+      summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    siteUrl: `https://elegant-austin-8bf305.netlify.app`,
     social: {
-      twitter: `kylemathews`,
+      instagram: `chelseacardinal`,
     },
   },
   plugins: [
@@ -40,7 +40,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 1000,
+              maxWidth: 1626,
               linkImagesToOriginal: false,
             },
           },
@@ -68,12 +68,6 @@ module.exports = {
         name: `about`,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-transition-link",
-      // options: {
-      //   layout: require.resolve(`./src/components/layout.js`),
-      // },
-    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
