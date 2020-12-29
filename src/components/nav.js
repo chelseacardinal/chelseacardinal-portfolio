@@ -59,89 +59,89 @@ const Nav = props => {
     setMobileMenu(!mobileMenu)
   }
   return (
-    <motion.nav
-      variants={variantsList}
-      initial="hidden"
-      animate="visible"
-      exit="out"
-    >
-      <motion.div className="wrapper">
-        <motion.div
-          className="about"
-          onClick={props.about}
-          variants={variantsInner}
-          initial="hidden"
-          animate="visible"
-          exit="out"
-        >
-          <h1>
-            <button>Studio of Chelsea Cardinal</button>
-          </h1>
+    <>
+      <motion.nav
+        variants={variantsList}
+        initial="hidden"
+        animate="visible"
+        exit="out"
+      >
+        <motion.div className="wrapper">
+          <motion.div
+            className="about"
+            variants={variantsInner}
+            initial="hidden"
+            animate="visible"
+            exit="out"
+          >
+            <h1>
+              <button onClick={props.about}>Studio of Chelsea Cardinal</button>
+            </h1>
+          </motion.div>
+          <motion.ul
+            variants={variantsInner}
+            initial="hidden"
+            animate="visible"
+            exit="out"
+            className="desktop-menu"
+          >
+            {categories.map((category, i) => {
+              return (
+                <li key={i}>
+                  <button onClick={() => props.filterProject(category)}>
+                    {category}
+                  </button>
+                </li>
+              )
+            })}
+            <li>
+              <button onClick={() => props.filterProject("all")}>all</button>
+            </li>
+          </motion.ul>
+          <motion.button
+            initial={false}
+            animate={{ rotate: mobileMenu ? 45 : 0 }}
+            transition={{ ease: "easeInOut", duration: 0.25 }}
+            className="mobile-menu-btn"
+            onClick={() => setMobileMenu(!mobileMenu)}
+          >
+            <span>+</span>
+          </motion.button>
+          <motion.span
+            variants={variantsInner}
+            initial="hidden"
+            animate="visible"
+            exit="out"
+          >
+            <Link to={props.imageIndex ? "/image-index" : "/"}>
+              {props.imageIndex ? "— image index" : "— titles"}
+            </Link>
+          </motion.span>
         </motion.div>
-        <motion.ul
-          variants={variantsInner}
-          initial="hidden"
-          animate="visible"
-          exit="out"
-          className="desktop-menu"
-        >
-          {categories.map((category, i) => {
-            return (
-              <li key={i}>
-                <button onClick={() => props.filterProject(category)}>
-                  {category}
-                </button>
-              </li>
-            )
-          })}
-          <li>
-            <button onClick={() => props.filterProject("all")}>all</button>
-          </li>
-        </motion.ul>
-
-        <motion.ul
-          initial={false}
-          animate={{ y: mobileMenu ? "0%" : "-100%" }}
-          transition={{
-            ease: "easeInOut",
-            duration: 0.35,
-          }}
-          className="mobile-menu"
-        >
-          {categories.map((category, i) => {
-            return (
-              <li key={i}>
-                <button onClick={() => mobileMenuButtons(category)}>
-                  {category}
-                </button>
-              </li>
-            )
-          })}
-          <li>
-            <button onClick={() => mobileMenuButtons("all")}>all</button>
-          </li>
-        </motion.ul>
-        <motion.button
-          initial={false}
-          animate={{ rotate: mobileMenu ? 45 : 0 }}
-          transition={{ ease: "easeInOut", duration: 0.25 }}
-          className="mobile-menu-btn"
-          onClick={() => setMobileMenu(!mobileMenu)}
-        >
-          <span>+</span>
-        </motion.button>
-        <motion.span
-          variants={variantsInner}
-          initial="hidden"
-          animate="visible"
-          exit="out"
-        >
-          <Link to={props.imageIndex ? "/image-index" : "/"}>
-            {props.imageIndex ? "— image index" : "— titles"}
-          </Link>
-        </motion.span>
-      </motion.div>
-    </motion.nav>
+      </motion.nav>
+      <motion.ul
+        initial={false}
+        animate={{ y: mobileMenu ? "36px" : "-100%" }}
+        transition={{
+          ease: "easeInOut",
+          duration: 0.35,
+        }}
+        className="mobile-menu"
+      >
+        {categories.map((category, i) => {
+          return (
+            <li key={i}>
+              <button onClick={() => mobileMenuButtons(category)}>
+                {category}
+              </button>
+            </li>
+          )
+        })}
+        <li>
+          <button onClick={() => mobileMenuButtons("all")}>all</button>
+        </li>
+      </motion.ul>
+    </>
   )
 }
 

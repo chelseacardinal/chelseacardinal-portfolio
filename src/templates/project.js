@@ -5,8 +5,8 @@ import "../styles/project.css"
 import { motion } from "framer-motion"
 import Scrollbar from "react-smooth-scrollbar"
 import SmoothScrollbar, { ScrollbarPlugin } from "smooth-scrollbar"
+// import LazyLoad from "react-lazyload"
 // SmoothScrollbar.use(OverscrollPlugin)
-
 
 class HorizontalScrollPlugin extends ScrollbarPlugin {
   static pluginName = "horizontalScroll"
@@ -48,10 +48,10 @@ const variants = {
 
 const Project = props => {
   const project = props.data.markdownRemark.frontmatter
-  // const scrollRef = React.createRef()
-  // useEffect(() => {})
+  console.log(project)
   return (
     <>
+      {/* <div className="project-bg-wrap" style={{ backgroundColor: project.color || "#000" }}> */}
       <ProjectNav category={project.category} title={project.title} />
       <motion.div
         className="project-container"
@@ -79,6 +79,7 @@ const Project = props => {
           })}
         </Scrollbar>
       </motion.div>
+      {/* </div> */}
     </>
   )
 }
@@ -92,6 +93,7 @@ export const data = graphql`
         title
         description
         category
+        color
         image_gallery {
           caption
           image {
