@@ -80,6 +80,18 @@ fields:
     labelField: 
   label: Image Gallery
   description: Enter your image and captions here.
+- name: tag_list
+  type: select
+  default: ''
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: site-settings
+      file: content/site/site.json
+      path: 
+  label: Tag List
 pages:
 - content/projects/atlas-rock-center.md
 - content/projects/bon-appetit-hot-10-2018.md
