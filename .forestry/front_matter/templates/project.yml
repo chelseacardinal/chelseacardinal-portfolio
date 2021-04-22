@@ -87,8 +87,8 @@ fields:
     required: false
     options: []
     source:
-      type: pages
-      section: site-settings
+      type: documents
+      section: projects
       file: content/site/site.json
       path: 
   label: Tag List
