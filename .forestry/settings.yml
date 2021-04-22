@@ -7,6 +7,7 @@ sections:
 - type: document
   path: content/site/site.json
   label: Site Settings
+  read_only: false
 - type: directory
   path: content/projects
   label: Projects
