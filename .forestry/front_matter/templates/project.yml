@@ -20,26 +20,32 @@ fields:
   label: Title
   description: Enter your project title
   default: New Project
-- name: category
-  type: tag_list
-  default:
-  - magazines
-  - identity
-  - covers
-  - posters
-  - books
-  - art
-  - events/live
-  - illustration
-  label: Category
-  description: Add a project category
+- name: text_color
+  type: color
+  label: Text Color
+  config:
+    required: false
+    color_format: Hex
+  default: "#000000"
 - name: color
   type: color
-  label: Color
+  label: Background Color
   config:
     required: false
     color_format: Hex
   description: Select project color here.
+- name: categories
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: site-settings
+      file: content/site/site.json
+      path: category_tags
+  label: Categories
 - name: description
   type: textarea
   default: ''
@@ -80,18 +86,6 @@ fields:
     labelField: 
   label: Image Gallery
   description: Enter your image and captions here.
-- name: tag_list
-  type: select
-  default: ''
-  config:
-    required: false
-    options: []
-    source:
-      type: documents
-      section: site-settings
-      file: content/site/site.json
-      path: category_tags
-  label: Tag List
 pages:
 - content/projects/atlas-rock-center.md
 - content/projects/bon-appetit-hot-10-2018.md
