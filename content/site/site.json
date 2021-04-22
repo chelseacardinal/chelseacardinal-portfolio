@@ -5,6 +5,11 @@
   "index_color": "#FFD0D0",
   "mobile_menu_background_color": "#FFFAF0",
   "categories": [
-
+    {
+      "tags": [
+        "magazines"
+      ],
+      "tag_color": "#D0021B"
+    }
   ]
 }
