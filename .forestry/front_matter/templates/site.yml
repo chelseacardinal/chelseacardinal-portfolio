@@ -26,14 +26,6 @@ fields:
     color_format: Hex
   description: This sets the background color for the mobile menu.
   default: "#FFFAF0"
-- type: textarea
-  name: bio
-  label: Bio
-  description: This is the part where you write about yourself.
-  config:
-    wysiwyg: true
-    schema:
-      format: html
 - name: categories
   type: field_group_list
   fields:
@@ -54,5 +46,13 @@ fields:
     labelField: tag_name
   label: Categories
   description: Add categories their colors here.
+- type: textarea
+  name: bio
+  label: Bio
+  description: This is the part where you write about yourself.
+  config:
+    wysiwyg: true
+    schema:
+      format: html
 pages:
 - content/site/site.json
