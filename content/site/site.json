@@ -11,6 +11,19 @@
     }
   ],
   "category_tags": [
-    "magazines"
+    "magazines",
+    "identity",
+    "covers",
+    "posters",
+    "books",
+    "art",
+    "events/live",
+    "illustration"
+  ],
+  "category_color": [
+    {
+      "select_category": "magazines",
+      "tag_color": "#000000"
+    }
   ]
 }
