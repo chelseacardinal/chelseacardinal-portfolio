@@ -5,8 +5,8 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
-  path: content/about/about.json
-  label: About
+  path: content/site/site.json
+  label: Site Settings
 - type: directory
   path: content/projects
   label: Projects
