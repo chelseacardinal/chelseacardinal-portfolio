@@ -18,17 +18,98 @@
   overscroll-behavior-y: none;
 }
 
-.project-container p:first-of-type {
+.project-container .project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 0 0 213px;
   padding: 0 20px 0 0;
+  height: 93%;
+  max-height: 813px;
 }
 
-.scrollbar-track-x,
+.project-container .project-description .project-paginator {
+  display: flex;
+  width: 142px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-container .project-description .project-paginator > span {
+  padding: 20px 0 0;
+}
+
+.project-container .project-description .project-paginator > a:first-of-type {
+  padding: 20px 30px 0 0;
+}
+.project-container .project-description .project-paginator > a:last-of-type {
+  padding: 20px 0 0 30px;
+}
+
+.swiper-slide {
+  width: auto !important;
+  flex: 0;
+}
+
+.swiper-slide .wrapper {
+  width: auto;
+  height: 93%;
+  max-height: 813px;
+}
+
+.swiper-slide .wrapper img {
+  height: 100%;
+  width: auto;
+}
+
+.swiper-slide .wrapper img.lazy-placeholder {
+  opacity: 0;
+}
+
+.swiper-slide figcaption {
+  margin: 7px 0 0;
+  flex: 0;
+}
+
+.swiper-slide.next-link {
+  display: flex;
+}
+
+.swiper-slide a {
+  display: block;
+  white-space: nowrap;
+  align-self: center;
+  text-align: center;
+  flex: 0 0 auto;
+  width: 197px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.swiper-slide a span {
+  display: inline-block;
+  width: 4px;
+}
+
+@media only screen and (max-height: 846px) {
+  .swiper-slide .wrapper,
+  .swiper-slide .image-wrapper {
+    height: 100%;
+    max-height: 813px;
+    width: auto;
+    padding: 0 0 30px;
+  }
+  .swiper-slide figcaption {
+    display: none;
+  }
+}
+
+/* .scrollbar-track-x,
 .scrollbar-track-x.show {
   opacity: 0 !important;
-}
+} */
 
-.project-container section {
+/* .project-container section {
   flex-grow: 1;
   height: 100%;
 }
@@ -61,12 +142,33 @@ section .scroll-content > *:first-child {
   width: auto;
 }
 
+.project-container section .scroll-content div figure .wrapper img.lazy-placeholder {
+  opacity: 0;
+}
+
 .project-container section .scroll-content div figure figcaption {
   margin: 7px 0 0;
 }
 
+.project-container section .scroll-content div a {
+  display: block;
+  white-space: nowrap;
+  align-self: center;
+  text-align: center;
+  flex: 0 0 auto;
+  width: 197px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.project-container section .scroll-content div a span {
+  display: inline-block;
+  width: 4px;
+}
+
 @media only screen and (max-height: 846px) {
-  .project-container section .scroll-content div figure .wrapper {
+  .project-container section .scroll-content div figure .wrapper,
+  .project-container section .scroll-content div figure .image-wrapper {
     height: 100%;
     max-height: 813px;
     width: auto;
@@ -75,4 +177,4 @@ section .scroll-content > *:first-child {
   .project-container section .scroll-content div figure figcaption {
     display: none;
   }
-}
+} */

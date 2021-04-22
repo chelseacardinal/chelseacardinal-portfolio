@@ -28,6 +28,7 @@
 */
 
 @import "./reset.css";
+@import "./nav.css";
 
 * {
   box-sizing: border-box;
@@ -69,161 +70,6 @@ main {
   overflow: hidden;
 }
 
-/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV  */
-/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV  */
-/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV  */
-
-nav {
-  display: flex;
-  width: 100%;
-  height: 66px;
-  padding: 0px 28px;
-  overflow: hidden;
-}
-
-nav .wrapper {
-  display: flex;
-  width: 100%;
-  height: auto;
-  padding: 11px 0 0;
-  font-family: freight-text-pro, "Times New Roman", Times, serif;
-  font-size: 14px;
-  line-height: 14px;
-  color: #000000;
-  border-bottom: solid 1px #9879b0;
-}
-
-nav .wrapper > *:first-child {
-  min-width: 212px;
-}
-
-nav .wrapper span:last-of-type {
-  font-style: italic;
-}
-
-nav .wrapper ul {
-  display: flex;
-  font-style: italic;
-  flex-grow: 1;
-}
-
-nav .wrapper ul li {
-  padding: 0 11px 0 0;
-}
-
-nav .wrapper button {
-  font-family: freight-text-pro, "Times New Roman", Times, serif;
-  font-size: 14px;
-  line-height: 14px;
-  font-style: italic;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-}
-
-ul.mobile-menu {
-  display: none;
-  font-style: italic;
-  flex-grow: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: calc(100vh - 36px);
-  background-color: #ffd0d0;
-  text-transform: capitalize;
-  padding: 0 12px 0;
-  transform: translateY(-100%) translateZ(0px);
-}
-
-ul.mobile-menu li {
-  border-bottom: 1px solid #9879b0;
-}
-
-ul.mobile-menu li button {
-  font-family: freight-big-pro, "Times New Roman", Times, serif;
-  font-size: 66px;
-  line-height: 77px;
-  font-style: normal;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  text-decoration: none;
-  display: block;
-  cursor: pointer;
-  text-transform: capitalize;
-}
-
-nav .wrapper button.mobile-menu-btn {
-  display: none;
-}
-
-nav .wrapper button.mobile-menu-btn span {
-  position: relative;
-  font-family: "freight-big-pro", serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 20px;
-  padding: 0 0 10px;
-  color: #000000;
-}
-
-nav .wrapper a {
-  font-size: 14px;
-  line-height: 14px;
-}
-
-nav .wrapper ul li button:hover {
-  text-decoration: underline;
-}
-
-nav .wrapper ul li button:focus {
-  text-decoration: underline;
-}
-
-nav .wrapper .about button {
-  font-style: normal;
-}
-
-nav .wrapper button:focus {
-  outline: 0px;
-}
-
-/* PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV */
-/* PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV */
-/* PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV */
-/* PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV */
-
-nav.project .wrapper {
-  line-height: 28px;
-}
-
-nav.project .wrapper > *:first-child {
-  align-self: flex-end;
-}
-
-nav.project .wrapper span:last-of-type {
-  align-self: flex-end;
-  padding: 0 0 10px;
-}
-
-nav.project .wrapper h2 {
-  font-family: "freight-big-pro", "Times New Roman", Times, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 37px;
-  line-height: 43px;
-  color: #000000;
-  flex-grow: 1;
-  /* min-width: 100%; */
-  align-self: flex-end;
-}
-
 /* CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER */
 /* CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER */
 /* CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER CONTAINER */
@@ -259,10 +105,19 @@ nav.project .wrapper h2 {
   overflow: hidden;
 }
 
+.container.image-index ul li {
+  display: block;
+}
+
+.container.image-index ul li a {
+  display: flex;
+}
+
 .container ul li .inner-image-wrap {
   display: flex;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+  /* scroll-snap-type: x proximity; */
+  /* scroll-padding: 7px; */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -275,6 +130,10 @@ nav.project .wrapper h2 {
   height: 0;
 }
 
+/* .container ul li .inner-image-wrap > * {
+  scroll-snap-align: start;
+} */
+
 .container ul li p {
   font-family: freight-text-pro, "Times New Roman", Times, serif;
   font-style: italic;
@@ -282,6 +141,11 @@ nav.project .wrapper h2 {
   line-height: 14px;
   min-width: 200px;
   white-space: nowrap;
+  padding: 6.5px 0;
+}
+
+.container.image-index ul li p {
+  padding: 0;
 }
 
 .container ul li h2 {
@@ -289,6 +153,12 @@ nav.project .wrapper h2 {
   line-height: 56px;
   padding: 2px 0 5px;
   white-space: nowrap;
+}
+
+@media (hover: hover) {
+  .container ul li a > h2:hover {
+    font-style: italic;
+  }
 }
 
 .container ul li .inner-info-wrap {
@@ -306,7 +176,7 @@ nav.project .wrapper h2 {
 .container ul li .wrapper {
   height: 189px;
   width: auto;
-  padding: 15px 11px 15px 0;
+  padding: 15px 7px 15px 0;
 }
 
 .container ul li .wrapper img {
@@ -325,21 +195,23 @@ nav.project .wrapper h2 {
   .container {
     width: 100%;
     height: 100%;
-    padding: 36px 0 0 12px;
+    padding: 0 12px 0 12px;
     position: relative;
   }
 
   .container ul li {
-    display: block;
+    /* display: block; */
+    flex-direction: column-reverse;
     border-bottom: solid 1px #9879b0;
     position: relative;
+    overflow: visible;
     /* overflow: hidden; */
   }
 
   .container ul li .wrapper {
     height: 246px;
     width: auto;
-    padding: 7px 11px 15px 0;
+    padding: 7px 7px 7px 0;
   }
 
   .container ul li p {
@@ -348,66 +220,41 @@ nav.project .wrapper h2 {
     font-size: 12px;
     line-height: 12px;
     min-width: 200px;
-    padding: 4px 0 0;
+    padding: 5px 0 12px;
     white-space: nowrap;
   }
 
-  .container ul li:first-of-type p {
+  /* .container ul li:first-of-type p {
     padding: 8px 0 0;
+  } */
+
+  .container ul li .inner-info-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
   }
 
   .container ul li .inner-info-wrap h2 {
     font-family: freight-text-pro, "Times New Roman", Times, serif;
-    font-size: 23px;
-    line-height: 23px;
-    padding: 4px 0 0;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 0;
     white-space: nowrap;
   }
 
-  nav {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 36px;
-    padding: 0px 12px;
-    overflow: hidden;
-    z-index: 99;
-    background-color: #ffd0d0;
-  }
-
-  nav .wrapper {
-    background-color: #ffd0d0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav .wrapper > *:first-child {
-    min-width: 212px;
-    flex-grow: 1;
-  }
-
-  nav .wrapper .about button {
-    font-size: 12px;
-    line-height: 12px;
+  .container ul li .inner-image-wrap p {
+    font-family: freight-text-pro, "Times New Roman", Times, serif;
     font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #393939;
+    min-width: 248px;
+    padding: 0 0 0 13px;
+    letter-spacing: 0px;
+    white-space: normal;
+    align-self: center;
   }
 
-  nav .wrapper ul {
-    display: none;
-  }
-
-ul.mobile-menu {
-    display: block;
-  }
-
-  nav .wrapper button.mobile-menu-btn {
-    display: block;
-  }
-
-  nav .wrapper a {
-    display: none;
-  }
+  
 }

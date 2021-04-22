@@ -5,25 +5,25 @@ import X from "../images/x.svg"
 
 const variantsList = {
   hidden: {
-    x: 0,
-    width: "0%",
+    // x: 0,
+    // width: "0%",
   },
   visible: {
-    x: 0,
-    width: "100%",
-    transition: {
-      duration: 1,
-      when: "beforeChildren",
-    },
+    // x: 0,
+    // width: "100%",
+    // transition: {
+    //   duration: 1,
+    //   when: "beforeChildren",
+    // },
   },
   out: {
-    x: "100vw",
-    width: "100%",
-    transition: {
-      delay: 0.5,
-      duration: 1,
-      when: "afterChildren",
-    },
+    // x: "100vw",
+    // width: "100%",
+    // transition: {
+    //   delay: 0.5,
+    //   duration: 1,
+    //   when: "afterChildren",
+    // },
   },
 }
 
@@ -36,7 +36,7 @@ const variantsInner = {
     y: "0%",
     opacity: 1,
     transition: {
-      delay: 1,
+      // delay: 1,
       duration: 0.5,
     },
   },

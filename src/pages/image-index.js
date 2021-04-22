@@ -12,7 +12,10 @@ const variantsOuterWrap = {
   },
   visible: {
     opacity: 1,
-    transition: { delay: 1, duration: 0.5 },
+    transition: {
+      // delay: 1,
+      duration: 0.5,
+    },
   },
   out: {
     opacity: 0,
@@ -22,19 +25,19 @@ const variantsOuterWrap = {
 
 const variantsList = {
   hidden: {
-    x: 0,
-    width: "0%",
+    // x: 0,
+    // width: "0%",
   },
   visible: {
-    x: 0,
-    width: "100%",
+    // x: 0,
+    // width: "100%",
   },
   out: {
-    x: "100vw",
-    transition: {
-      duration: 1,
-      when: "afterChildren",
-    },
+    // x: "100vw",
+    // transition: {
+    //   duration: 1,
+    //   when: "afterChildren",
+    // },
   },
 }
 
@@ -82,41 +85,42 @@ const ImageIndex = ({ data }) => {
 
   return (
     <>
-        <Nav
-          about={() => setAbout(!about)}
-          animationTime={animationTime}
-          imageIndex={false}
-          category={projects}
-          filterProject={filterProject}
-          width={width}
-        />
-        <motion.div
-          variants={variantsOuterWrap}
-          initial="hidden"
-          animate="visible"
-          exit="out"
-          className="container"
-        >
-          <ul key="index">
-            <AnimatePresence>{about && <About />}</AnimatePresence>
-            <AnimatePresence
-              initial={false}
-              onExitComplete={() => setProjectList(storeList)}
-            >
-              {projectList &&
-                projectList.map((project, i) => {
-                  return (
-                    <motion.li
-                      key={project.node.id}
-                      style={{
-                        color: project.node.frontmatter.color || "#000000",
-                      }}
-                      variants={variantsList}
-                      initial="hidden"
-                      animate="visible"
-                      transition={{ duration: 1.5, delay: i * 0.2 }}
-                      exit="out"
-                    >
+      <Nav
+        about={() => setAbout(!about)}
+        animationTime={animationTime}
+        imageIndex={false}
+        category={projects}
+        filterProject={filterProject}
+        width={width}
+      />
+      <motion.div
+        variants={variantsOuterWrap}
+        initial="hidden"
+        animate="visible"
+        exit="out"
+        className="container image-index"
+      >
+        <ul key="index">
+          <AnimatePresence>{about && <About />}</AnimatePresence>
+          <AnimatePresence
+            initial={false}
+            onExitComplete={() => setProjectList(storeList)}
+          >
+            {projectList &&
+              projectList.map((project, i) => {
+                return (
+                  <motion.li
+                    key={project.node.id}
+                    style={{
+                      color: project.node.frontmatter.color || "#000000",
+                    }}
+                    variants={variantsList}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 1.5, delay: i * 0.2 }}
+                    exit="out"
+                  >
+                    <Link to={`${project.node.fields.slug}`}>
                       <motion.div
                         className="inner-info-wrap"
                         variants={variantsInner}
@@ -125,11 +129,7 @@ const ImageIndex = ({ data }) => {
                       >
                         <p>{project.node.frontmatter.category.join(", ")}</p>
 
-                        <Link
-                          to={`${project.node.fields.slug}`}
-                        >
-                          <h2>{project.node.frontmatter.title}</h2>
-                        </Link>
+                        <h2>{project.node.frontmatter.title}</h2>
                       </motion.div>
                       <motion.div
                         className="inner-image-wrap"
@@ -144,7 +144,9 @@ const ImageIndex = ({ data }) => {
                                 <div className="wrapper">
                                   <img
                                     src={item.image.childImageSharp.fluid.src}
-                                    sizes={item.image.childImageSharp.fluid.sizes}
+                                    sizes={
+                                      item.image.childImageSharp.fluid.sizes
+                                    }
                                     alt=""
                                     srcSet={
                                       item.image.childImageSharp.fluid.srcSet
@@ -157,12 +159,13 @@ const ImageIndex = ({ data }) => {
                           }
                         )}
                       </motion.div>
-                    </motion.li>
-                  )
-                })}
-            </AnimatePresence>
-          </ul>
-        </motion.div>
+                    </Link>
+                  </motion.li>
+                )
+              })}
+          </AnimatePresence>
+        </ul>
+      </motion.div>
     </>
   )
 }

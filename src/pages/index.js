@@ -12,7 +12,10 @@ const variantsOuterWrap = {
   },
   visible: {
     opacity: 1,
-    transition: { delay: 1, duration: 0.5 },
+    transition: { 
+      // delay: 1, 
+      duration: 0.5 
+    },
   },
   out: {
     opacity: 0,
@@ -22,37 +25,36 @@ const variantsOuterWrap = {
 
 const variantsList = {
   hidden: {
-    x: 0,
-    width: "0%",
+    // x: 0,
+    // width: "0%",
   },
   visible: {
-    x: 0,
-    width: "100%",
+    // x: 0,
+    // width: "100%",
   },
   out: {
-    x: "100vw",
-    transition: {
-      duration: 1,
-      when: "afterChildren",
-    },
+    // x: "100vw",
+    // transition: {
+    //   duration: 1
+    // },
   },
 }
 
 const variantsMobileList = {
   hidden: {
-    x: 0,
-    width: "0%",
+    // x: 0,
+    // width: "0%",
   },
   visible: {
-    x: 0,
-    width: "100%",
+    // x: 0,
+    // width: "100%",
   },
   out: {
-    x: "100vw",
-    transition: {
-      duration: 0.45,
-      when: "afterChildren",
-    },
+    // x: "100vw",
+    // transition: {
+    //   duration: 0.45,
+    //   when: "afterChildren",
+    // },
   },
 }
 
@@ -87,11 +89,17 @@ const Index = ({ data }) => {
   const filterProject = name => {
     setProjectList([])
     let newList
+    let oldList = projects
+    let combineList
     if (name !== "all") {
       newList = projects.filter(project =>
         project.node.frontmatter.category.includes(name)
       )
-      setStoreList(newList)
+      oldList = projects.filter(
+        project => !project.node.frontmatter.category.includes(name)
+      )
+      combineList = newList.concat(oldList)
+      setStoreList(combineList)
     } else if (name === "all") {
       newList = projects
       setStoreList(newList)
@@ -192,7 +200,7 @@ const Index = ({ data }) => {
                     >
                       <motion.div
                         variants={variantsInner}
-                        transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
+                        transition={{ duration: 0.5, delay: i * 0.2 }}
                         exit="out"
                       >
                         <p>{project.node.frontmatter.category.join(", ")}</p>
@@ -211,7 +219,7 @@ const Index = ({ data }) => {
                           variants={variantsInner}
                           transition={{
                             duration: 0.5,
-                            delay: 0.4 + i * 0.2,
+                            delay: i * 0.2,
                           }}
                           exit="out"
                         >
@@ -271,6 +279,7 @@ const Index = ({ data }) => {
                             )
                           }
                         )}
+                        <p>{project.node.frontmatter.description}</p>
                       </motion.div>
                     </motion.li>
                   )

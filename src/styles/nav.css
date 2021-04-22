@@ -1,0 +1,210 @@
+/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV  */
+/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV  */
+/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV  */
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 66px;
+    padding: 0px 28px;
+    overflow: hidden;
+  }
+  
+  nav .wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 11px 0 0;
+    font-family: freight-text-pro, "Times New Roman", Times, serif;
+    font-size: 14px;
+    line-height: 14px;
+    color: #000000;
+    border-bottom: solid 1px #9879b0;
+  }
+  
+  nav .wrapper > *:first-child {
+    min-width: 212px;
+  }
+  
+  nav .wrapper span:last-of-type {
+    font-style: italic;
+  }
+  
+  nav .wrapper ul {
+    display: flex;
+    font-style: italic;
+    flex-grow: 1;
+  }
+  
+  nav .wrapper ul li {
+    padding: 0 11px 0 0;
+  }
+  
+  nav .wrapper button {
+    font-family: freight-text-pro, "Times New Roman", Times, serif;
+    font-size: 14px;
+    line-height: 14px;
+    font-style: italic;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  ul.mobile-menu {
+    display: none;
+    font-style: italic;
+    flex-grow: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 36px);
+    background-color: #ffd0d0;
+    text-transform: capitalize;
+    padding: 0 12px 0;
+    transform: translateY(-100%) translateZ(0px);
+  }
+  
+  ul.mobile-menu li {
+    border-bottom: 1px solid #9879b0;
+  }
+  
+  ul.mobile-menu li button {
+    font-family: freight-big-pro, "Times New Roman", Times, serif;
+    font-size: 66px;
+    line-height: 77px;
+    font-style: normal;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  
+  nav .wrapper button.mobile-menu-btn {
+    display: none;
+  }
+  
+  nav .wrapper button.mobile-menu-btn span {
+    position: relative;
+    font-family: "freight-big-pro", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 20px;
+    padding: 0 0 10px;
+    color: #000000;
+  }
+  
+  nav .wrapper a {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  
+  nav .wrapper ul li button:hover {
+    text-decoration: underline;
+  }
+  
+  nav .wrapper ul li button:focus {
+    text-decoration: underline;
+  }
+  
+  nav .wrapper .about button {
+    font-style: normal;
+  }
+  
+  nav .wrapper button:focus {
+    outline: 0px;
+  }
+  
+  /* PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV */
+  /* PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV */
+  /* PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV */
+  /* PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV PROJECT NAV */
+  
+  nav.project .wrapper {
+    line-height: 28px;
+  }
+  
+  nav.project .wrapper > *:first-child {
+    align-self: flex-end;
+  }
+  
+  nav.project .wrapper span:last-of-type {
+    align-self: flex-end;
+    padding: 0 0 10px;
+  }
+  
+  nav.project .wrapper h2 {
+    font-family: "freight-big-pro", "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 37px;
+    line-height: 43px;
+    color: #000000;
+    flex-grow: 1;
+    /* min-width: 100%; */
+    align-self: flex-end;
+  }
+
+  /* MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE */
+/* MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE */
+/* MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE */
+/* MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE */
+/* MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE */
+/* MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE */
+
+@media only screen and (max-width: 844px) {
+    nav.index {
+        display: flex;
+        /* position: fixed; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 36px;
+        padding: 0px 12px;
+        overflow: hidden;
+        z-index: 99;
+        background-color: #ffd0d0;
+      }
+    
+      nav.index .wrapper {
+        background-color: #ffd0d0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      nav.index .wrapper > *:first-child {
+        min-width: 212px;
+        flex-grow: 1;
+      }
+    
+      nav.index .wrapper .about button {
+        font-size: 12px;
+        line-height: 12px;
+        font-style: normal;
+      }
+    
+      nav.index .wrapper ul {
+        display: none;
+      }
+    
+      ul.mobile-menu {
+        display: block;
+      }
+    
+      nav.index .wrapper button.mobile-menu-btn {
+        display: block;
+      }
+    
+      nav.index .wrapper a {
+        display: none;
+      }
+}

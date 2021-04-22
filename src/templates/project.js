@@ -1,30 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React, { useState } from "react"
+import { graphql, Link } from "gatsby"
 import ProjectNav from "../components/projectNav"
 import "../styles/project.css"
 import { motion } from "framer-motion"
-import Scrollbar from "react-smooth-scrollbar"
-import SmoothScrollbar, { ScrollbarPlugin } from "smooth-scrollbar"
-// import LazyLoad from "react-lazyload"
-// SmoothScrollbar.use(OverscrollPlugin)
+// import LazyImage from "../utils/lazy-image"
+import { Swiper, SwiperSlide } from "swiper/react"
+import SwiperCore, { Mousewheel, Keyboard } from "swiper"
+import "swiper/swiper-bundle.css"
 
-class HorizontalScrollPlugin extends ScrollbarPlugin {
-  static pluginName = "horizontalScroll"
-
-  transformDelta(delta, fromEvent) {
-    if (!/wheel/.test(fromEvent.type)) {
-      return delta
-    }
-
-    const { x, y } = delta
-
-    return {
-      y: 0,
-      x: Math.abs(x) > Math.abs(y) ? x : y,
-    }
-  }
-}
-SmoothScrollbar.use(HorizontalScrollPlugin)
+SwiperCore.use([Mousewheel, Keyboard])
 
 const variants = {
   hidden: {
@@ -33,25 +17,25 @@ const variants = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 1.5,
+      // delay: 1.5,
       duration: 0.5,
     },
   },
   out: {
     opacity: 0,
     transition: {
-      delay: 0,
+      // delay: 0,
       duration: 0.5,
     },
   },
 }
 
-const Project = props => {
-  const project = props.data.markdownRemark.frontmatter
-  console.log(project)
+const Project = ({ data, pageContext }) => {
+  console.log(pageContext)
+  const [paginator, setPaginator] = useState("project")
+  const project = data.markdownRemark.frontmatter
   return (
     <>
-      {/* <div className="project-bg-wrap" style={{ backgroundColor: project.color || "#000" }}> */}
       <ProjectNav category={project.category} title={project.title} />
       <motion.div
         className="project-container"
@@ -60,26 +44,67 @@ const Project = props => {
         animate="visible"
         exit="out"
       >
-        <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
-        <Scrollbar>
+        <div className="project-description">
+          <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
+          <div className="project-paginator">
+            <Link
+              onMouseEnter={() => setPaginator("previous")}
+              onMouseLeave={() => setPaginator("project")}
+              to={pageContext.previous ? pageContext.previous.fields.slug : "/"}
+            >
+              {"<<"}
+            </Link>
+            <span>{paginator}</span>
+            <Link
+              onMouseEnter={() => setPaginator("next")}
+              onMouseLeave={() => setPaginator("project")}
+              to={pageContext.next ? pageContext.next.fields.slug : "/"}
+            >
+              {">>"}
+            </Link>
+          </div>
+        </div>
+
+        <Swiper
+          speed={400}
+          spaceBetween={30}
+          slidesPerView="auto"
+          mousewheel
+          keyboard
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={swiper => console.log(swiper)}
+        >
           {project.image_gallery.map((item, index) => {
             return (
-              <figure key={index}>
+              <SwiperSlide key={index} tag="figure">
                 <div className="wrapper">
                   <img
                     src={item.image.childImageSharp.fluid.src}
                     sizes={item.image.childImageSharp.fluid.sizes}
                     alt=""
                     srcSet={item.image.childImageSharp.fluid.srcSet}
+                    loading="lazy"
                   />
                 </div>
-                <figcaption>{item.caption}</figcaption>
-              </figure>
+                <figcaption style={{ flex: 0 }}>{item.caption}</figcaption>
+              </SwiperSlide>
             )
           })}
-        </Scrollbar>
+          <SwiperSlide className="next-link">
+            {pageContext.next ? (
+              <Link to={pageContext.next.fields.slug}>
+                next project <span> </span>
+                {">"}
+              </Link>
+            ) : (
+              <Link to="/">
+                back to index <span> </span>
+                {">"}
+              </Link>
+            )}
+          </SwiperSlide>
+        </Swiper>
       </motion.div>
-      {/* </div> */}
     </>
   )
 }
