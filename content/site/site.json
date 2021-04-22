@@ -6,10 +6,8 @@
   "mobile_menu_background_color": "#FFFAF0",
   "categories": [
     {
-      "tags": [
-        "magazines"
-      ],
-      "tag_color": "#D0021B"
+      "tag_name": "Magazines",
+      "tag_color": "#F5A623"
     }
   ]
 }
