@@ -5,6 +5,10 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
+  path: content/site/site.json
+  label: Site Settings
+  match: "**/*"
+- type: document
   path: content/about/about.json
   label: About
 - type: directory
