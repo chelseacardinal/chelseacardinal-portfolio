@@ -87,7 +87,7 @@ fields:
     required: false
     options: []
     source:
-      type: documents
+      type: pages
       section: site-settings
       file: content/site/site.json
       path: 
