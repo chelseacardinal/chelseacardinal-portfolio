@@ -35,4 +35,4 @@ fields:
     schema:
       format: html
 pages:
-- content/about/about.json
+- content/about/site.json
