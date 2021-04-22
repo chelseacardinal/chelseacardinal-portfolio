@@ -37,10 +37,11 @@ fields:
 - name: categories
   type: field_group_list
   fields:
-  - name: tags
-    type: tag_list
-    default: []
-    label: Tags
+  - name: tag_name
+    type: text
+    config:
+      required: false
+    label: Tag Name
   - name: tag_color
     type: color
     label: Tag Color
@@ -50,7 +51,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: tag_name
   label: Categories
   description: Add categories their colors here.
 pages:
