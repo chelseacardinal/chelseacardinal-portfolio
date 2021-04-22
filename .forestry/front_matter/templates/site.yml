@@ -26,14 +26,25 @@ fields:
     color_format: Hex
   description: This sets the background color for the mobile menu.
   default: "#FFFAF0"
-- name: categories
+- name: category_tags
+  type: tag_list
+  default: []
+  label: Category Tags
+- name: category_color
   type: field_group_list
   fields:
-  - name: tag_name
-    type: text
+  - name: select_category
+    type: select
+    default: ''
     config:
       required: false
-    label: Tag Name
+      options: []
+      source:
+        type: documents
+        section: site-settings
+        file: content/site/site.json
+        path: category_tags
+    label: Select Category
   - name: tag_color
     type: color
     label: Tag Color
@@ -43,9 +54,9 @@ fields:
   config:
     min: 
     max: 
-    labelField: tag_name
-  label: Categories
-  description: Add categories their colors here.
+    labelField: select_category
+  label: Category Color
+  description: Assign a color to each category
 - type: textarea
   name: bio
   label: Bio
@@ -54,9 +65,5 @@ fields:
     wysiwyg: true
     schema:
       format: html
-- name: category_tags
-  type: tag_list
-  default: []
-  label: Category Tags
 pages:
 - content/site/site.json
