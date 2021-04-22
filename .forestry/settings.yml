@@ -4,8 +4,10 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: heading
-  label: Edit heading
+- type: document
+  path: content/about/about.json
+  label: Site Settings
+  match: "**/*"
 - type: directory
   path: content/projects
   label: Projects
