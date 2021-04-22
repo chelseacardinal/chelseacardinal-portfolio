@@ -6,14 +6,14 @@ fields:
   type: color
   label: Index Text Color
   config:
-    required: true
+    required: false
     color_format: Hex
   description: Set the text color for text on the index page.
   default: "#000000"
 - name: index_color
   type: color
   config:
-    required: true
+    required: false
     color_format: Hex
   description: Set a custom background color for index page.
   default: "#FFD0D0"
@@ -22,7 +22,7 @@ fields:
   type: color
   label: Mobile Menu Background Color
   config:
-    required: true
+    required: false
     color_format: Hex
   description: This sets the background color for the mobile menu.
   default: "#FFFAF0"
@@ -34,5 +34,24 @@ fields:
     wysiwyg: true
     schema:
       format: html
+- name: categories
+  type: field_group_list
+  fields:
+  - name: tags
+    type: tag_list
+    default: []
+    label: Tags
+  - name: tag_color
+    type: color
+    label: Tag Color
+    config:
+      required: false
+      color_format: Hex
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Categories
+  description: Add categories their colors here.
 pages:
 - content/site/site.json
