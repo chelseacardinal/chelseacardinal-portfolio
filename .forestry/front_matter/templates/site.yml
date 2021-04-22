@@ -54,5 +54,9 @@ fields:
     wysiwyg: true
     schema:
       format: html
+- name: category_tags
+  type: tag_list
+  default: []
+  label: Category Tags
 pages:
 - content/site/site.json
