@@ -12,9 +12,9 @@ const variantsOuterWrap = {
   },
   visible: {
     opacity: 1,
-    transition: { 
-      // delay: 1, 
-      duration: 0.5 
+    transition: {
+      // delay: 1,
+      duration: 0.5,
     },
   },
   out: {
@@ -76,6 +76,11 @@ const Index = ({ data }) => {
   //   1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
   // console.log(data)
 
+  const categoryColors = data.siteJson.category_color
+  const categoryTags = data.siteJson.category_tags
+
+  // console.log(categoryTags)
+
   const [about, setAbout] = useState(false)
   const projects = data.allMarkdownRemark.edges
   const [projectList, setProjectList] = useState(projects)
@@ -93,10 +98,10 @@ const Index = ({ data }) => {
     let combineList
     if (name !== "all") {
       newList = projects.filter(project =>
-        project.node.frontmatter.category.includes(name)
+        project.node.frontmatter.categories.includes(name)
       )
       oldList = projects.filter(
-        project => !project.node.frontmatter.category.includes(name)
+        project => !project.node.frontmatter.categories.includes(name)
       )
       combineList = newList.concat(oldList)
       setStoreList(combineList)
@@ -117,7 +122,7 @@ const Index = ({ data }) => {
         about={() => setAbout(!about)}
         animationTime={animationTime}
         imageIndex={true}
-        category={projects}
+        category={categoryTags}
         filterProject={filterProject}
         width={width}
       />
@@ -187,10 +192,15 @@ const Index = ({ data }) => {
                 projectList.map((project, i) => {
                   return (
                     <motion.li
-                      className={project.node.frontmatter.category[0]}
+                      className={project.node.frontmatter.categories[0]}
                       key={project.node.id}
                       style={{
-                        color: project.node.frontmatter.color || "#000000",
+                        color:
+                          categoryColors.find(
+                            tag =>
+                              tag.select_category ===
+                              project.node.frontmatter.categories[0]
+                          ).tag_color || "#000000",
                       }}
                       variants={variantsList}
                       initial="hidden"
@@ -203,7 +213,7 @@ const Index = ({ data }) => {
                         transition={{ duration: 0.5, delay: i * 0.2 }}
                         exit="out"
                       >
-                        <p>{project.node.frontmatter.category.join(", ")}</p>
+                        <p>{project.node.frontmatter.categories.join(", ")}</p>
                       </motion.div>
                       <Link
                         onMouseEnter={() =>
@@ -235,7 +245,12 @@ const Index = ({ data }) => {
                     <motion.li
                       key={project.node.id}
                       style={{
-                        color: project.node.frontmatter.color || "#000000",
+                        color:
+                          categoryColors.find(
+                            tag =>
+                              tag.select_category ===
+                              project.node.frontmatter.categories[0]
+                          ).tag_color || "#000000",
                       }}
                       variants={variantsMobileList}
                       initial="hidden"
@@ -249,7 +264,7 @@ const Index = ({ data }) => {
                         transition={{ duration: 0.35, delay: 0.4 + i * 0.2 }}
                         exit="out"
                       >
-                        <p>{project.node.frontmatter.category}</p>
+                        <p>{project.node.frontmatter.categories}</p>
                         <h2>{project.node.frontmatter.title}</h2>
                       </motion.div>
                       <motion.div
@@ -305,7 +320,7 @@ export const data = graphql`
           frontmatter {
             date
             title
-            category
+            categories
             color
             description
             image_gallery {
@@ -327,6 +342,13 @@ export const data = graphql`
           }
         }
       }
+    }
+    siteJson {
+      category_color {
+        select_category
+        tag_color
+      }
+      category_tags
     }
   }
 `

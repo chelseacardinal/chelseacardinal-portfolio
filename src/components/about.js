@@ -59,9 +59,8 @@ const About = ({ width }) => {
     <StaticQuery
       query={graphql`
         query AboutQuery {
-          aboutJson {
+          siteJson {
             bio
-            color
             id
           }
         }

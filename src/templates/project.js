@@ -36,7 +36,7 @@ const Project = ({ data, pageContext }) => {
   const project = data.markdownRemark.frontmatter
   return (
     <>
-      <ProjectNav category={project.category} title={project.title} />
+      <ProjectNav category={project.categories} title={project.title} />
       <motion.div
         className="project-container"
         variants={variants}
@@ -117,7 +117,7 @@ export const data = graphql`
       frontmatter {
         title
         description
-        category
+        categories
         color
         image_gallery {
           caption

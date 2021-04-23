@@ -66,12 +66,15 @@ const ImageIndex = ({ data }) => {
   // const animationTime =
   //   1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
 
+  const categoryColors = data.siteJson.category_color
+  const categoryTags = data.siteJson.category_tags
+
   const filterProject = name => {
     setProjectList([])
     let newList
     if (name !== "all") {
       newList = projects.filter(project =>
-        project.node.frontmatter.category.includes(name)
+        project.node.frontmatter.categories.includes(name)
       )
       setStoreList(newList)
     } else if (name === "all") {
@@ -89,7 +92,7 @@ const ImageIndex = ({ data }) => {
         about={() => setAbout(!about)}
         animationTime={animationTime}
         imageIndex={false}
-        category={projects}
+        category={categoryTags}
         filterProject={filterProject}
         width={width}
       />
@@ -112,7 +115,12 @@ const ImageIndex = ({ data }) => {
                   <motion.li
                     key={project.node.id}
                     style={{
-                      color: project.node.frontmatter.color || "#000000",
+                      color:
+                        categoryColors.find(
+                          tag =>
+                            tag.select_category ===
+                            project.node.frontmatter.categories[0]
+                        ).tag_color || "#000000",
                     }}
                     variants={variantsList}
                     initial="hidden"
@@ -127,7 +135,7 @@ const ImageIndex = ({ data }) => {
                         transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
                         exit="out"
                       >
-                        <p>{project.node.frontmatter.category.join(", ")}</p>
+                        <p>{project.node.frontmatter.categories.join(", ")}</p>
 
                         <h2>{project.node.frontmatter.title}</h2>
                       </motion.div>
@@ -184,7 +192,7 @@ export const data = graphql`
           frontmatter {
             date
             title
-            category
+            categories
             color
             description
             image_gallery {
@@ -205,6 +213,13 @@ export const data = graphql`
           }
         }
       }
+    }
+    siteJson {
+      category_color {
+        select_category
+        tag_color
+      }
+      category_tags
     }
   }
 `

@@ -49,9 +49,7 @@ const variantsInner = {
 
 const Nav = props => {
   const [mobileMenu, setMobileMenu] = useState(false)
-  const categoriesArrays = props.category.map(
-    (project, i) => project.node.frontmatter.category
-  )
+  const categoriesArrays = props.category
   const categoriesRaw = [].concat.apply([], categoriesArrays)
   const categories = [...new Set(categoriesRaw)]
   function mobileMenuButtons(filter) {

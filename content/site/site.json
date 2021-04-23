@@ -4,12 +4,6 @@
   "index_text_color": "#000000",
   "index_color": "#FFD0D0",
   "mobile_menu_background_color": "#FFFAF0",
-  "categories": [
-    {
-      "tag_name": "Magazines",
-      "tag_color": "#F5A623"
-    }
-  ],
   "category_tags": [
     "magazines",
     "identity",
