@@ -1,10 +1,10 @@
 ---
-date: 2020-12-10T13:31:21-05:00
+date: 2020-12-10T13:31:21.000-05:00
 title: D’Addario/Built to Compete
 category:
 - covers
 - illustration
-color: "#02822D"
+color: "#FFD0D0"
 description: A long caption here maybe up to 100 words sometimes if necessary but
   more likely will be about 30 words tops. A long caption here maybe up to 100 words
   sometimes if necessary but more likely will be about 30 words tops. A long caption
@@ -17,5 +17,9 @@ image_gallery:
 - image: "../assets/test-slide-2.jpg"
   caption: New image caption 2
   featured_image: false
+text_color: "#000000"
+categories:
+- covers
+- illustration
 
 ---
