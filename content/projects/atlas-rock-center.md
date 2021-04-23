@@ -1,9 +1,9 @@
 ---
-date: 2020-12-10T13:40:42-05:00
+date: 2020-12-10T13:40:42.000-05:00
 title: " Atlas/Rock Center"
 category:
 - magazines
-color: "#393939"
+color: "#F8D2D1"
 description: A long caption here maybe up to 100 words sometimes if necessary but
   more likely will be about 30 words tops. A long caption here maybe up to 100 words
   sometimes if necessary but more likely will be about 30 words tops. A long caption
@@ -19,5 +19,8 @@ image_gallery:
 - image: "../assets/test-slide-1.jpg"
   caption: New image caption 3
   featured_image: false
+text_color: "#000000"
+categories:
+- magazines
 
 ---
