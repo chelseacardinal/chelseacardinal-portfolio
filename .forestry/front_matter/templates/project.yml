@@ -56,7 +56,7 @@ fields:
       path: category_tags
   label: Categories
   description: Assign categories to your project page. <strong><em>Note:</em></strong><em>
-    list of available tags pulls from field in the Index section.</em>
+    list of available tags pulls from Category Tags field in the Index section.</em>
 - name: image_gallery
   type: field_group_list
   fields:
