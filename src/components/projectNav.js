@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
-import X from "../images/x.svg"
+// import X from "../images/x.svg"
+import X from "../components/X"
 
 const variantsList = {
   hidden: {
@@ -59,6 +60,7 @@ const projectNav = props => {
     >
       <div className="wrapper">
         <motion.span
+          style={{color: props.textColor || "#000000"}}
           variants={variantsInner}
           initial="hidden"
           animate="visible"
@@ -68,6 +70,7 @@ const projectNav = props => {
         </motion.span>
 
         <motion.h2
+        style={{color: props.textColor || "#000000"}}
           variants={variantsInner}
           initial="hidden"
           animate="visible"
@@ -82,7 +85,7 @@ const projectNav = props => {
           exit="out"
         >
           <Link to="/">
-            <img src={X} alt="close project" />
+            <X color={props.textColor || "#000000"} />
           </Link>
         </motion.span>
       </div>

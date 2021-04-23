@@ -78,6 +78,9 @@ const Index = ({ data }) => {
 
   const categoryColors = data.siteJson.category_color
   const categoryTags = data.siteJson.category_tags
+  const indexTextColor = data.siteJson.index_text_color
+  const IndexColor = data.siteJson.index_color
+  const mobileMenuColor = data.siteJson.mobile_menu_background_color
 
   // console.log(categoryTags)
 
@@ -100,6 +103,16 @@ const Index = ({ data }) => {
       newList = projects.filter(project =>
         project.node.frontmatter.categories.includes(name)
       )
+
+      newList.forEach((project, index) => {
+        const foundCategories = project.node.frontmatter.categories
+        if (foundCategories.length > 1 && foundCategories[0] !== name) {
+          let tagIndex = foundCategories.indexOf(name)
+          foundCategories.splice(tagIndex, 1)
+          foundCategories.unshift(name)
+        }
+      })
+
       oldList = projects.filter(
         project => !project.node.frontmatter.categories.includes(name)
       )
@@ -114,11 +127,16 @@ const Index = ({ data }) => {
     )
   }
 
-  console.log(projectList)
+  // console.log(projectList)
 
   return (
-    <>
+    <div
+      className="page-rapper"
+      style={{ backgroundColor: IndexColor, minHeight: "100vh" }}
+    >
       <Nav
+        textColor={indexTextColor}
+        menuColor={mobileMenuColor}
         about={() => setAbout(!about)}
         animationTime={animationTime}
         imageIndex={true}
@@ -302,7 +320,7 @@ const Index = ({ data }) => {
           </AnimatePresence>
         </ul>
       </motion.div>
-    </>
+    </div>
   )
 }
 
@@ -349,6 +367,9 @@ export const data = graphql`
         tag_color
       }
       category_tags
+      index_text_color
+      index_color
+      mobile_menu_background_color
     }
   }
 `

@@ -72,11 +72,27 @@ const ImageIndex = ({ data }) => {
   const filterProject = name => {
     setProjectList([])
     let newList
+    let oldList = projects
+    let combineList
     if (name !== "all") {
       newList = projects.filter(project =>
         project.node.frontmatter.categories.includes(name)
       )
-      setStoreList(newList)
+
+      newList.forEach((project, index) => {
+        const foundCategories = project.node.frontmatter.categories
+        if (foundCategories.length > 1 && foundCategories[0] !== name) {
+          let tagIndex = foundCategories.indexOf(name)
+          foundCategories.splice(tagIndex, 1)
+          foundCategories.unshift(name)
+        }
+      })
+
+      oldList = projects.filter(
+        project => !project.node.frontmatter.categories.includes(name)
+      )
+      combineList = newList.concat(oldList)
+      setStoreList(combineList)
     } else if (name === "all") {
       newList = projects
       setStoreList(newList)

@@ -31,12 +31,19 @@ const variants = {
 }
 
 const Project = ({ data, pageContext }) => {
-  console.log(pageContext)
   const [paginator, setPaginator] = useState("project")
   const project = data.markdownRemark.frontmatter
+  const site = data.siteJson
   return (
-    <>
-      <ProjectNav category={project.categories} title={project.title} />
+    // <>
+    <motion.div
+      className="page-rapper"
+      initial={{ backgroundColor: site.index_color }}
+      animate={{ backgroundColor: project.color }}
+      transition={{ duration: 0.5 }}
+      exit={{ backgroundColor: site.index_color }}
+    >
+      <ProjectNav category={project.categories} title={project.title} textColor={project.text_color} />
       <motion.div
         className="project-container"
         variants={variants}
@@ -44,7 +51,7 @@ const Project = ({ data, pageContext }) => {
         animate="visible"
         exit="out"
       >
-        <div className="project-description">
+        <div className="project-description" style={{ color: project.text_color || "#000000" }}>
           <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
           <div className="project-paginator">
             <Link
@@ -86,7 +93,7 @@ const Project = ({ data, pageContext }) => {
                     loading="lazy"
                   />
                 </div>
-                <figcaption style={{ flex: 0 }}>{item.caption}</figcaption>
+                <figcaption style={{ flex: 0, color: project.text_color || "#000000" }}>{item.caption}</figcaption>
               </SwiperSlide>
             )
           })}
@@ -105,7 +112,8 @@ const Project = ({ data, pageContext }) => {
           </SwiperSlide>
         </Swiper>
       </motion.div>
-    </>
+    </motion.div>
+    // </>
   )
 }
 
@@ -119,6 +127,7 @@ export const data = graphql`
         description
         categories
         color
+        text_color
         image_gallery {
           caption
           image {
@@ -136,6 +145,11 @@ export const data = graphql`
           }
         }
       }
+    }
+    siteJson {
+      category_tags
+      index_text_color
+      index_color
     }
   }
 `

@@ -1,7 +1,7 @@
 ---
 date: 2021-04-22T00:00:00-04:00
 title: Bon Appetit/Hot 10 2019
-color: "#1700AE"
+color: "#D2DCDB"
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis

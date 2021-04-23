@@ -37,9 +37,9 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   font-family: freight-big-pro, "Times New Roman", Times, serif;
-  background-color: #ffd0d0;
+  /* background-color: #ffd0d0; */
 }
 
 a {

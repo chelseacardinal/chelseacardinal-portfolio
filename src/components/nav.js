@@ -59,13 +59,14 @@ const Nav = props => {
   return (
     <>
       <motion.nav
+        style={mobileMenu ? { backgroundColor: props.menuColor } : {}}
         className="index"
         variants={variantsList}
         initial="hidden"
         animate="visible"
         exit="out"
       >
-        <motion.div className="wrapper">
+        <motion.div className="wrapper" style={mobileMenu ? { backgroundColor: props.menuColor } : {}}>
           <motion.div
             className="about"
             variants={variantsInner}
@@ -74,7 +75,9 @@ const Nav = props => {
             exit="out"
           >
             <h1>
-              <button onClick={props.about}>Studio of Chelsea Cardinal</button>
+              <button style={{ color: props.textColor }} onClick={props.about}>
+                Studio of Chelsea Cardinal
+              </button>
             </h1>
           </motion.div>
           <motion.ul
@@ -87,17 +90,26 @@ const Nav = props => {
             {categories.map((category, i) => {
               return (
                 <li key={i}>
-                  <button onClick={() => props.filterProject(category)}>
+                  <button
+                    style={{ color: props.textColor }}
+                    onClick={() => props.filterProject(category)}
+                  >
                     {category}
                   </button>
                 </li>
               )
             })}
             <li>
-              <button onClick={() => props.filterProject("all")}>all</button>
+              <button
+                style={{ color: props.textColor }}
+                onClick={() => props.filterProject("all")}
+              >
+                all
+              </button>
             </li>
           </motion.ul>
           <motion.button
+            style={{ color: props.textColor }}
             initial={false}
             animate={{ rotate: mobileMenu ? 45 : 0 }}
             transition={{ ease: "easeInOut", duration: 0.25 }}
@@ -107,6 +119,7 @@ const Nav = props => {
             <span>+</span>
           </motion.button>
           <motion.span
+            style={{ color: props.textColor }}
             variants={variantsInner}
             initial="hidden"
             animate="visible"
@@ -119,8 +132,12 @@ const Nav = props => {
         </motion.div>
       </motion.nav>
       <motion.ul
+        style={{
+          backgroundColor: props.menuColor,
+          display: mobileMenu ? "block" : "none",
+        }}
         initial={false}
-        animate={{ y: mobileMenu ? "36px" : "-100%" }}
+        animate={{ opacity: mobileMenu ? 1 : 0 }}
         transition={{
           ease: "easeInOut",
           duration: 0.35,

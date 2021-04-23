@@ -66,7 +66,8 @@ nav {
     background-color: #ffd0d0;
     text-transform: capitalize;
     padding: 0 12px 0;
-    transform: translateY(-100%) translateZ(0px);
+    overflow: scroll;
+    transform: translateY(36px) translateZ(0px);
   }
   
   ul.mobile-menu li {
@@ -196,9 +197,9 @@ nav {
         display: none;
       }
     
-      ul.mobile-menu {
+      /* ul.mobile-menu {
         display: block;
-      }
+      } */
     
       nav.index .wrapper button.mobile-menu-btn {
         display: block;
