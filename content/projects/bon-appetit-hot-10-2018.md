@@ -1,9 +1,9 @@
 ---
-date: 2020-07-04T00:13:08-04:00
+date: 2020-07-04T00:13:08.000-04:00
 title: Bon Appetit/Hot 10 2018
 category:
 - magazines
-color: "#0D0002"
+color: "#F8D2D1"
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -17,5 +17,8 @@ image_gallery:
 - image: "../assets/test-slide-2.jpg"
   caption: New image caption 2
   featured_image: true
+text_color: "#000000"
+categories:
+- magazines
 
 ---
