@@ -20,5 +20,6 @@ image_gallery:
 text_color: "#000000"
 categories:
 - magazines
+project_line_color: "#9879B0"
 
 ---
