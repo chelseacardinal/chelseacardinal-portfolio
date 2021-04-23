@@ -17,5 +17,6 @@ image_gallery:
 text_color: "#640048"
 categories:
 - identity
+project_line_color: "#9879B0"
 
 ---
