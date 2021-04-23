@@ -34,5 +34,6 @@
       "select_category": "illustration",
       "tag_color": "#AD5A9B"
     }
-  ]
+  ],
+  "index_line_color": "#9879B0"
 }
