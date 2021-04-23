@@ -2,14 +2,14 @@
 label: Site Settings
 hide_body: true
 fields:
-- name: index_text_color
-  type: color
-  label: Index Text Color
+- type: textarea
+  name: bio
+  label: Bio
+  description: This is the part where you write about yourself.
   config:
-    required: false
-    color_format: Hex
-  description: Set the text color for text on the index page.
-  default: "#000000"
+    wysiwyg: true
+    schema:
+      format: html
 - name: index_color
   type: color
   config:
@@ -18,6 +18,21 @@ fields:
   description: Set a custom background color for index page.
   default: "#FFD0D0"
   label: Index Background Color
+- name: index_line_color
+  type: color
+  label: Line Color
+  config:
+    required: false
+    color_format: Hex
+  default: "#9879B0"
+- name: index_text_color
+  type: color
+  label: Index Text Color
+  config:
+    required: false
+    color_format: Hex
+  description: Set the text color for text on the index page.
+  default: "#000000"
 - name: mobile_menu_background_color
   type: color
   label: Mobile Menu Background Color
@@ -57,13 +72,5 @@ fields:
     labelField: select_category
   label: Category Color
   description: Assign a color to each category
-- type: textarea
-  name: bio
-  label: Bio
-  description: This is the part where you write about yourself.
-  config:
-    wysiwyg: true
-    schema:
-      format: html
 pages:
 - content/site/site.json
