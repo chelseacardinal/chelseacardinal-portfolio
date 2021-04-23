@@ -34,6 +34,13 @@ fields:
     required: false
     color_format: Hex
   description: Select project color here.
+- name: project_line_color
+  type: color
+  label: Line Color
+  config:
+    required: false
+    color_format: Hex
+  default: "#9879B0"
 - name: categories
   type: list
   config:
