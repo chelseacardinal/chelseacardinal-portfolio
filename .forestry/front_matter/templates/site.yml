@@ -2,20 +2,12 @@
 label: Site Settings
 hide_body: true
 fields:
-- type: textarea
-  name: bio
-  label: Bio
-  description: This is the part where you write about yourself.
-  config:
-    wysiwyg: true
-    schema:
-      format: html
 - name: index_color
   type: color
   config:
     required: false
     color_format: Hex
-  description: Set a custom background color for index page.
+  description: Set a background color for index page.
   default: "#FFD0D0"
   label: Index Background Color
 - name: index_line_color
@@ -25,13 +17,15 @@ fields:
     required: false
     color_format: Hex
   default: "#9879B0"
+  description: Set a color for all lines on index page.
 - name: index_text_color
   type: color
   label: Index Text Color
   config:
     required: false
     color_format: Hex
-  description: Set the text color for text on the index page.
+  description: 'Set the text color for the index page. <em>Note: does not override
+    category color assignments.</em>'
   default: "#000000"
 - name: mobile_menu_background_color
   type: color
@@ -39,12 +33,14 @@ fields:
   config:
     required: false
     color_format: Hex
-  description: This sets the background color for the mobile menu.
+  description: Set the background color for the mobile overlay menu.
   default: "#FFFAF0"
 - name: category_tags
   type: tag_list
   default: []
   label: Category Tags
+  description: Add a tag for each type of project category. <strong><em>Note:</em></strong><em>
+    this list will feed all other category fields in admin.</em>
 - name: category_color
   type: field_group_list
   fields:
@@ -66,11 +62,22 @@ fields:
     config:
       required: false
       color_format: Hex
+    description: 'Assign a color to each of your project categories. <strong><em>Note:
+      </em></strong><em>you must use the field above to create new categories. Only
+      preexisting tags will be available for assignment.</em>'
   config:
     min: 
     max: 
     labelField: select_category
   label: Category Color
   description: Assign a color to each category
+- type: textarea
+  name: bio
+  label: Bio
+  description: This is the part where you write about yourself.
+  config:
+    wysiwyg: true
+    schema:
+      format: html
 pages:
 - content/site/site.json
