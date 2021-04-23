@@ -1,5 +1,5 @@
 ---
-date: 2020-07-04T00:13:08.000-04:00
+date: 2021-04-22T00:00:00-04:00
 title: Bon Appetit/Hot 10 2019
 category:
 - posters
