@@ -6,7 +6,7 @@ webhook_url:
 sections:
 - type: document
   path: content/site/site.json
-  label: Site Settings
+  label: Index
 - type: directory
   path: content/projects
   label: Projects
