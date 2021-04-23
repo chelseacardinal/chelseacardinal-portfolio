@@ -20,6 +20,27 @@ fields:
   label: Title
   description: Enter your project title
   default: New Project
+- name: color
+  type: color
+  label: Background Color
+  config:
+    required: false
+    color_format: Hex
+  description: Select project color here.
+- name: project_line_color
+  type: color
+  label: Line Color
+  config:
+    required: false
+    color_format: Hex
+  default: "#9879B0"
+- name: text_color
+  type: color
+  label: Text Color
+  config:
+    required: false
+    color_format: Hex
+  default: "#000000"
 - name: categories
   type: list
   config:
@@ -32,16 +53,6 @@ fields:
       file: content/site/site.json
       path: category_tags
   label: Categories
-- name: description
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: html
-  label: Description
-  description: Enter your project description here.
 - name: image_gallery
   type: field_group_list
   fields:
@@ -72,27 +83,16 @@ fields:
     labelField: 
   label: Image Gallery
   description: Enter your image and captions here.
-- name: text_color
-  type: color
-  label: Text Color
+- name: description
+  type: textarea
+  default: ''
   config:
     required: false
-    color_format: Hex
-  default: "#000000"
-- name: color
-  type: color
-  label: Background Color
-  config:
-    required: false
-    color_format: Hex
-  description: Select project color here.
-- name: project_line_color
-  type: color
-  label: Line Color
-  config:
-    required: false
-    color_format: Hex
-  default: "#9879B0"
+    wysiwyg: true
+    schema:
+      format: html
+  label: Description
+  description: Enter your project description here.
 pages:
 - content/projects/atlas-rock-center.md
 - content/projects/bon-appetit-hot-10-2018.md
