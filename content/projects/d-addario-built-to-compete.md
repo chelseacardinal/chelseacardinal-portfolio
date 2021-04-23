@@ -18,5 +18,6 @@ text_color: "#000000"
 categories:
 - covers
 - illustration
+project_line_color: "#9879B0"
 
 ---
