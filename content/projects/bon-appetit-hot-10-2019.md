@@ -1,5 +1,5 @@
 ---
-date: 2021-04-22T00:00:00-04:00
+date: 2021-04-22T00:00:00.000-04:00
 title: Bon Appetit/Hot 10 2019
 color: "#D2DCDB"
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -32,5 +32,6 @@ image_gallery:
 text_color: "#000000"
 categories:
 - posters
+project_line_color: "#525252"
 
 ---
