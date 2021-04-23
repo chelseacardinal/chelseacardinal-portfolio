@@ -22,6 +22,10 @@
   ],
   "category_color": [
     {
+      "select_category": "covers",
+      "tag_color": "#00851B"
+    },
+    {
       "select_category": "identity",
       "tag_color": "#924B4B"
     },
