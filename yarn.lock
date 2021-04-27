@@ -10916,7 +10916,7 @@
     "nanoid" "^3.1.22"
     "source-map" "^0.6.1"
 
-"postcss@8.2.6":
+"postcss@^8.2.6", "postcss@8.2.6":
   "integrity" "sha512-xpB8qYxgPuly166AGlpRjUdEYtmOWx2iCwGmrv4vqZL9YPVviDVPZPRXxnXr6xPZOdxQ9lp3ZBFCRgWJ7LE3Sg=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.2.6.tgz"
   "version" "8.2.6"
