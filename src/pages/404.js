@@ -1,31 +1,11 @@
-import React from "react"
-// import { graphql } from "gatsby"
-
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
+import { useEffect } from "react"
+import { navigate } from "@reach/router"
 
 const NotFoundPage = () => {
-  // const siteTitle = data.site.siteMetadata.title
-
-  return <div>404</div>
+  useEffect(() => {
+    navigate("/")
+  }, [])
+  return null
 }
 
 export default NotFoundPage
-
-// export const pageQuery = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `
-
-{
-  /* <Layout location={location} title={siteTitle}>
-      <SEO title="404: Not Found" />
-      <h1>Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Layout> */
-}

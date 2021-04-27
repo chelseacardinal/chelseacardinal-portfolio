@@ -47,26 +47,45 @@ const variantsInner = {
   },
 }
 
-const Nav = props => {
+const Nav = ({
+  category,
+  catColors,
+  filterProject,
+  menuColor,
+  textColor,
+  about,
+  imageIndex,
+}) => {
   const [mobileMenu, setMobileMenu] = useState(false)
-  const categoriesArrays = props.category
+  const categoriesArrays = category
   const categoriesRaw = [].concat.apply([], categoriesArrays)
   const categories = [...new Set(categoriesRaw)]
   function mobileMenuButtons(filter) {
-    props.filterProject(filter)
+    filterProject(filter)
     setMobileMenu(!mobileMenu)
+  }
+  function menuItemColorFilter(item) {
+    const itemColor = catColors.find(color => color.select_category === item)
+    if (itemColor) {
+      return itemColor.tag_color
+    } else {
+      return "#000000"
+    }
   }
   return (
     <>
       <motion.nav
-        style={mobileMenu ? { backgroundColor: props.menuColor } : {}}
+        style={mobileMenu ? { backgroundColor: menuColor } : {}}
         className="index"
         variants={variantsList}
         initial="hidden"
         animate="visible"
         exit="out"
       >
-        <motion.div className="wrapper" style={mobileMenu ? { backgroundColor: props.menuColor } : {}}>
+        <motion.div
+          className="wrapper"
+          style={mobileMenu ? { backgroundColor: menuColor } : {}}
+        >
           <motion.div
             className="about"
             variants={variantsInner}
@@ -75,7 +94,7 @@ const Nav = props => {
             exit="out"
           >
             <h1>
-              <button style={{ color: props.textColor }} onClick={props.about}>
+              <button style={{ color: textColor }} onClick={about}>
                 Studio of Chelsea Cardinal
               </button>
             </h1>
@@ -91,8 +110,8 @@ const Nav = props => {
               return (
                 <li key={i}>
                   <button
-                    style={{ color: props.textColor }}
-                    onClick={() => props.filterProject(category)}
+                    style={{ color: textColor }}
+                    onClick={() => filterProject(category)}
                   >
                     {category}
                   </button>
@@ -101,15 +120,15 @@ const Nav = props => {
             })}
             <li>
               <button
-                style={{ color: props.textColor }}
-                onClick={() => props.filterProject("all")}
+                style={{ color: textColor }}
+                onClick={() => filterProject("all")}
               >
                 all
               </button>
             </li>
           </motion.ul>
           <motion.button
-            style={{ color: props.textColor }}
+            style={{ color: textColor }}
             initial={false}
             animate={{ rotate: mobileMenu ? 45 : 0 }}
             transition={{ ease: "easeInOut", duration: 0.25 }}
@@ -119,21 +138,21 @@ const Nav = props => {
             <span>+</span>
           </motion.button>
           <motion.span
-            style={{ color: props.textColor }}
+            style={{ color: textColor }}
             variants={variantsInner}
             initial="hidden"
             animate="visible"
             exit="out"
           >
-            <Link to={props.imageIndex ? "/image-index" : "/"}>
-              {props.imageIndex ? "— image index" : "— titles"}
+            <Link to={imageIndex ? "/image-index" : "/"}>
+              {imageIndex ? "— image index" : "— titles"}
             </Link>
           </motion.span>
         </motion.div>
       </motion.nav>
       <motion.ul
         style={{
-          backgroundColor: props.menuColor,
+          backgroundColor: menuColor,
           display: mobileMenu ? "block" : "none",
         }}
         initial={false}
@@ -147,7 +166,10 @@ const Nav = props => {
         {categories.map((category, i) => {
           return (
             <li key={i}>
-              <button onClick={() => mobileMenuButtons(category)}>
+              <button
+                style={{ color: menuItemColorFilter(category) }}
+                onClick={() => mobileMenuButtons(category)}
+              >
                 {category}
               </button>
             </li>

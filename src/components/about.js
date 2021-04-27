@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Styles from "../styles/modules/about.module.css"
+import { about } from "../styles/modules/about.module.css"
 import { motion } from "framer-motion"
 
 const variants = {
@@ -67,13 +67,13 @@ const About = ({ width }) => {
       `}
       render={data => (
         <motion.div
-          className={Styles.about}
+          className={about}
           variants={variants}
           initial="hidden"
           animate={width > 844 ? "visible" : "visibleMobile" }
           exit="out"
         >
-          <motion.p variants={variantsInner}>{data.aboutJson.bio}</motion.p>
+          <motion.p variants={variantsInner}>{data.siteJson.bio}</motion.p>
         </motion.div>
       )}
     />

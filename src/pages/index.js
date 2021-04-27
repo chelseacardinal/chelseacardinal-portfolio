@@ -5,6 +5,7 @@ import About from "../components/about"
 import "../styles/main.css"
 import { motion, AnimatePresence } from "framer-motion"
 import useWindowSize from "../utils/useWindowSize"
+import FeatureImageOverlay from "../components/featureImageOverlay"
 
 const variantsOuterWrap = {
   hidden: {
@@ -23,41 +24,6 @@ const variantsOuterWrap = {
   },
 }
 
-const variantsList = {
-  hidden: {
-    // x: 0,
-    // width: "0%",
-  },
-  visible: {
-    // x: 0,
-    // width: "100%",
-  },
-  out: {
-    // x: "100vw",
-    // transition: {
-    //   duration: 1
-    // },
-  },
-}
-
-const variantsMobileList = {
-  hidden: {
-    // x: 0,
-    // width: "0%",
-  },
-  visible: {
-    // x: 0,
-    // width: "100%",
-  },
-  out: {
-    // x: "100vw",
-    // transition: {
-    //   duration: 0.45,
-    //   when: "afterChildren",
-    // },
-  },
-}
-
 const variantsInner = {
   hidden: {
     opacity: 0,
@@ -67,23 +33,11 @@ const variantsInner = {
   },
   out: {
     opacity: 0,
+    transition: { duration: 0.5, delay: 0 },
   },
 }
 
 const Index = ({ data }) => {
-  // const siteTitle = data.site.siteMetadata.title
-  // const animationTime =
-  //   1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
-  // console.log(data)
-
-  const categoryColors = data.siteJson.category_color
-  const categoryTags = data.siteJson.category_tags
-  const indexTextColor = data.siteJson.index_text_color
-  const IndexColor = data.siteJson.index_color
-  const mobileMenuColor = data.siteJson.mobile_menu_background_color
-
-  // console.log(categoryTags)
-
   const [about, setAbout] = useState(false)
   const projects = data.allMarkdownRemark.edges
   const [projectList, setProjectList] = useState(projects)
@@ -93,6 +47,12 @@ const Index = ({ data }) => {
     1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
   )
   const { width } = useWindowSize()
+
+  const categoryColors = data.siteJson.category_color
+  const categoryTags = data.siteJson.category_tags
+  const indexTextColor = data.siteJson.index_text_color
+  const IndexColor = data.siteJson.index_color
+  const mobileMenuColor = data.siteJson.mobile_menu_background_color
 
   const filterProject = name => {
     setProjectList([])
@@ -127,8 +87,6 @@ const Index = ({ data }) => {
     )
   }
 
-  // console.log(projectList)
-
   return (
     <div
       className="page-rapper"
@@ -141,6 +99,7 @@ const Index = ({ data }) => {
         animationTime={animationTime}
         imageIndex={true}
         category={categoryTags}
+        catColors={categoryColors}
         filterProject={filterProject}
         width={width}
       />
@@ -152,51 +111,10 @@ const Index = ({ data }) => {
         className="container"
       >
         {width > 844 && (
-          <div className="feature-image-overlay">
-            {projectList &&
-              projectList.map((project, i) => {
-                return (
-                  <img
-                    key={project.node.id}
-                    style={{
-                      display:
-                        imageIndex.index === project.node.id ? "block" : "none",
-                    }}
-                    src={
-                      project.node.frontmatter.image_gallery.find(
-                        item => item.featured_image
-                      )
-                        ? project.node.frontmatter.image_gallery.find(
-                            item => item.featured_image
-                          ).image.childImageSharp.fluid.src
-                        : project.node.frontmatter.image_gallery[0].image
-                            .childImageSharp.fluid.src
-                    }
-                    sizes={
-                      project.node.frontmatter.image_gallery.find(
-                        item => item.featured_image
-                      )
-                        ? project.node.frontmatter.image_gallery.find(
-                            item => item.featured_image
-                          ).image.childImageSharp.fluid.src
-                        : project.node.frontmatter.image_gallery[0].image
-                            .childImageSharp.fluid.sizes
-                    }
-                    srcSet={
-                      project.node.frontmatter.image_gallery.find(
-                        item => item.featured_image
-                      )
-                        ? project.node.frontmatter.image_gallery.find(
-                            item => item.featured_image
-                          ).image.childImageSharp.fluid.src
-                        : project.node.frontmatter.image_gallery[0].image
-                            .childImageSharp.fluid.srcSet
-                    }
-                    alt=""
-                  />
-                )
-              })}
-          </div>
+          <FeatureImageOverlay
+            projectList={projectList}
+            imageIndex={imageIndex}
+          />
         )}
 
         <ul key="index">
@@ -209,7 +127,7 @@ const Index = ({ data }) => {
               ? projectList &&
                 projectList.map((project, i) => {
                   return (
-                    <motion.li
+                    <li
                       className={project.node.frontmatter.categories[0]}
                       key={project.node.id}
                       style={{
@@ -220,16 +138,13 @@ const Index = ({ data }) => {
                               project.node.frontmatter.categories[0]
                           ).tag_color || "#000000",
                       }}
-                      variants={variantsList}
-                      initial="hidden"
-                      animate="visible"
-                      transition={{ duration: 1.5, delay: i * 0.2 }}
-                      exit="out"
                     >
                       <motion.div
                         variants={variantsInner}
-                        transition={{ duration: 0.5, delay: i * 0.2 }}
+                        initial="hidden"
+                        animate="visible"
                         exit="out"
+                        transition={{ duration: 0.5 }}
                       >
                         <p>{project.node.frontmatter.categories.join(", ")}</p>
                       </motion.div>
@@ -245,22 +160,21 @@ const Index = ({ data }) => {
                       >
                         <motion.h2
                           variants={variantsInner}
-                          transition={{
-                            duration: 0.5,
-                            delay: i * 0.2,
-                          }}
+                          initial="hidden"
+                          animate="visible"
                           exit="out"
+                          transition={{ duration: 0.5 }}
                         >
                           {project.node.frontmatter.title}
                         </motion.h2>
                       </Link>
-                    </motion.li>
+                    </li>
                   )
                 })
               : projectList &&
                 projectList.map((project, i) => {
                   return (
-                    <motion.li
+                    <li
                       key={project.node.id}
                       style={{
                         color:
@@ -270,17 +184,14 @@ const Index = ({ data }) => {
                               project.node.frontmatter.categories[0]
                           ).tag_color || "#000000",
                       }}
-                      variants={variantsMobileList}
-                      initial="hidden"
-                      animate="visible"
-                      transition={{ duration: 0.45, delay: i * 0.2 }}
-                      exit="out"
                     >
                       <motion.div
                         className="inner-info-wrap"
                         variants={variantsInner}
-                        transition={{ duration: 0.35, delay: 0.4 + i * 0.2 }}
+                        initial="hidden"
+                        animate="visible"
                         exit="out"
+                        transition={{ duration: 0.5 }}
                       >
                         <p>{project.node.frontmatter.categories}</p>
                         <h2>{project.node.frontmatter.title}</h2>
@@ -288,8 +199,10 @@ const Index = ({ data }) => {
                       <motion.div
                         className="inner-image-wrap"
                         variants={variantsInner}
-                        transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
+                        initial="hidden"
+                        animate="visible"
                         exit="out"
+                        transition={{ duration: 0.5 }}
                       >
                         {project.node.frontmatter.image_gallery.map(
                           (item, index) => {
@@ -297,13 +210,18 @@ const Index = ({ data }) => {
                               <figure key={index}>
                                 <div className="wrapper">
                                   <img
-                                    src={item.image.childImageSharp.fluid.src}
+                                    src={
+                                      item.image.childImageSharp.gatsbyImageData
+                                        .images.fallback.src
+                                    }
                                     sizes={
-                                      item.image.childImageSharp.fluid.sizes
+                                      item.image.childImageSharp.gatsbyImageData
+                                        .images.fallback.sizes
                                     }
                                     alt=""
                                     srcSet={
-                                      item.image.childImageSharp.fluid.srcSet
+                                      item.image.childImageSharp.gatsbyImageData
+                                        .images.fallback.srcSet
                                     }
                                   />
                                 </div>
@@ -314,7 +232,7 @@ const Index = ({ data }) => {
                         )}
                         <p>{project.node.frontmatter.description}</p>
                       </motion.div>
-                    </motion.li>
+                    </li>
                   )
                 })}
           </AnimatePresence>
@@ -345,15 +263,7 @@ export const data = graphql`
               featured_image
               image {
                 childImageSharp {
-                  fluid(maxHeight: 504) {
-                    aspectRatio
-                    presentationWidth
-                    presentationHeight
-                    ...GatsbyImageSharpFluid
-                  }
-                  fixed(height: 504) {
-                    ...GatsbyImageSharpFixed
-                  }
+                  gatsbyImageData
                 }
               }
             }

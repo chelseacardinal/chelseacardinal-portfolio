@@ -1,6 +1,6 @@
 import React from "react"
 
-const featureImageOverlay = ({ projectList }) => {
+const FeatureImageOverlay = ({ projectList, imageIndex }) => {
   return (
     <div className="feature-image-overlay">
       {projectList &&
@@ -13,19 +13,34 @@ const featureImageOverlay = ({ projectList }) => {
                   imageIndex.index === project.node.id ? "block" : "none",
               }}
               src={
-                project &&
-                project.node.frontmatter.image_gallery[0].image.childImageSharp
-                  .fluid.src
+                project.node.frontmatter.image_gallery.find(
+                  item => item.featured_image
+                )
+                  ? project.node.frontmatter.image_gallery.find(
+                      item => item.featured_image
+                    ).image.childImageSharp.gatsbyImageData.images.fallback.src
+                  : project.node.frontmatter.image_gallery[0].image
+                      .childImageSharp.gatsbyImageData.images.fallback.src
               }
               sizes={
-                project &&
-                project.node.frontmatter.image_gallery[0].image.childImageSharp
-                  .fluid.sizes
+                project.node.frontmatter.image_gallery.find(
+                  item => item.featured_image
+                )
+                  ? project.node.frontmatter.image_gallery.find(
+                      item => item.featured_image
+                    ).image.childImageSharp.gatsbyImageData.images.fallback.src
+                  : project.node.frontmatter.image_gallery[0].image
+                      .childImageSharp.gatsbyImageData.images.fallback.sizes
               }
               srcSet={
-                project &&
-                project.node.frontmatter.image_gallery[0].image.childImageSharp
-                  .fluid.srcSet
+                project.node.frontmatter.image_gallery.find(
+                  item => item.featured_image
+                )
+                  ? project.node.frontmatter.image_gallery.find(
+                      item => item.featured_image
+                    ).image.childImageSharp.gatsbyImageData.images.fallback.src
+                  : project.node.frontmatter.image_gallery[0].image
+                      .childImageSharp.gatsbyImageData.images.fallback.srcSet
               }
               alt=""
             />
@@ -35,4 +50,4 @@ const featureImageOverlay = ({ projectList }) => {
   )
 }
 
-export default featureImageOverlay
+export default FeatureImageOverlay

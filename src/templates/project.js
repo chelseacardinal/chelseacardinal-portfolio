@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 import ProjectNav from "../components/projectNav"
-import "../styles/project.css"
 import { motion } from "framer-motion"
-// import LazyImage from "../utils/lazy-image"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Mousewheel, Keyboard } from "swiper"
+import LazyImagePicture from "../utils/lazy-image-picture"
 import "swiper/swiper-bundle.css"
+import "../styles/project.css"
 
 SwiperCore.use([Mousewheel, Keyboard])
 
@@ -35,7 +35,6 @@ const Project = ({ data, pageContext }) => {
   const project = data.markdownRemark.frontmatter
   const site = data.siteJson
   return (
-    // <>
     <motion.div
       className="page-rapper"
       initial={{ backgroundColor: site.index_color }}
@@ -43,7 +42,11 @@ const Project = ({ data, pageContext }) => {
       transition={{ duration: 0.5 }}
       exit={{ backgroundColor: site.index_color }}
     >
-      <ProjectNav category={project.categories} title={project.title} textColor={project.text_color} />
+      <ProjectNav
+        category={project.categories}
+        title={project.title}
+        textColor={project.text_color}
+      />
       <motion.div
         className="project-container"
         variants={variants}
@@ -51,7 +54,10 @@ const Project = ({ data, pageContext }) => {
         animate="visible"
         exit="out"
       >
-        <div className="project-description" style={{ color: project.text_color || "#000000" }}>
+        <div
+          className="project-description"
+          style={{ color: project.text_color || "#000000" }}
+        >
           <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
           <div className="project-paginator">
             <Link
@@ -73,10 +79,14 @@ const Project = ({ data, pageContext }) => {
         </div>
 
         <Swiper
-          speed={400}
+          observer="true"
+          observeParents="true"
+          key={project.image_gallery.length}
+          speed={500}
           spaceBetween={30}
           slidesPerView="auto"
           mousewheel
+          grabCursor="true"
           keyboard
           onSlideChange={() => console.log("slide change")}
           onSwiper={swiper => console.log(swiper)}
@@ -84,16 +94,29 @@ const Project = ({ data, pageContext }) => {
           {project.image_gallery.map((item, index) => {
             return (
               <SwiperSlide key={index} tag="figure">
-                <div className="wrapper">
-                  <img
-                    src={item.image.childImageSharp.fluid.src}
-                    sizes={item.image.childImageSharp.fluid.sizes}
-                    alt=""
-                    srcSet={item.image.childImageSharp.fluid.srcSet}
-                    loading="lazy"
-                  />
-                </div>
-                <figcaption style={{ flex: 0, color: project.text_color || "#000000" }}>{item.caption}</figcaption>
+                <LazyImagePicture
+                  src={
+                    item.image.childImageSharp.gatsbyImageData.images.fallback
+                      .src
+                  }
+                  media={
+                    item.image.childImageSharp.gatsbyImageData.images.fallback
+                      .sizes
+                  }
+                  srcSet={
+                    item.image.childImageSharp.gatsbyImageData.images.fallback
+                      .srcSet
+                  }
+                  wpSrcSet={
+                    item.image.childImageSharp.gatsbyImageData.images.sources[0]
+                      .srcSet
+                  }
+                />
+                <figcaption
+                  style={{ flex: 0, color: project.text_color || "#000000" }}
+                >
+                  {item.caption}
+                </figcaption>
               </SwiperSlide>
             )
           })}
@@ -113,7 +136,6 @@ const Project = ({ data, pageContext }) => {
         </Swiper>
       </motion.div>
     </motion.div>
-    // </>
   )
 }
 
@@ -132,15 +154,7 @@ export const data = graphql`
           caption
           image {
             childImageSharp {
-              fluid(maxHeight: 813) {
-                aspectRatio
-                presentationWidth
-                presentationHeight
-                ...GatsbyImageSharpFluid
-              }
-              fixed(height: 813) {
-                ...GatsbyImageSharpFixed
-              }
+              gatsbyImageData
             }
           }
         }

@@ -47,14 +47,22 @@
 }
 
 .swiper-slide {
+  display: block;
   width: auto !important;
   flex: 0;
 }
 
 .swiper-slide .wrapper {
+  display: block;
   width: auto;
   height: 93%;
   max-height: 813px;
+}
+
+.swiper-slide .wrapper picture {
+  display: block;
+  width: auto;
+  height: 100%;
 }
 
 .swiper-slide .wrapper img {

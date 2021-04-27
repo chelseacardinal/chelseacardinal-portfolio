@@ -23,24 +23,6 @@ const variantsOuterWrap = {
   },
 }
 
-const variantsList = {
-  hidden: {
-    // x: 0,
-    // width: "0%",
-  },
-  visible: {
-    // x: 0,
-    // width: "100%",
-  },
-  out: {
-    // x: "100vw",
-    // transition: {
-    //   duration: 1,
-    //   when: "afterChildren",
-    // },
-  },
-}
-
 const variantsInner = {
   hidden: {
     opacity: 0,
@@ -62,12 +44,12 @@ const ImageIndex = ({ data }) => {
     1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
   )
   const { width } = useWindowSize()
-  // const siteTitle = data.site.siteMetadata.title
-  // const animationTime =
-  //   1.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
 
   const categoryColors = data.siteJson.category_color
   const categoryTags = data.siteJson.category_tags
+  const indexTextColor = data.siteJson.index_text_color
+  const IndexColor = data.siteJson.index_color
+  const mobileMenuColor = data.siteJson.mobile_menu_background_color
 
   const filterProject = name => {
     setProjectList([])
@@ -103,14 +85,20 @@ const ImageIndex = ({ data }) => {
   }
 
   return (
-    <>
+    <div
+      className="page-rapper"
+      style={{ backgroundColor: IndexColor, minHeight: "100vh" }}
+    >
       <Nav
         about={() => setAbout(!about)}
         animationTime={animationTime}
         imageIndex={false}
         category={categoryTags}
+        catColors={categoryColors}
         filterProject={filterProject}
         width={width}
+        textColor={indexTextColor}
+        menuColor={mobileMenuColor}
       />
       <motion.div
         variants={variantsOuterWrap}
@@ -128,7 +116,7 @@ const ImageIndex = ({ data }) => {
             {projectList &&
               projectList.map((project, i) => {
                 return (
-                  <motion.li
+                  <li
                     key={project.node.id}
                     style={{
                       color:
@@ -138,18 +126,15 @@ const ImageIndex = ({ data }) => {
                             project.node.frontmatter.categories[0]
                         ).tag_color || "#000000",
                     }}
-                    variants={variantsList}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 1.5, delay: i * 0.2 }}
-                    exit="out"
                   >
                     <Link to={`${project.node.fields.slug}`}>
                       <motion.div
                         className="inner-info-wrap"
                         variants={variantsInner}
-                        transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
+                        initial="hidden"
+                        animate="visible"
                         exit="out"
+                        transition={{ duration: 0.5 }}
                       >
                         <p>{project.node.frontmatter.categories.join(", ")}</p>
 
@@ -158,8 +143,10 @@ const ImageIndex = ({ data }) => {
                       <motion.div
                         className="inner-image-wrap"
                         variants={variantsInner}
-                        transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
+                        initial="hidden"
+                        animate="visible"
                         exit="out"
+                        transition={{ duration: 0.5 }}
                       >
                         {project.node.frontmatter.image_gallery.map(
                           (item, index) => {
@@ -167,13 +154,18 @@ const ImageIndex = ({ data }) => {
                               <figure key={index}>
                                 <div className="wrapper">
                                   <img
-                                    src={item.image.childImageSharp.fluid.src}
+                                    src={
+                                      item.image.childImageSharp.gatsbyImageData
+                                        .images.fallback.src
+                                    }
                                     sizes={
-                                      item.image.childImageSharp.fluid.sizes
+                                      item.image.childImageSharp.gatsbyImageData
+                                        .images.fallback.sizes
                                     }
                                     alt=""
                                     srcSet={
-                                      item.image.childImageSharp.fluid.srcSet
+                                      item.image.childImageSharp.gatsbyImageData
+                                        .images.fallback.srcSet
                                     }
                                   />
                                 </div>
@@ -184,13 +176,13 @@ const ImageIndex = ({ data }) => {
                         )}
                       </motion.div>
                     </Link>
-                  </motion.li>
+                  </li>
                 )
               })}
           </AnimatePresence>
         </ul>
       </motion.div>
-    </>
+    </div>
   )
 }
 
@@ -214,15 +206,7 @@ export const data = graphql`
             image_gallery {
               image {
                 childImageSharp {
-                  fluid(maxHeight: 159) {
-                    aspectRatio
-                    presentationWidth
-                    presentationHeight
-                    ...GatsbyImageSharpFluid
-                  }
-                  fixed(height: 159) {
-                    ...GatsbyImageSharpFixed
-                  }
+                  gatsbyImageData
                 }
               }
             }
@@ -236,6 +220,9 @@ export const data = graphql`
         tag_color
       }
       category_tags
+      index_text_color
+      index_color
+      mobile_menu_background_color
     }
   }
 `
