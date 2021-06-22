@@ -18,6 +18,8 @@ front_matter_path: "../assets"
 use_front_matter_path: false
 file_template: ":filename:"
 build:
+  preview_env:
+  - GATSBY_HOT_LOADER=fast-refresh
   preview_output_directory: public
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
