@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
+import useWindowSize from "../components/utils/useWindowSize"
 
 const variantsList = {
   hidden: {
@@ -57,6 +58,8 @@ const Nav = ({
   imageIndex,
 }) => {
   const [mobileMenu, setMobileMenu] = useState(false)
+  const [activeAbout, setActiveAbout] = useState(false)
+  const size = useWindowSize()
   const categoriesArrays = category
   const categoriesRaw = [].concat.apply([], categoriesArrays)
   const categories = [...new Set(categoriesRaw)]
@@ -72,10 +75,21 @@ const Nav = ({
       return "#000000"
     }
   }
+
+  function aboutHandler() {
+    about()
+    if (size.width < 845) {
+      setActiveAbout(!activeAbout)
+    }
+  }
   return (
     <>
       <motion.nav
-        style={mobileMenu ? { backgroundColor: menuColor } : {}}
+        style={
+          mobileMenu && size.width < 845
+            ? { backgroundColor: menuColor, position: "fixed" }
+            : {}
+        }
         className="index"
         variants={variantsList}
         initial="hidden"
@@ -84,7 +98,9 @@ const Nav = ({
       >
         <motion.div
           className="wrapper"
-          style={mobileMenu ? { backgroundColor: menuColor } : {}}
+          style={
+            mobileMenu && size.width < 845 ? { backgroundColor: menuColor } : {}
+          }
         >
           <motion.div
             className="about"
@@ -94,8 +110,11 @@ const Nav = ({
             exit="out"
           >
             <h1>
-              <button style={{ color: textColor }} onClick={about}>
-                Studio of Chelsea Cardinal
+              <button
+                style={{ color: textColor }}
+                onClick={!mobileMenu ? aboutHandler : null}
+              >
+                {activeAbout ? <span>+</span> : "Studio of Chelsea Cardinal"}
               </button>
             </h1>
           </motion.div>
@@ -130,7 +149,7 @@ const Nav = ({
           <motion.button
             style={{ color: textColor }}
             initial={false}
-            animate={{ rotate: mobileMenu ? 45 : 0 }}
+            animate={{ rotate: mobileMenu && size.width < 845 ? 45 : 0 }}
             transition={{ ease: "easeInOut", duration: 0.25 }}
             className="mobile-menu-btn"
             onClick={() => setMobileMenu(!mobileMenu)}
@@ -153,7 +172,7 @@ const Nav = ({
       <motion.ul
         style={{
           backgroundColor: menuColor,
-          display: mobileMenu ? "block" : "none",
+          display: mobileMenu && size.width < 845 ? "block" : "none",
         }}
         initial={false}
         animate={{ opacity: mobileMenu ? 1 : 0 }}

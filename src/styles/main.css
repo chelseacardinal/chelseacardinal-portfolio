@@ -217,8 +217,8 @@ main {
   .container ul li p {
     font-family: freight-text-pro, "Times New Roman", Times, serif;
     font-style: italic;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 13px;
+    line-height: 13px;
     min-width: 200px;
     padding: 5px 0 12px;
     white-space: nowrap;
@@ -236,8 +236,8 @@ main {
 
   .container ul li .inner-info-wrap h2 {
     font-family: freight-text-pro, "Times New Roman", Times, serif;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 13px;
+    line-height: 13px;
     padding: 0;
     white-space: nowrap;
   }
@@ -246,8 +246,8 @@ main {
     font-family: freight-text-pro, "Times New Roman", Times, serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 18px;
     color: #393939;
     min-width: 248px;
     padding: 0 0 0 13px;

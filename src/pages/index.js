@@ -85,6 +85,9 @@ const Index = ({ data }) => {
     setanimationTime(
       10.65 + storeList.length * 0.2 + (0.5 - storeList.length * 0.2)
     )
+    if (about) {
+      setAbout(false)
+    }
   }
 
   return (

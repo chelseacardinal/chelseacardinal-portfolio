@@ -81,6 +81,8 @@
 
 .swiper-slide.next-link {
   display: flex;
+  height: 93%;
+  max-height: 813px;
 }
 
 .swiper-slide a {
