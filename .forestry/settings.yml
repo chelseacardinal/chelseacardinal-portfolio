@@ -1,17 +1,17 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: ""
-webhook_url:
+admin_path: ''
+webhook_url: 
 sections:
-  - type: document
-    path: content/site/site.json
-    label: Index
-  - type: directory
-    path: content/projects
-    label: Projects
-    create: all
-    match: "**/*"
+- type: document
+  path: content/site/site.json
+  label: Index
+- type: directory
+  path: content/projects
+  label: Projects
+  create: all
+  match: "**/*"
 upload_dir: content/assets
 public_path: "../assets"
 front_matter_path: "../assets"
@@ -19,7 +19,7 @@ use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_env:
-    - GATSBY_HOT_LOADER=fast-refresh
+  - GATSBY_HOT_LOADER=fast-refresh
   preview_output_directory: public
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
