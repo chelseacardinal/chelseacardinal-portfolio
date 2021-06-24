@@ -70,7 +70,7 @@ const About = ({ width }) => {
           className={about}
           variants={variants}
           initial="hidden"
-          animate={width > 844 ? "visible" : "visibleMobile" }
+          animate={width > 844 ? "visible" : "visibleMobile"}
           exit="out"
         >
           <motion.p variants={variantsInner}>{data.siteJson.bio}</motion.p>

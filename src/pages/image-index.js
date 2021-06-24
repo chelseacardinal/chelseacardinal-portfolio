@@ -2,9 +2,10 @@ import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 import Nav from "../components/nav"
 import About from "../components/about"
-import "../styles/main.css"
 import { motion, AnimatePresence } from "framer-motion"
 import useWindowSize from "../utils/useWindowSize"
+import { GatsbyImage } from "gatsby-plugin-image"
+import "../styles/main.css"
 
 const variantsOuterWrap = {
   hidden: {
@@ -151,26 +152,14 @@ const ImageIndex = ({ data }) => {
                         {project.node.frontmatter.image_gallery.map(
                           (item, index) => {
                             return (
-                              <figure key={index}>
-                                <div className="wrapper">
-                                  <img
-                                    src={
-                                      item.image.childImageSharp.gatsbyImageData
-                                        .images.fallback.src
-                                    }
-                                    sizes={
-                                      item.image.childImageSharp.gatsbyImageData
-                                        .images.fallback.sizes
-                                    }
-                                    alt=""
-                                    srcSet={
-                                      item.image.childImageSharp.gatsbyImageData
-                                        .images.fallback.srcSet
-                                    }
-                                  />
-                                </div>
-                                <figcaption>{item.caption}</figcaption>
-                              </figure>
+                              <div key={index} className="wrapper">
+                                <GatsbyImage
+                                  image={
+                                    item.image.childImageSharp.gatsbyImageData
+                                  }
+                                  alt={item.caption}
+                                />
+                              </div>
                             )
                           }
                         )}
@@ -204,9 +193,14 @@ export const data = graphql`
             color
             description
             image_gallery {
+              caption
               image {
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(
+                    height: 189
+                    placeholder: NONE
+                    formats: [AUTO, WEBP, AVIF]
+                  )
                 }
               }
             }

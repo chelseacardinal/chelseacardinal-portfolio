@@ -14,24 +14,17 @@ const LazyImagePicture = ({ src, srcSet, wpSrcSet, media, alt }) => {
     <div ref={!supportsLazyLoading ? ref : undefined} className="wrapper">
       {inView || supportsLazyLoading ? (
         <picture>
-          <source
-            media={media}
-            srcSet={wpSrcSet}
-            type="image/webp"
-          />
-          <source
-            media={media}
-            srcSet={srcSet}
-            type="image/jpeg"
-          />
-          <img
-            src={src}
-            alt={alt}
-            loading="lazy"
-          />
+          <source media={media} srcSet={wpSrcSet} type="image/webp" />
+          <source media={media} srcSet={srcSet} type="image/jpeg" />
+          <img src={src} alt={alt} height="813" loading="lazy" />
         </picture>
       ) : (
-        <img className="lazy-placeholder" src={LazyPlaceholderImg} alt="" />
+        <img
+          className="lazy-placeholder"
+          src={LazyPlaceholderImg}
+          alt={alt}
+          height="813"
+        />
       )}
     </div>
   )

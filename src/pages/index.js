@@ -6,6 +6,8 @@ import "../styles/main.css"
 import { motion, AnimatePresence } from "framer-motion"
 import useWindowSize from "../utils/useWindowSize"
 import FeatureImageOverlay from "../components/featureImageOverlay"
+import { GatsbyImage } from "gatsby-plugin-image"
+import Seo from "../components/seo"
 
 const variantsOuterWrap = {
   hidden: {
@@ -53,6 +55,7 @@ const Index = ({ data }) => {
   const indexTextColor = data.siteJson.index_text_color
   const IndexColor = data.siteJson.index_color
   const mobileMenuColor = data.siteJson.mobile_menu_background_color
+  const bio = data.siteJson.bio
 
   const filterProject = name => {
     setProjectList([])
@@ -91,157 +94,153 @@ const Index = ({ data }) => {
   }
 
   return (
-    <div
-      className="page-rapper"
-      style={{ backgroundColor: IndexColor, minHeight: "100vh" }}
-    >
-      <Nav
-        textColor={indexTextColor}
-        menuColor={mobileMenuColor}
-        about={() => setAbout(!about)}
-        animationTime={animationTime}
-        imageIndex={true}
-        category={categoryTags}
-        catColors={categoryColors}
-        filterProject={filterProject}
-        width={width}
-      />
-      <motion.div
-        variants={variantsOuterWrap}
-        initial="hidden"
-        animate="visible"
-        exit="out"
-        className="container"
+    <>
+      <Seo metaDescription={bio} />
+      <div
+        className="page-rapper"
+        style={{ backgroundColor: IndexColor, minHeight: "100vh" }}
       >
-        {width > 844 && (
-          <FeatureImageOverlay
-            projectList={projectList}
-            imageIndex={imageIndex}
-          />
-        )}
+        <Nav
+          textColor={indexTextColor}
+          menuColor={mobileMenuColor}
+          about={() => setAbout(!about)}
+          animationTime={animationTime}
+          imageIndex={true}
+          category={categoryTags}
+          catColors={categoryColors}
+          filterProject={filterProject}
+          width={width}
+        />
+        <motion.div
+          variants={variantsOuterWrap}
+          initial="hidden"
+          animate="visible"
+          exit="out"
+          className="container"
+        >
+          {width > 844 && (
+            <FeatureImageOverlay
+              projectList={projectList}
+              featureSize={data.featureImage}
+              imageIndex={imageIndex}
+            />
+          )}
 
-        <ul key="index">
-          <AnimatePresence>{about && <About width={width} />}</AnimatePresence>
-          <AnimatePresence
-            initial={false}
-            onExitComplete={() => setProjectList(storeList)}
-          >
-            {width > 844
-              ? projectList &&
-                projectList.map((project, i) => {
-                  return (
-                    <li
-                      className={project.node.frontmatter.categories[0]}
-                      key={project.node.id}
-                      style={{
-                        color:
-                          categoryColors.find(
-                            tag =>
-                              tag.select_category ===
-                              project.node.frontmatter.categories[0]
-                          ).tag_color || "#000000",
-                      }}
-                    >
-                      <motion.div
-                        variants={variantsInner}
-                        initial="hidden"
-                        animate="visible"
-                        exit="out"
-                        transition={{ duration: 0.5 }}
+          <ul key="index">
+            <AnimatePresence>
+              {about && <About width={width} />}
+            </AnimatePresence>
+            <AnimatePresence
+              initial={false}
+              onExitComplete={() => setProjectList(storeList)}
+            >
+              {width > 844
+                ? projectList &&
+                  projectList.map((project, i) => {
+                    return (
+                      <li
+                        className={project.node.frontmatter.categories[0]}
+                        key={project.node.id}
+                        style={{
+                          color:
+                            categoryColors.find(
+                              tag =>
+                                tag.select_category ===
+                                project.node.frontmatter.categories[0]
+                            ).tag_color || "#000000",
+                        }}
                       >
-                        <p>{project.node.frontmatter.categories.join(", ")}</p>
-                      </motion.div>
-                      <Link
-                        onMouseEnter={() =>
-                          setImageIndex({
-                            index: project.node.id,
-                            visible: true,
-                          })
-                        }
-                        onMouseLeave={() => setImageIndex({ visible: false })}
-                        to={`${project.node.fields.slug}`}
-                      >
-                        <motion.h2
+                        <motion.div
                           variants={variantsInner}
                           initial="hidden"
                           animate="visible"
                           exit="out"
                           transition={{ duration: 0.5 }}
                         >
-                          {project.node.frontmatter.title}
-                        </motion.h2>
-                      </Link>
-                    </li>
-                  )
-                })
-              : projectList &&
-                projectList.map((project, i) => {
-                  return (
-                    <li
-                      key={project.node.id}
-                      style={{
-                        color:
-                          categoryColors.find(
-                            tag =>
-                              tag.select_category ===
-                              project.node.frontmatter.categories[0]
-                          ).tag_color || "#000000",
-                      }}
-                    >
-                      <motion.div
-                        className="inner-info-wrap"
-                        variants={variantsInner}
-                        initial="hidden"
-                        animate="visible"
-                        exit="out"
-                        transition={{ duration: 0.5 }}
+                          <p>
+                            {project.node.frontmatter.categories.join(", ")}
+                          </p>
+                        </motion.div>
+                        <Link
+                          onMouseEnter={() =>
+                            setImageIndex({
+                              index: project.node.id,
+                              visible: true,
+                            })
+                          }
+                          onMouseLeave={() => setImageIndex({ visible: false })}
+                          to={`${project.node.fields.slug}`}
+                        >
+                          <motion.h2
+                            variants={variantsInner}
+                            initial="hidden"
+                            animate="visible"
+                            exit="out"
+                            transition={{ duration: 0.5 }}
+                          >
+                            {project.node.frontmatter.title}
+                          </motion.h2>
+                        </Link>
+                      </li>
+                    )
+                  })
+                : projectList &&
+                  projectList.map((project, i) => {
+                    return (
+                      <li
+                        key={project.node.id}
+                        style={{
+                          color:
+                            categoryColors.find(
+                              tag =>
+                                tag.select_category ===
+                                project.node.frontmatter.categories[0]
+                            ).tag_color || "#000000",
+                        }}
                       >
-                        <p>{project.node.frontmatter.categories}</p>
-                        <h2>{project.node.frontmatter.title}</h2>
-                      </motion.div>
-                      <motion.div
-                        className="inner-image-wrap"
-                        variants={variantsInner}
-                        initial="hidden"
-                        animate="visible"
-                        exit="out"
-                        transition={{ duration: 0.5 }}
-                      >
-                        {project.node.frontmatter.image_gallery.map(
-                          (item, index) => {
-                            return (
-                              <figure key={index}>
-                                <div className="wrapper">
-                                  <img
-                                    src={
+                        <motion.div
+                          className="inner-info-wrap"
+                          variants={variantsInner}
+                          initial="hidden"
+                          animate="visible"
+                          exit="out"
+                          transition={{ duration: 0.5 }}
+                        >
+                          <p>{project.node.frontmatter.categories}</p>
+                          <h2>{project.node.frontmatter.title}</h2>
+                        </motion.div>
+                        <motion.div
+                          className="inner-image-wrap"
+                          variants={variantsInner}
+                          initial="hidden"
+                          animate="visible"
+                          exit="out"
+                          transition={{ duration: 0.5 }}
+                        >
+                          {project.node.frontmatter.image_gallery.map(
+                            (item, index) => {
+                              return (
+                                <div key={index} className="wrapper">
+                                  <GatsbyImage
+                                    image={
                                       item.image.childImageSharp.gatsbyImageData
-                                        .images.fallback.src
                                     }
-                                    sizes={
-                                      item.image.childImageSharp.gatsbyImageData
-                                        .images.fallback.sizes
-                                    }
-                                    alt=""
-                                    srcSet={
-                                      item.image.childImageSharp.gatsbyImageData
-                                        .images.fallback.srcSet
-                                    }
+                                    alt={item.caption}
                                   />
                                 </div>
-                                <figcaption>{item.caption}</figcaption>
-                              </figure>
-                            )
-                          }
-                        )}
-                        <p>{project.node.frontmatter.description}</p>
-                      </motion.div>
-                    </li>
-                  )
-                })}
-          </AnimatePresence>
-        </ul>
-      </motion.div>
-    </div>
+                              )
+                            }
+                          )}
+                          <p>{project.node.frontmatter.description}</p>
+                        </motion.div>
+                      </li>
+                    )
+                  })}
+            </AnimatePresence>
+          </ul>
+        </motion.div>
+      </div>
+    </>
   )
 }
 
@@ -263,10 +262,39 @@ export const data = graphql`
             color
             description
             image_gallery {
+              caption
               featured_image
               image {
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(
+                    height: 246
+                    placeholder: NONE
+                    formats: [AUTO, WEBP, AVIF]
+                    quality: 75
+                  )
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    featureImage: allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            image_gallery {
+              caption
+              featured_image
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    height: 504
+                    placeholder: NONE
+                    formats: [AUTO, WEBP, AVIF]
+                    quality: 75
+                  )
                 }
               }
             }
@@ -275,6 +303,7 @@ export const data = graphql`
       }
     }
     siteJson {
+      bio
       category_color {
         select_category
         tag_color

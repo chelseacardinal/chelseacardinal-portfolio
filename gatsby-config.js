@@ -1,15 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Studio of Chelsea Cardinal`,
-    author: {
-      name: `Chelsea Cardinal`,
-      summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    description: `LChelsea Cardinal is a graphic designer, illustrator and fashion designer. She grew up on the canadian prairies, attended the Alberta College of Art + Design, moved to New York in 2005, worked at GQ Magazine for many years and is now freelancing. Chelsea Cardinal is a graphic designer, illustrator and fashion designer. She grew up on the canadian prairies, attended the Alberta College of Art + Design, moved to New York in 2005, worked at GQ Magazine for many years and is now freelancing.`,
     siteUrl: `https://elegant-austin-8bf305.netlify.app`,
-    social: {
-      instagram: `chelseacardinal`,
-    },
   },
   plugins: [
     `gatsby-transformer-json`,
@@ -68,7 +61,7 @@ module.exports = {
         name: `about`,
       },
     },
-    `gatsby-plugin-image`
+    `gatsby-plugin-image`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
