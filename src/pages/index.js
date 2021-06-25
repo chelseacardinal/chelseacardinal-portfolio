@@ -130,7 +130,10 @@ const Index = ({ data }) => {
             <AnimatePresence>
               {about && <About width={width} />}
             </AnimatePresence>
-            <AnimatePresence onExitComplete={() => setProjectList(storeList)}>
+            <AnimatePresence
+              initial={false}
+              onExitComplete={() => setProjectList(storeList)}
+            >
               {width > 844
                 ? projectList &&
                   projectList.map((project, i) => {

@@ -84,6 +84,12 @@ const Nav = ({
   }
   return (
     <>
+      {mobileMenu && size.width < 845 && (
+        <div
+          className="menu-fixed-placeholder"
+          style={{ height: "36px" }}
+        ></div>
+      )}
       <motion.nav
         style={
           mobileMenu && size.width < 845

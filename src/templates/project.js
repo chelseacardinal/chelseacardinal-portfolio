@@ -36,12 +36,7 @@ const Project = ({ data, pageContext }) => {
   const [paginator, setPaginator] = useState("project")
   const project = data.markdownRemark.frontmatter
   const site = data.siteJson
-  console.log(data)
   const size = useWindowSize()
-  console.log(Swiper)
-  // useEffect(() => {
-  //   Swiper.updateSize()
-  // }, [size])
 
   return (
     <>
