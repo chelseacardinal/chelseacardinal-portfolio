@@ -129,7 +129,12 @@ const Project = ({ data, pageContext }) => {
                       style={{
                         color: project.text_color || "#000000",
                         maxWidth:
-                          item.image.childImageSharp.gatsbyImageData.width,
+                          item.image.childImageSharp.gatsbyImageData &&
+                          item.image.childImageSharp.gatsbyImageData.height &&
+                          size.elheight &&
+                          (item.image.childImageSharp.gatsbyImageData.width /
+                            item.image.childImageSharp.gatsbyImageData.height) *
+                            size.elheight,
                       }}
                     >
                       {item.caption}
