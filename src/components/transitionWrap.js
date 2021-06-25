@@ -1,11 +1,11 @@
 import React from "react"
-import { AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 const TransitionWrap = ({ children, location }) => {
   return (
     <>
       <AnimatePresence initial={false} exitBeforeEnter>
-        <main key={location.pathname}>{children}</main>
+        <motion.main key={location.pathname}>{children}</motion.main>
       </AnimatePresence>
     </>
   )

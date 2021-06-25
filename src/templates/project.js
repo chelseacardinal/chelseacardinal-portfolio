@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Mousewheel, Keyboard } from "swiper"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
+import useWindowSize from "../components/utils/useWindowSize"
 import "swiper/swiper-bundle.css"
 import "../styles/project.css"
 
@@ -35,7 +36,13 @@ const Project = ({ data, pageContext }) => {
   const [paginator, setPaginator] = useState("project")
   const project = data.markdownRemark.frontmatter
   const site = data.siteJson
-  console.log(site)
+  console.log(data)
+  const size = useWindowSize()
+  console.log(Swiper)
+  // useEffect(() => {
+  //   Swiper.updateSize()
+  // }, [size])
+
   return (
     <>
       <Seo metaTitle={project.title} metaDescription={project.description} />
@@ -84,54 +91,67 @@ const Project = ({ data, pageContext }) => {
             </div>
           </div>
 
-          <Swiper
-            observer="true"
-            observeParents="true"
-            key={project.image_gallery.length}
-            speed={500}
-            spaceBetween={30}
-            slidesPerView="auto"
-            mousewheel
-            grabCursor="true"
-            keyboard
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={swiper => console.log(swiper)}
-          >
-            {project.image_gallery.map((item, index) => {
-              return (
-                <SwiperSlide key={index} tag="figure">
-                  <div className="wrapper">
-                    <GatsbyImage
-                      image={item.image.childImageSharp.gatsbyImageData}
-                      alt=""
-                    />
-                  </div>
-                  <figcaption
-                    style={{
-                      color: project.text_color || "#000000",
-                      maxWidth:
-                        item.image.childImageSharp.gatsbyImageData.width,
-                    }}
-                  >
-                    {item.caption}
-                  </figcaption>
-                </SwiperSlide>
-              )
-            })}
-            <SwiperSlide className="next-link">
-              {pageContext.next ? (
-                <Link to={pageContext.next.fields.slug}>
-                  next project <span> </span>
-                  {">"}
-                </Link>
-              ) : (
-                <Link to="/">
-                  back to index <span> </span>
-                  {">"}
-                </Link>
-              )}
-            </SwiperSlide>
-          </Swiper>
+          {size && (
+            <Swiper
+              observer="true"
+              observeParents="true"
+              key={project.image_gallery.length}
+              speed={500}
+              spaceBetween={30}
+              slidesPerView="auto"
+              mousewheel
+              grabCursor="true"
+              keyboard
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={swiper => console.log(swiper)}
+            >
+              {project.image_gallery.map((item, index) => {
+                return (
+                  <SwiperSlide key={index} tag="figure">
+                    <div
+                      className="wrapper"
+                      style={{
+                        width:
+                          item.image.childImageSharp.gatsbyImageData &&
+                          item.image.childImageSharp.gatsbyImageData.height &&
+                          size.elheight &&
+                          (item.image.childImageSharp.gatsbyImageData.width /
+                            item.image.childImageSharp.gatsbyImageData.height) *
+                            size.elheight,
+                      }}
+                    >
+                      <GatsbyImage
+                        image={item.image.childImageSharp.gatsbyImageData}
+                        alt=""
+                      />
+                    </div>
+                    <figcaption
+                      style={{
+                        color: project.text_color || "#000000",
+                        maxWidth:
+                          item.image.childImageSharp.gatsbyImageData.width,
+                      }}
+                    >
+                      {item.caption}
+                    </figcaption>
+                  </SwiperSlide>
+                )
+              })}
+              <SwiperSlide className="next-link">
+                {pageContext.next ? (
+                  <Link to={pageContext.next.fields.slug}>
+                    next project <span> </span>
+                    {">"}
+                  </Link>
+                ) : (
+                  <Link to="/">
+                    back to index <span> </span>
+                    {">"}
+                  </Link>
+                )}
+              </SwiperSlide>
+            </Swiper>
+          )}
         </motion.div>
       </motion.div>
     </>
@@ -154,6 +174,7 @@ export const data = graphql`
           image {
             childImageSharp {
               gatsbyImageData(
+                layout: CONSTRAINED
                 height: 813
                 placeholder: NONE
                 formats: [AUTO, WEBP, AVIF]

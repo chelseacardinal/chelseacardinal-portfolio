@@ -52,12 +52,6 @@
   flex: 0 0 auto;
 }
 
-/* .swiper-slide > * {
-  height: 93%;
-  max-height: 813px;
-  width: auto;
-} */
-
 .swiper-slide .wrapper {
   display: block;
   width: auto;
@@ -113,12 +107,14 @@
 }
 
 @media only screen and (max-height: 846px) {
+  .swiper-slide {
+    padding: 0 0 30px;
+  }
   .swiper-slide .wrapper,
   .swiper-slide .image-wrapper {
     height: 100%;
     max-height: 813px;
     width: auto;
-    padding: 0 0 30px;
   }
   .swiper-slide figcaption {
     display: none;

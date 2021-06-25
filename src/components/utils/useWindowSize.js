@@ -6,6 +6,7 @@ export default function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
+    elheight: undefined,
   })
   useEffect(() => {
     // Handler to call on window resize
@@ -14,6 +15,9 @@ export default function useWindowSize() {
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
+        elheight: document.querySelector("figure .wrapper")
+          ? document.querySelector("figure .wrapper").offsetHeight
+          : null,
       })
     }
     // Add event listener
