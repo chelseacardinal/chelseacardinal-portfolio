@@ -8,6 +8,9 @@ description: A long caption here maybe up to 100 words sometimes if necessary bu
   here maybe up to 100 words sometimes if necessary but more likely will be about
   30 words tops
 image_gallery:
+- image: "../assets/prince.jpg"
+  caption: New image caption Prince
+  featured_image: false
 - image: "../assets/screen-shot-2020-06-17-at-5-50-14-pm.png"
   caption: New image caption 1
   featured_image: false
