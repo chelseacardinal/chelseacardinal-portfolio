@@ -9,6 +9,9 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
   nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
   officia deserunt mollit anim id est laborum.
 image_gallery:
+- image: "../assets/prince.jpg"
+  caption: New image caption another Prince image
+  featured_image: false
 - image: "../assets/test-slide-1.jpg"
   caption: New image caption 1
   featured_image: false
