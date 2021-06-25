@@ -11,7 +11,7 @@ image_gallery:
 - image: "../assets/prince.jpg"
   caption: New image caption Prince
   featured_image: false
-- image: "../assets/screen-shot-2020-06-17-at-5-50-14-pm.png"
+- image: "../assets/test-slide-1.jpg"
   caption: New image caption 1
   featured_image: false
 - image: "../assets/img_2729-13.jpg"
