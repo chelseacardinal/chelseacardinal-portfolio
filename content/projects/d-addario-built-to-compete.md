@@ -1,6 +1,6 @@
 ---
 date: 2020-12-10T13:31:21.000-05:00
-title: D’Addario/Built to Compete Test
+title: D’Addario/Built to Compete
 color: "#F8E71C"
 description: A long caption here maybe up to 100 words sometimes if necessary but
   more likely will be about 30 words tops. A long caption here maybe up to 100 words
