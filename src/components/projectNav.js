@@ -6,25 +6,21 @@ import X from "../components/X"
 
 const variantsList = {
   hidden: {
-    // x: 0,
-    // width: "0%",
+    opacity: 0,
   },
   visible: {
-    // x: 0,
-    // width: "100%",
-    // transition: {
-    //   duration: 1,
-    //   when: "beforeChildren",
-    // },
+    opacity: 1,
+    transition: {
+      // delay: 1,
+      duration: 0.5,
+    },
   },
   out: {
-    // x: "100vw",
-    // width: "100%",
-    // transition: {
-    //   delay: 0.5,
-    //   duration: 1,
-    //   when: "afterChildren",
-    // },
+    opacity: 0,
+    transition: {
+      // delay: 1,
+      duration: 0.5,
+    },
   },
 }
 
@@ -50,6 +46,7 @@ const variantsInner = {
 }
 
 const projectNav = props => {
+  console.log(props.lineColor)
   return (
     <motion.nav
       className="project"
@@ -58,9 +55,16 @@ const projectNav = props => {
       animate="visible"
       exit="out"
     >
-      <div className="wrapper">
+      <div
+        className="wrapper"
+        style={{
+          borderBottom: `solid 1px ${
+            props.lineColor ? props.lineColor : "#9879b0"
+          }`,
+        }}
+      >
         <motion.span
-          style={{color: props.textColor || "#000000"}}
+          style={{ color: props.textColor || "#000000" }}
           variants={variantsInner}
           initial="hidden"
           animate="visible"
@@ -70,7 +74,7 @@ const projectNav = props => {
         </motion.span>
 
         <motion.h2
-        style={{color: props.textColor || "#000000"}}
+          style={{ color: props.textColor || "#000000" }}
           variants={variantsInner}
           initial="hidden"
           animate="visible"

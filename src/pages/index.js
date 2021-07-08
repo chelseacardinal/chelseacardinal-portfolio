@@ -54,6 +54,7 @@ const Index = ({ data }) => {
   const categoryTags = data.siteJson.category_tags
   const indexTextColor = data.siteJson.index_text_color
   const IndexColor = data.siteJson.index_color
+  const IndexLineColor = data.siteJson.index_line_color
   const mobileMenuColor = data.siteJson.mobile_menu_background_color
   const bio = data.siteJson.bio
 
@@ -103,13 +104,14 @@ const Index = ({ data }) => {
         <Nav
           textColor={indexTextColor}
           menuColor={mobileMenuColor}
-          about={() => setAbout(!about)}
+          about={setAbout}
           animationTime={animationTime}
           imageIndex={true}
           category={categoryTags}
           catColors={categoryColors}
           filterProject={filterProject}
           width={width}
+          borderColor={IndexLineColor}
         />
         <motion.div
           variants={variantsOuterWrap}
@@ -148,6 +150,9 @@ const Index = ({ data }) => {
                                 tag.select_category ===
                                 project.node.frontmatter.categories[0]
                             ).tag_color || "#000000",
+                          borderBottom: `solid 1px ${
+                            IndexLineColor ? IndexLineColor : "#9879b0"
+                          }`,
                         }}
                       >
                         <motion.div
@@ -198,6 +203,15 @@ const Index = ({ data }) => {
                             ).tag_color || "#000000",
                         }}
                       >
+                        {i > 0 && (
+                          <hr
+                            style={{
+                              borderTop: `solid 1px ${
+                                IndexLineColor ? IndexLineColor : "#9879b0"
+                              }`,
+                            }}
+                          />
+                        )}
                         <motion.div
                           className="inner-info-wrap"
                           variants={variantsInner}
@@ -311,6 +325,7 @@ export const data = graphql`
       category_tags
       index_text_color
       index_color
+      index_line_color
       mobile_menu_background_color
     }
   }

@@ -33,6 +33,8 @@ const Seo = ({ metaDescription, metaTitle }) => {
 
   return (
     <Helmet>
+      <html lang="en" />
+      <meta charSet="utf-8" />
       <title>{title}</title>
       <link rel="canonical" href={url} />
       <meta name="description" content={description} />

@@ -52,6 +52,7 @@ const Project = ({ data, pageContext }) => {
           category={project.categories}
           title={project.title}
           textColor={project.text_color}
+          lineColor={project.project_line_color}
         />
         <motion.div
           className="project-container"
@@ -169,6 +170,7 @@ export const data = graphql`
         categories
         color
         text_color
+        project_line_color
         image_gallery {
           caption
           image {

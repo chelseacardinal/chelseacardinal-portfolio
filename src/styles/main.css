@@ -201,23 +201,34 @@ main {
   .container {
     width: 100%;
     height: 100%;
-    padding: 0 12px 0 12px;
+    padding: 0 0 0 12px;
     position: relative;
+    /* overflow: visible; */
   }
 
   .container ul li {
-    /* display: block; */
     flex-direction: column-reverse;
     border-bottom: solid 1px #9879b0;
+    border-bottom: none;
     position: relative;
     overflow: visible;
-    /* overflow: hidden; */
+    padding: 7px 0 0;
+  }
+
+  .container ul li hr {
+    position: absolute;
+    border-style: none;
+    margin: 0;
+    top: 0;
+    left: 0;
+    border-top: solid 1px #9879b0;
+    width: calc(100% - 12px);
   }
 
   .container ul li .wrapper {
     /* height: 246px;
     width: auto; */
-    padding: 7px 7px 7px 0;
+    padding: 0px 7px 7px 0;
   }
 
   .container ul li p {

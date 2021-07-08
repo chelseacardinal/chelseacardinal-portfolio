@@ -5,25 +5,21 @@ import useWindowSize from "../components/utils/useWindowSize"
 
 const variantsList = {
   hidden: {
-    // x: 0,
-    // width: "0%",
+    opacity: 0,
   },
   visible: {
-    // x: 0,
-    // width: "100%",
-    // transition: {
-    //   duration: 1,
-    //   when: "beforeChildren",
-    // },
+    opacity: 1,
+    transition: {
+      // delay: 1,
+      duration: 0.5,
+    },
   },
   out: {
-    // x: "100vw",
-    // width: "100%",
-    // transition: {
-    //   delay: 0.5,
-    //   duration: 1,
-    //   when: "afterChildren",
-    // },
+    opacity: 0,
+    transition: {
+      // delay: 1,
+      duration: 0.5,
+    },
   },
 }
 
@@ -56,6 +52,7 @@ const Nav = ({
   textColor,
   about,
   imageIndex,
+  borderColor,
 }) => {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [activeAbout, setActiveAbout] = useState(false)
@@ -77,11 +74,18 @@ const Nav = ({
   }
 
   function aboutHandler() {
-    about()
+    about(!activeAbout)
     if (size.width < 845) {
       setActiveAbout(!activeAbout)
     }
   }
+
+  function menuHandler() {
+    about(false)
+    setActiveAbout(false)
+    setMobileMenu(!mobileMenu)
+  }
+
   return (
     <>
       {mobileMenu && size.width < 845 && (
@@ -105,7 +109,18 @@ const Nav = ({
         <motion.div
           className="wrapper"
           style={
-            mobileMenu && size.width < 845 ? { backgroundColor: menuColor } : {}
+            mobileMenu && size.width < 845
+              ? {
+                  backgroundColor: menuColor,
+                  borderBottom: `solid 1px ${
+                    borderColor ? borderColor : "#9879b0"
+                  }`,
+                }
+              : {
+                  borderBottom: `solid 1px ${
+                    borderColor ? borderColor : "#9879b0"
+                  }`,
+                }
           }
         >
           <motion.div
@@ -158,7 +173,7 @@ const Nav = ({
             animate={{ rotate: mobileMenu && size.width < 845 ? 45 : 0 }}
             transition={{ ease: "easeInOut", duration: 0.25 }}
             className="mobile-menu-btn"
-            onClick={() => setMobileMenu(!mobileMenu)}
+            onClick={menuHandler}
           >
             <span>+</span>
           </motion.button>

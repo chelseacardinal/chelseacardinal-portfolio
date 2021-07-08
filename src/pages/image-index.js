@@ -50,6 +50,7 @@ const ImageIndex = ({ data }) => {
   const categoryTags = data.siteJson.category_tags
   const indexTextColor = data.siteJson.index_text_color
   const IndexColor = data.siteJson.index_color
+  const IndexLineColor = data.siteJson.index_line_color
   const mobileMenuColor = data.siteJson.mobile_menu_background_color
 
   const filterProject = name => {
@@ -100,6 +101,7 @@ const ImageIndex = ({ data }) => {
         width={width}
         textColor={indexTextColor}
         menuColor={mobileMenuColor}
+        borderColor={IndexLineColor}
       />
       <motion.div
         variants={variantsOuterWrap}
@@ -216,6 +218,7 @@ export const data = graphql`
       category_tags
       index_text_color
       index_color
+      index_line_color
       mobile_menu_background_color
     }
   }
