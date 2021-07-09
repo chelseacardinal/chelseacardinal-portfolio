@@ -1,6 +1,6 @@
 ---
 date: 2020-12-10T12:44:31.000-05:00
-title: Bon Appetit Special Issue
+title: Bon Appetit Holiday
 color: "#4B8CC8"
 description: A long caption here maybe up to 100 words sometimes if necessary but
   more likely will be about 30 words tops. A long caption here maybe up to 100 words
