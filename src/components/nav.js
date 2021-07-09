@@ -51,6 +51,7 @@ const Nav = ({
   menuColor,
   textColor,
   about,
+  setAbout,
   imageIndex,
   borderColor,
 }) => {
@@ -74,14 +75,14 @@ const Nav = ({
   }
 
   function aboutHandler() {
-    about(!activeAbout)
+    setAbout(!about)
     if (size.width < 845) {
       setActiveAbout(!activeAbout)
     }
   }
 
   function menuHandler() {
-    about(false)
+    setAbout(false)
     setActiveAbout(false)
     setMobileMenu(!mobileMenu)
   }
@@ -133,7 +134,7 @@ const Nav = ({
             <h1>
               <button
                 style={{ color: textColor }}
-                onClick={!mobileMenu ? aboutHandler : null}
+                onClick={mobileMenu ? null : aboutHandler}
               >
                 {activeAbout ? <span>+</span> : "Studio of Chelsea Cardinal"}
               </button>

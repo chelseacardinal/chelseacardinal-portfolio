@@ -104,7 +104,8 @@ const Index = ({ data }) => {
         <Nav
           textColor={indexTextColor}
           menuColor={mobileMenuColor}
-          about={setAbout}
+          about={about}
+          setAbout={setAbout}
           animationTime={animationTime}
           imageIndex={true}
           category={categoryTags}

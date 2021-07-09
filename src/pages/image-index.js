@@ -92,7 +92,8 @@ const ImageIndex = ({ data }) => {
       style={{ backgroundColor: IndexColor, minHeight: "100vh" }}
     >
       <Nav
-        about={() => setAbout(!about)}
+        about={about}
+        setAbout={setAbout}
         animationTime={animationTime}
         imageIndex={false}
         category={categoryTags}
