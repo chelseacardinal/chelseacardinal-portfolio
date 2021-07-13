@@ -206,7 +206,14 @@ const Nav = ({
       >
         {categories.map((category, i) => {
           return (
-            <li key={i}>
+            <li
+              key={i}
+              style={{
+                borderBottom: `solid 1px ${
+                  borderColor ? borderColor : "#9879b0"
+                }`,
+              }}
+            >
               <button
                 style={{ color: menuItemColorFilter(category) }}
                 onClick={() => mobileMenuButtons(category)}
@@ -216,8 +223,17 @@ const Nav = ({
             </li>
           )
         })}
-        <li>
-          <button onClick={() => mobileMenuButtons("all")}>all</button>
+        <li
+          style={{
+            borderBottom: `solid 1px ${borderColor ? borderColor : "#9879b0"}`,
+          }}
+        >
+          <button
+            style={{ color: textColor }}
+            onClick={() => mobileMenuButtons("all")}
+          >
+            all
+          </button>
         </li>
       </motion.ul>
     </>
