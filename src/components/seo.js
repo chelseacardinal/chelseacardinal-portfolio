@@ -29,7 +29,7 @@ const Seo = ({ metaDescription, metaTitle }) => {
   const title = metaTitle ? metaTitle : defaults.title
   const description = metaDescription ? metaDescription : defaults.description
   const url = new URL(defaults.siteUrl)
-  const image = false
+  const image = "/CCpreview.jpg"
 
   return (
     <Helmet>
@@ -39,6 +39,28 @@ const Seo = ({ metaDescription, metaTitle }) => {
       <link rel="canonical" href={url} />
       <meta name="description" content={description} />
       {image && <meta name="image" content={image} />}
+
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+      <meta name="msapplication-TileColor" content="#da532c" />
+      <meta name="theme-color" content="#ffffff" />
 
       <meta property="og:url" content={url} />
       <meta property="og:type" content="article" />
