@@ -6,7 +6,6 @@ text_color: "#3D573D"
 color: "#FFDCAE"
 categories:
 - books
-- identity
 image_gallery:
 - image: "../assets/peden-munk-photo-promo1.jpg"
   caption: New image caption
