@@ -8,6 +8,9 @@ categories:
 - books
 - identity
 image_gallery:
+- image: "../assets/peden-munk-photo-promo1.jpg"
+  caption: New image caption
+  featured_image: false
 - image: "../assets/peden-munk-photo-promo3.jpg"
   caption: New image caption
   featured_image: false
