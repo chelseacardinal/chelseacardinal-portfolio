@@ -15,6 +15,10 @@
   ],
   "category_color": [
     {
+      "select_category": "art",
+      "tag_color": "#417505"
+    },
+    {
       "select_category": "branding/identity",
       "tag_color": "#00B0AE"
     },
