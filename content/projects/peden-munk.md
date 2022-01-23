@@ -13,7 +13,7 @@ image_gallery:
   featured_image: false
 - image: "../assets/peden-munk-photo-promo3.jpg"
   caption: New image caption
-  featured_image: false
+  featured_image: true
 - image: "../assets/peden-munk-photo-promo2.jpg"
   caption: New image caption
   featured_image: false
