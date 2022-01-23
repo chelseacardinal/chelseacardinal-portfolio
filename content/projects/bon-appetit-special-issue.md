@@ -19,7 +19,7 @@ image_gallery:
   featured_image: true
 text_color: "#640048"
 categories:
-- identity
+- branding/identity
 project_line_color: "#9879B0"
 
 ---
