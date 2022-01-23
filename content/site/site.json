@@ -15,8 +15,8 @@
   ],
   "category_color": [
     {
-      "select_category": "magazines",
-      "tag_color": "#9013FE"
+      "select_category": "covers",
+      "tag_color": "#00B0AE"
     },
     {
       "select_category": "posters",
