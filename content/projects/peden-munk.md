@@ -5,6 +5,7 @@ project_line_color: "#3D573D"
 text_color: "#3D573D"
 color: "#FFDCAE"
 categories:
+- branding/identity
 - books
 image_gallery:
 - image: "../assets/peden-munk-photo-promo1.jpg"
