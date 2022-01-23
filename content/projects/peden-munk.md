@@ -8,6 +8,9 @@ categories:
 - books
 - identity
 image_gallery:
+- caption: New image caption
+  image: "../assets/peden-munk-photo-portfolio2.jpg"
+  featured_image: false
 - image: "../assets/peden-munk-photo-qrcodes.jpg"
   caption: New image caption
   featured_image: false
