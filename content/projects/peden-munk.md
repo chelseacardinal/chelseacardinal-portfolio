@@ -11,7 +11,7 @@ image_gallery:
 - image: "../assets/peden-munk-photo-promo3.jpg"
   caption: New image caption
   featured_image: false
-- image: ''
+- image: "../assets/peden-munk-photo-promo2.jpg"
   caption: New image caption
   featured_image: false
 - image: "../assets/peden-munk-photo-qrcodes.jpg"
