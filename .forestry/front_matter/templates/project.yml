@@ -66,6 +66,19 @@ fields:
       maxSize: 1
     label: Image
     description: Upload your image here
+  - name: featured_image
+    type: boolean
+    label: Featured Image
+    description: This is the image that will appear when the user hovers over the
+      project title on the home page.
+  - name: alt_text
+    type: text
+    config:
+      required: false
+    label: Image Alt Text
+    description: Alt text for image. Learn more here <a href="https://moz.com/learn/seo/alt-text"
+      title="https://moz.com/learn/seo/alt-text" target="_blank">https://moz.com/learn/seo/alt-text</a>
+    default: Sample image alt text
   - name: caption
     type: textarea
     default: New image caption
@@ -76,15 +89,10 @@ fields:
         format: html
     label: Caption
     description: Enter image caption here.
-  - name: featured_image
-    type: boolean
-    label: Featured Image
-    description: This is the image that will appear when the user hovers over the
-      project title on the home page.
   config:
     min: 
     max: 
-    labelField: 
+    labelField: alt_text
   label: Image Gallery
   description: Enter your image and captions here.
 - name: description
