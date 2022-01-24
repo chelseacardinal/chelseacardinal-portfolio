@@ -7,12 +7,12 @@ color: ''
 categories:
 - posters
 image_gallery:
+- caption: ''
+  featured_image: true
+  image: "../assets/peden-munk-photo-promo6.jpg"
 - image: "../assets/peden-munk-stickers.jpg"
   caption: New image caption
   featured_image: false
-- caption: Caption test
-  featured_image: true
-  image: "../assets/peden-munk-photo-promo6.jpg"
 description: 'Hi! Hope all is well. <br>I made a "homepage" warming present for you!
   Hope this helps you settle into your new site <br>Here''s also the specs for:'
 
