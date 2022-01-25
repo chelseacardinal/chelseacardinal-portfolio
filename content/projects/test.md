@@ -5,7 +5,7 @@ project_line_color: "#9879B0"
 text_color: "#000000"
 color: ''
 categories:
-- posters
+- covers
 image_gallery:
 - caption: ''
   featured_image: true
