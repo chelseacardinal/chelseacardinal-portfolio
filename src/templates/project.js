@@ -118,7 +118,7 @@ const Project = ({ data, pageContext }) => {
                     >
                       <GatsbyImage
                         image={item.image.childImageSharp.gatsbyImageData}
-                        alt=""
+                        alt={item.alt_text}
                       />
                     </div>
                     <figcaption
@@ -172,6 +172,7 @@ export const data = graphql`
         text_color
         project_line_color
         image_gallery {
+          alt_text
           caption
           image {
             childImageSharp {

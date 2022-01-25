@@ -142,15 +142,19 @@ const Index = ({ data }) => {
                   projectList.map((project, i) => {
                     return (
                       <li
-                        className={project.node.frontmatter.categories[0]}
+                        className={
+                          project.node.frontmatter.categories &&
+                          project.node.frontmatter.categories[0]
+                        }
                         key={project.node.id}
                         style={{
-                          color:
-                            categoryColors.find(
-                              tag =>
-                                tag.select_category ===
-                                project.node.frontmatter.categories[0]
-                            ).tag_color || "#000000",
+                          color: project.node.frontmatter.categories
+                            ? categoryColors.find(
+                                tag =>
+                                  tag.select_category ===
+                                  project.node.frontmatter.categories[0]
+                              ).tag_color
+                            : "#000000",
                           borderBottom: `solid 1px ${
                             IndexLineColor ? IndexLineColor : "#9879b0"
                           }`,
@@ -196,12 +200,13 @@ const Index = ({ data }) => {
                       <li
                         key={project.node.id}
                         style={{
-                          color:
-                            categoryColors.find(
-                              tag =>
-                                tag.select_category ===
-                                project.node.frontmatter.categories[0]
-                            ).tag_color || "#000000",
+                          color: project.node.frontmatter.categories
+                            ? categoryColors.find(
+                                tag =>
+                                  tag.select_category ===
+                                  project.node.frontmatter.categories[0]
+                              ).tag_color
+                            : "#000000",
                         }}
                       >
                         {i > 0 && (
@@ -240,7 +245,7 @@ const Index = ({ data }) => {
                                     image={
                                       item.image.childImageSharp.gatsbyImageData
                                     }
-                                    alt={item.caption}
+                                    alt={item.alt_text}
                                   />
                                 </div>
                               )
@@ -277,6 +282,7 @@ export const data = graphql`
             color
             description
             image_gallery {
+              alt_text
               caption
               featured_image
               image {
@@ -300,6 +306,7 @@ export const data = graphql`
           id
           frontmatter {
             image_gallery {
+              alt_text
               caption
               featured_image
               image {

@@ -123,12 +123,13 @@ const ImageIndex = ({ data }) => {
                   <li
                     key={project.node.id}
                     style={{
-                      color:
-                        categoryColors.find(
-                          tag =>
-                            tag.select_category ===
-                            project.node.frontmatter.categories[0]
-                        ).tag_color || "#000000",
+                      color: project.node.frontmatter.categories
+                        ? categoryColors.find(
+                            tag =>
+                              tag.select_category ===
+                              project.node.frontmatter.categories[0]
+                          ).tag_color
+                        : "#000000",
                     }}
                   >
                     <Link to={`${project.node.fields.slug}`}>
@@ -160,7 +161,7 @@ const ImageIndex = ({ data }) => {
                                   image={
                                     item.image.childImageSharp.gatsbyImageData
                                   }
-                                  alt={item.caption}
+                                  alt={item.alt_text}
                                 />
                               </div>
                             )
@@ -196,6 +197,7 @@ export const data = graphql`
             color
             description
             image_gallery {
+              alt_text
               caption
               image {
                 childImageSharp {
