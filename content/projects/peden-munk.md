@@ -5,27 +5,32 @@ project_line_color: "#3D573D"
 text_color: "#3D573D"
 color: "#FFDCAE"
 categories:
-- branding/identity
-- books
+  - branding/identity
+  - books
 image_gallery:
-- image: "../assets/peden-munk-photo-promo1.jpg"
-  caption: ''
-  featured_image: false
-- image: "../assets/peden-munk-photo-promo3.jpg"
-  caption: New image caption
-  featured_image: true
-- image: "../assets/peden-munk-photo-promo2.jpg"
-  caption: New image caption
-  featured_image: false
-- image: "../assets/peden-munk-photo-qrcodes.jpg"
-  caption: New image caption
-  featured_image: false
-- caption: New image caption
-  image: "../assets/peden-munk-photo-portfolio2.jpg"
-  featured_image: false
-- image: "../assets/peden-munk-photo-promo4.jpg"
-  caption: New image caption
-  featured_image: false
-description: ''
-
+  - image: "../assets/peden-munk-photo-promo1.jpg"
+    caption: ""
+    featured_image: false
+    alt_text: Sample image alt text
+  - image: "../assets/peden-munk-photo-promo3.jpg"
+    caption: New image caption
+    featured_image: true
+    alt_text: Sample image alt text
+  - image: "../assets/peden-munk-photo-promo2.jpg"
+    caption: New image caption
+    featured_image: false
+    alt_text: Sample image alt text
+  - image: "../assets/peden-munk-photo-qrcodes.jpg"
+    caption: New image caption
+    featured_image: false
+    alt_text: Sample image alt text
+  - caption: New image caption
+    image: "../assets/peden-munk-photo-portfolio2.jpg"
+    featured_image: false
+    alt_text: Sample image alt text
+  - image: "../assets/peden-munk-photo-promo4.jpg"
+    caption: New image caption
+    featured_image: false
+    alt_text: Sample image alt text
+description: ""
 ---
