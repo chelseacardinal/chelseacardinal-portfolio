@@ -15,7 +15,7 @@ image_gallery:
 - image: "../assets/saunders-swim-pond-rain-spine.jpg"
   featured_image: false
   alt_text: Sample image alt text
-  caption: New image caption
+  caption: ''
 description: ''
 
 ---
