@@ -1,48 +1,16 @@
 ---
 date: 2020-12-10T13:40:42.000-05:00
-title: Atlas/Rock Center
-color: "#F8D2D1"
-description:
-  A long caption here maybe up to 100 words sometimes if necessary but
+title: Rockefeller Center/Atlas
+color: "#F3EED7"
+description: A long caption here maybe up to 100 words sometimes if necessary but
   more likely will be about 30 words tops. A long caption here maybe up to 100 words
   sometimes if necessary but more likely will be about 30 words tops. A long caption
   here maybe up to 100 words sometimes if necessary but more likely will be about
   30 words tops
-image_gallery:
-  - image: "../assets/test.jpg"
-    caption: New image caption 1
-    featured_image: false
-    alt_text: Sample image alt text
-  - image: "../assets/screen-shot-2020-01-10-at-4-37-1.jpg"
-    caption: New image caption 2
-    featured_image: false
-    alt_text: Sample image alt text
-  - image: "../assets/test-slide-1.jpg"
-    caption: New image caption 3
-    featured_image: false
-    alt_text: Sample image alt text
-  - image: "../assets/test.jpg"
-    caption: New image caption 1
-    featured_image: false
-    alt_text: Sample image alt text
-  - image: "../assets/screen-shot-2020-01-10-at-4-37-1.jpg"
-    caption: New image caption 2
-    featured_image: false
-    alt_text: Sample image alt text
-  - image: "../assets/test-slide-1.jpg"
-    caption: New image caption 3
-    featured_image: false
-    alt_text: Sample image alt text
-  - image: "../assets/screen-shot-2020-01-10-at-4-37-1.jpg"
-    caption: New image caption 2
-    featured_image: false
-    alt_text: Sample image alt text
-  - image: "../assets/test-slide-1.jpg"
-    caption: New image caption 3
-    featured_image: false
-    alt_text: Sample image alt text
-text_color: "#000000"
+image_gallery: []
+text_color: "#1C4F1C"
 categories:
-  - magazines
-project_line_color: "#9879B0"
+- magazines
+project_line_color: "#1C4F1C"
+
 ---
