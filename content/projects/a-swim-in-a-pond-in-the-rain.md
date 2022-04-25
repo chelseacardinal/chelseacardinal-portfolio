@@ -7,12 +7,12 @@ color: "#FFFAE7"
 categories:
 - covers
 image_gallery:
-- image: "../assets/210308_chelsea_cardinal_0005.jpg"
-  featured_image: true
+- image: "../assets/210308_chelsea_cardinal_0006.jpg"
+  featured_image: false
   alt_text: Sample image alt text
   caption: New image caption
-- image: ''
-  featured_image: false
+- image: "../assets/210308_chelsea_cardinal_0005.jpg"
+  featured_image: true
   alt_text: Sample image alt text
   caption: New image caption
 description: ''
