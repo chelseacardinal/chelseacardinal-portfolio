@@ -9,7 +9,7 @@ categories:
 - books
 image_gallery:
 - image: "../assets/after-visiting-friends-hainey-cover1.jpg"
-  featured_image: false
+  featured_image: true
   alt_text: Sample image alt text
   caption: ''
 - image: "../assets/after-visiting-friends-hainey-cover2.jpg"
