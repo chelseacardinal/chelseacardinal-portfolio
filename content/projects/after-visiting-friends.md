@@ -1,7 +1,7 @@
 ---
 date: 2022-04-25T16:30:49-04:00
 title: After Visiting Friends
-project_line_color: "#9879B0"
+project_line_color: "#FF5F33"
 text_color: "#000000"
 color: ''
 categories:
