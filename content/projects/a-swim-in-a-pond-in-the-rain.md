@@ -11,7 +11,7 @@ image_gallery:
   featured_image: false
   alt_text: Sample image alt text
   caption: New image caption
-- image: "../assets/210308_chelsea_cardinal_0005.jpg"
+- image: "../assets/saunders-swim-pond-rain-cover.jpg"
   featured_image: true
   alt_text: Sample image alt text
   caption: New image caption
