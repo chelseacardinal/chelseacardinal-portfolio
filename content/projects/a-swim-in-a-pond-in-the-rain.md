@@ -11,7 +11,7 @@ image_gallery:
 - image: "../assets/saunders-swim-pond-rain-cover.jpg"
   featured_image: true
   alt_text: Sample image alt text
-  caption: New image caption
+  caption: ''
 - image: "../assets/saunders-swim-pond-rain-spine.jpg"
   featured_image: false
   alt_text: Sample image alt text
