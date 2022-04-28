@@ -8,6 +8,10 @@ description: A long caption here maybe up to 100 words sometimes if necessary bu
   here maybe up to 100 words sometimes if necessary but more likely will be about
   30 words tops
 image_gallery:
+- image: "../assets/bon-appetit-special-issue-spreads-4.jpg"
+  featured_image: false
+  alt_text: Sample image alt text
+  caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-5.jpg"
   featured_image: false
   alt_text: Sample image alt text
