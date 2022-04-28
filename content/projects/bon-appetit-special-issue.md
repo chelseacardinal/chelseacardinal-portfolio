@@ -1,28 +1,21 @@
 ---
 date: 2020-12-10T12:44:31.000-05:00
-title: Bon Appetit Holiday
+title: Bon Appétit Special Issue
 color: "#4B8CC8"
-description:
-  A long caption here maybe up to 100 words sometimes if necessary but
+description: A long caption here maybe up to 100 words sometimes if necessary but
   more likely will be about 30 words tops. A long caption here maybe up to 100 words
   sometimes if necessary but more likely will be about 30 words tops. A long caption
   here maybe up to 100 words sometimes if necessary but more likely will be about
   30 words tops
 image_gallery:
-  - image: "../assets/prince.jpg"
-    caption: New image caption Prince
-    featured_image: false
-    alt_text: Sample image alt text
-  - image: "../assets/test-slide-1.jpg"
-    caption: New image caption 1
-    featured_image: false
-    alt_text: Sample image alt text
-  - image: "../assets/img_2729-13.jpg"
-    caption: New image caption 2
-    featured_image: true
-    alt_text: Sample image alt text
+- image: "../assets/bon-appetit-special-issue-cover-2.jpg"
+  featured_image: false
+  alt_text: Sample image alt text
+  caption: ''
 text_color: "#640048"
 categories:
-  - branding/identity
+- magazines
+- illustration
 project_line_color: "#9879B0"
+
 ---
