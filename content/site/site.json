@@ -35,7 +35,7 @@
       "tag_color": "#4A90E2"
     },
     {
-      "select_category": "identity",
+      "select_category": "illustration",
       "tag_color": "#924B4B"
     },
     {
@@ -43,7 +43,7 @@
       "tag_color": "#000000"
     },
     {
-      "select_category": "illustration",
+      "select_category": "books",
       "tag_color": "#AD5A9B"
     }
   ],
