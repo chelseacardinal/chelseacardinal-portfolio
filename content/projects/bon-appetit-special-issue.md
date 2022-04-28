@@ -1,7 +1,7 @@
 ---
 date: 2020-12-10T12:44:31.000-05:00
 title: Bon Appétit Special Issue
-color: "#4B8CC8"
+color: "#CBF3EC"
 description: A long caption here maybe up to 100 words sometimes if necessary but
   more likely will be about 30 words tops. A long caption here maybe up to 100 words
   sometimes if necessary but more likely will be about 30 words tops. A long caption
@@ -36,10 +36,10 @@ image_gallery:
   featured_image: false
   alt_text: Sample image alt text
   caption: ''
-text_color: "#640048"
+text_color: "#3A4EFE"
 categories:
 - magazines
 - illustration
-project_line_color: "#9879B0"
+project_line_color: "#3A4EFE"
 
 ---
