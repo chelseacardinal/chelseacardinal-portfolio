@@ -10,7 +10,7 @@ description: A long caption here maybe up to 100 words sometimes if necessary bu
 image_gallery:
 - image: "../assets/daddario-built-to-compete-spreads-1.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: magazine, daddario, built to compete, chelsea cardinal
   caption: ''
 - image: "../assets/daddario-built-to-compete-spreads-2.jpg"
   featured_image: false
