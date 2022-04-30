@@ -26,7 +26,7 @@ image_gallery:
   caption: ''
 - image: "../assets/daddario-built-to-compete-magazine-cover-2.jpg"
   featured_image: true
-  alt_text: Sample image alt text
+  alt_text: magazine,cover, daddario, built to compete, chelsea cardinal
   caption: ''
 text_color: "#000000"
 categories:
