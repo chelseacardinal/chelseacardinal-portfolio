@@ -22,7 +22,7 @@ image_gallery:
   caption: ''
 - image: "../assets/daddario-built-to-compete-magazine-centerville.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: magazine, daddario, built to compete, centerville, chelsea cardinal
   caption: ''
 - image: "../assets/daddario-built-to-compete-magazine-cover-2.jpg"
   featured_image: true
