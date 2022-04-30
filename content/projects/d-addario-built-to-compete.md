@@ -8,6 +8,10 @@ description: A long caption here maybe up to 100 words sometimes if necessary bu
   here maybe up to 100 words sometimes if necessary but more likely will be about
   30 words tops
 image_gallery:
+- image: "../assets/daddario-built-to-compete-magazine-cover-1.jpg"
+  featured_image: false
+  alt_text: magazine cover, daddario, built to compete, chelsea cardinal
+  caption: ''
 - image: "../assets/daddario-built-to-compete-magazine-contents.jpg"
   featured_image: false
   alt_text: magazine, daddario, built to compete, contents, chelsea cardinal
