@@ -14,7 +14,7 @@ image_gallery:
   caption: ''
 - image: "../assets/daddario-built-to-compete-spreads-2.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: magazine, daddario, built to compete, chelsea cardinal
   caption: ''
 - image: "../assets/daddario-built-to-compete-magazine-folio.jpg"
   featured_image: false
