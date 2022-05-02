@@ -9,6 +9,10 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
   nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
   officia deserunt mollit anim id est laborum.
 image_gallery:
+- image: "../assets/bon-appetit-hot-10-natural-wine.jpg"
+  featured_image: false
+  alt_text: bon appetit, hot 10, magazine, spreads, chelsea cardinal
+  caption: ''
 - image: "../assets/bon-appetit-hot-10-mister-jius.jpg"
   featured_image: false
   alt_text: bon appetit, hot 10, magazine, mister jius, chelsea cardinal
