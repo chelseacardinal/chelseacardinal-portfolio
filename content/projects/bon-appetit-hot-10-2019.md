@@ -18,7 +18,7 @@ image_gallery:
   alt_text: bon appetit, hot 10, magazine, restaurant list, chelsea cardinal
   caption: ''
 - image: "../assets/bon-appetit-hot-10-turkey-wolf.jpg"
-  featured_image: false
+  featured_image: true
   alt_text: bon appetit, hot 10, magazine, turkey and wolf, chelsea cardinal
   caption: ''
 - image: "../assets/bon-appetit-hot-10-natural-wine.jpg"
