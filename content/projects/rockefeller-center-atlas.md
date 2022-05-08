@@ -7,6 +7,10 @@ color: ''
 categories:
 - magazines
 image_gallery:
+- image: "../assets/rockefeller-center-work-spread.jpg"
+  featured_image: false
+  alt_text: Rockefeller Center, Magazine, Work Spread, Staff
+  caption: ''
 - image: "../assets/rockefeller-center-contents-spread.jpg"
   featured_image: false
   alt_text: Rockefeller Center, Magazine, Contents Spread
