@@ -7,6 +7,10 @@ color: ''
 categories:
 - magazines
 image_gallery:
+- image: "../assets/rockefeller-center-work2-spread.jpg"
+  featured_image: false
+  alt_text: Rockefeller Center, Magazine, Staff Photos
+  caption: ''
 - image: "../assets/rockefeller-center-art-spread.jpg"
   featured_image: false
   alt_text: Rockefeller Center, Magazine, Christmas Tree
