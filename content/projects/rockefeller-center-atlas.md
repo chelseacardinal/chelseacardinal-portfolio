@@ -13,7 +13,7 @@ image_gallery:
   caption: ''
 - image: "../assets/rockefeller-center-art-spread.jpg"
   featured_image: false
-  alt_text: Rockefeller Center, Magazine, Christmas Tree
+  alt_text: Rockefeller Center, Magazine, Public Art, Type Spread
   caption: ''
 - image: "../assets/rockefeller-center-art2-spread.jpg"
   featured_image: false
