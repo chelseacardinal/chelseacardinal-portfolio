@@ -7,7 +7,7 @@ color: ''
 categories:
 - covers
 image_gallery:
-- image: "../assets/220804_chelsea_cardinal_189.gif"
+- image: "../assets/220804_chelsea_cardinal_171.jpg"
   featured_image: false
   alt_text: Sample image alt text
   caption: New image caption
