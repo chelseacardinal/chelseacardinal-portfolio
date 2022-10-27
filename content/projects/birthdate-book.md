@@ -6,6 +6,7 @@ text_color: "#000000"
 color: "#FBFAF8"
 categories:
 - books
+- covers
 image_gallery:
 - image: "../assets/birthdate-book-covers.jpg"
   featured_image: true
