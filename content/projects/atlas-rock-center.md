@@ -13,7 +13,7 @@ image_gallery:
   alt_text: Sample image alt text
   caption: ''
 - image: "../assets/congratulations-saunders-cover2.jpg"
-  featured_image: false
+  featured_image: true
   alt_text: Sample image alt text
   caption: ''
 - image: "../assets/congratulations-saunders-illustration1.jpg"
