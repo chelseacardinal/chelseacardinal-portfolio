@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/birthdate-book-mercury-venus-sign.jpg"
+  featured_image: false
+  alt_text: birthdate book mercury sign spread and drop cap
+  caption: ''
 - image: "../assets/birthdate-book-rising-sign.jpg"
   featured_image: false
   alt_text: birthdate book spreads
