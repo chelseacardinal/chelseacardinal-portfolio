@@ -7,6 +7,10 @@ color: ''
 categories:
 - covers
 image_gallery:
+- image: "../assets/tenth-december-george-saunders.jpg"
+  featured_image: true
+  alt_text: tenth of december by george saunders book cover
+  caption: ''
 - image: "../assets/tenth-december-george-saunders-cover.jpg"
   featured_image: false
   alt_text: 'tenth of december by george saunders book cover '
