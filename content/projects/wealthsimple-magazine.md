@@ -7,9 +7,9 @@ color: ''
 categories:
 - magazines
 image_gallery:
-- image: "../assets/wealthsimple-magazine-risk-diversification.jpg"
+- image: "../assets/wealthsimple-magazine-sneakers.jpg"
   featured_image: false
-  alt_text: 'wealthsimple magazine financial guide pink '
+  alt_text: wealthsimple magaine sneakers art travel spread
   caption: ''
 - image: "../assets/wealthsimple-magazine-cover.jpg"
   featured_image: false
@@ -18,6 +18,10 @@ image_gallery:
 - image: "../assets/wealthsimple-magazine-contents.jpg"
   featured_image: false
   alt_text: wealthsimple magazine table of contents
+  caption: ''
+- image: "../assets/wealthsimple-magazine-risk-diversification.jpg"
+  featured_image: false
+  alt_text: 'wealthsimple magazine financial guide pink '
   caption: ''
 - image: "../assets/wealthsimple-magazine-buy-sell.jpg"
   featured_image: true
