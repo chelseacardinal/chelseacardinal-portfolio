@@ -9,7 +9,7 @@ description: A long caption here maybe up to 100 words sometimes if necessary bu
   30 words tops
 image_gallery:
 - image: "../assets/bon-appetit-special-issue-cover-1.jpg"
-  featured_image: true
+  featured_image: false
   alt_text: Sample image alt text
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spread-1.jpg"
@@ -17,7 +17,7 @@ image_gallery:
   alt_text: Sample image alt text
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-2.jpg"
-  featured_image: false
+  featured_image: true
   alt_text: Sample image alt text
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-3.jpg"
