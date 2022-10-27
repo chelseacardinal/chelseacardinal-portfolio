@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/birthdate-book-edward-kwong-leo.jpg"
+  featured_image: false
+  alt_text: leo lion illustration by edward kwong
+  caption: ''
 - image: "../assets/birthdate-book-mercury-venus-sign.jpg"
   featured_image: false
   alt_text: birthdate book mercury sign spread and drop cap
