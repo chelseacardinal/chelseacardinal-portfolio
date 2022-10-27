@@ -1,6 +1,6 @@
 ---
 date: 2022-10-27T17:16:54-04:00
-title: Society of Illustrators 56
+title: SOI 56 Call for Entries
 project_line_color: "#9879B0"
 text_color: "#000000"
 color: "#FBFAF8"
