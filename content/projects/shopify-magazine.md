@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - magazines
 image_gallery:
+- image: "../assets/shopify-magazine-stickers.jpg"
+  featured_image: false
+  alt_text: shopify magazine stickers cha ching fuck it
+  caption: ''
 - image: "../assets/shopify-magazine-stickers-peeled.jpg"
   featured_image: false
   alt_text: shopify magazine stickers peeled off
