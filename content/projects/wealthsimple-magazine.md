@@ -7,9 +7,9 @@ color: ''
 categories:
 - magazines
 image_gallery:
-- image: "../assets/wealthsimple-magazine-spreads-death-taxes.jpg"
+- image: "../assets/wealthsimple-magazine-money-faces-gold.jpg"
   featured_image: false
-  alt_text: wealthsimple magazine spreads gig economy and taxes
+  alt_text: wealthsimple magazine faces from world currency
   caption: ''
 - image: "../assets/wealthsimple-magazine-cover.jpg"
   featured_image: false
@@ -35,9 +35,9 @@ image_gallery:
   featured_image: false
   alt_text: wealthsimple magaine sneakers art travel spread
   caption: ''
-- image: "../assets/wealthsimple-magazine-death-taxes.jpg"
-  featured_image: true
-  alt_text: wealthsimple magazine death and taxes spread with insert
+- image: "../assets/wealthsimple-magazine-spreads-death-taxes.jpg"
+  featured_image: false
+  alt_text: wealthsimple magazine spreads gig economy and taxes
   caption: ''
 - image: "../assets/wealthsimple-magazine-spike-color-chart.jpg"
   featured_image: false
