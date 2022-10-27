@@ -7,6 +7,14 @@ color: "#FBFAF8"
 categories:
 - magazines
 image_gallery:
+- image: ''
+  featured_image: false
+  alt_text: Sample image alt text
+  caption: New image caption
+- image: "../assets/shopify-magazine-package2.jpg"
+  featured_image: false
+  alt_text: shopify magazine package
+  caption: ''
 - image: "../assets/shopify-magazine-iconic-stacks.jpg"
   featured_image: false
   alt_text: shopify magazine at iconic magazines stacks
