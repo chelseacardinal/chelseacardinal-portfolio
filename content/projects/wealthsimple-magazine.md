@@ -7,9 +7,13 @@ color: ''
 categories:
 - magazines
 image_gallery:
-- image: "../assets/wealthsimple-magazine-spike-color-chart.jpg"
+- image: ''
   featured_image: false
-  alt_text: wealthsimple magazine spike lee color chart mae musk
+  alt_text: Sample image alt text
+  caption: New image caption
+- image: "../assets/wealthsimple-magazine-death-taxes.jpg"
+  featured_image: false
+  alt_text: wealthsimple magazine death and taxes spread with insert
   caption: ''
 - image: "../assets/wealthsimple-magazine-cover.jpg"
   featured_image: false
@@ -34,6 +38,10 @@ image_gallery:
 - image: "../assets/wealthsimple-magazine-sneakers.jpg"
   featured_image: false
   alt_text: wealthsimple magaine sneakers art travel spread
+  caption: ''
+- image: "../assets/wealthsimple-magazine-spike-color-chart.jpg"
+  featured_image: false
+  alt_text: wealthsimple magazine spike lee color chart mae musk
   caption: ''
 description: ''
 
