@@ -12,7 +12,7 @@ image_gallery:
   alt_text: Rockefeller Center, Magazine, Cover, Atlas
   caption: ''
 - image: "../assets/rockefeller-center-contents-spread.jpg"
-  featured_image: false
+  featured_image: true
   alt_text: Rockefeller Center, Magazine, Contents Spread
   caption: ''
 - image: "../assets/rockefeller-center-work-spread.jpg"
