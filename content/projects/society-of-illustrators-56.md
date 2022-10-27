@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - posters
 image_gallery:
+- image: "../assets/society-illustrators-56-poster-front.jpg"
+  featured_image: false
+  alt_text: 'society of illustrators poster face '
+  caption: ''
 - image: "../assets/society-illustrators-56-poster-back.jpg"
   featured_image: true
   alt_text: society of illustrators 56 poster figure and circles
