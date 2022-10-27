@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/birthdate-book-aquarius.jpg"
+  featured_image: false
+  alt_text: birthdate book aquarius sign chapter opener
+  caption: ''
 - image: "../assets/birthdate-book-signs.jpg"
   featured_image: false
   alt_text: birthdate book aries taurus sagittarius virgo signs
