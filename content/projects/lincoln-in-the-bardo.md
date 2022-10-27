@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - covers
 image_gallery:
+- image: "../assets/saunders-george-incoln-bardo-cover1.jpg"
+  featured_image: true
+  alt_text: lincoln in the bardo by george saunders book cover
+  caption: ''
 - image: "../assets/saunders-george-incoln-bardo-spine.jpg"
   featured_image: false
   alt_text: 'lincoln in the bardo by george saunders book spine '
