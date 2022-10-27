@@ -30,7 +30,7 @@ image_gallery:
   alt_text: bon appetit, hot 10, magazine, mister jius, chelsea cardinal
   caption: ''
 - image: "../assets/bon-appetit-hot-10-salad.jpg"
-  featured_image: false
+  featured_image: true
   alt_text: bon appetit, hot 10, magazine, salad, chelsea cardinal
   caption: ''
 - image: "../assets/bon-appetit-hot-10-spreads.jpg"
