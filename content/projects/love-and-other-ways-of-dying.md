@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - covers
 image_gallery:
+- image: "../assets/michael-paterniti-love-other-ways-detail-spine.jpg"
+  featured_image: false
+  alt_text: love and other ways of dying by michael paterniti cover and spine
+  caption: ''
 - image: "../assets/michael-paterniti-love-other-ways-cover.jpg"
   featured_image: true
   alt_text: love and other ways of dying by michael paterniti book cover
