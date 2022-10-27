@@ -5,17 +5,16 @@ project_line_color: "#000000"
 text_color: "#000000"
 color: "#FFFAE7"
 categories:
-- covers
-- books
+  - covers
+  - books
 image_gallery:
-- image: "../assets/saunders-swim-pond-rain-cover.jpg"
-  featured_image: true
-  alt_text: Sample image alt text
-  caption: ''
-- image: "../assets/saunders-swim-pond-rain-spine.jpg"
-  featured_image: false
-  alt_text: Sample image alt text
-  caption: ''
-description: ''
-
+  - image: "../assets/saunders-swim-pond-rain-cover.jpg"
+    featured_image: true
+    alt_text: Sample image alt text
+    caption: "Sample caption"
+  - image: "../assets/saunders-swim-pond-rain-spine.jpg"
+    featured_image: false
+    alt_text: Sample image alt text
+    caption: ""
+description: ""
 ---

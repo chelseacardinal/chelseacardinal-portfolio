@@ -153,7 +153,7 @@ const Index = ({ data }) => {
                                 tag =>
                                   tag.select_category ===
                                   project.node.frontmatter.categories[0]
-                              ).tag_color
+                              )?.tag_color || "#000000"
                             : "#000000",
                           borderBottom: `solid 1px ${
                             IndexLineColor ? IndexLineColor : "#9879b0"
@@ -205,7 +205,7 @@ const Index = ({ data }) => {
                                 tag =>
                                   tag.select_category ===
                                   project.node.frontmatter.categories[0]
-                              ).tag_color
+                              )?.tag_color || "#000000"
                             : "#000000",
                         }}
                       >
