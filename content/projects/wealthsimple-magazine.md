@@ -39,7 +39,7 @@ image_gallery:
   featured_image: false
   alt_text: wealthsimple magazine spike lee color chart mae musk
   caption: ''
-- image: "../assets/wealthsimple-magazine-spreads-death-taxes.jpg"
+- image: "../assets/wealthsimple-magazine-spreads-death-taxes-2.jpg"
   featured_image: false
   alt_text: wealthsimple magazine spreads gig economy and taxes
   caption: ''
