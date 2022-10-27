@@ -1,8 +1,8 @@
 ---
 date: 2022-10-27T07:50:58-04:00
 title: The Largesse of The Sea Maiden
-project_line_color: "#9879B0"
-text_color: "#000000"
+project_line_color: "#243524"
+text_color: "#243524"
 color: "#FBFAF8"
 categories:
 - covers
