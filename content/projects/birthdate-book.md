@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/birthdate-book-rising-sign.jpg"
+  featured_image: false
+  alt_text: birthdate book spreads
+  caption: ''
 - image: "../assets/birthdate-book-rising-sign-spread.jpg"
   featured_image: false
   alt_text: rising sign spread in birthdate book
