@@ -7,10 +7,10 @@ color: "#FBFAF8"
 categories:
 - magazines
 image_gallery:
-- image: ''
+- image: "../assets/shopify-magazine-insert-foldout.jpg"
   featured_image: false
-  alt_text: Sample image alt text
-  caption: New image caption
+  alt_text: shopify magazine foldout insert shopping guide
+  caption: ''
 - image: "../assets/shopify-magazine-package2.jpg"
   featured_image: false
   alt_text: shopify magazine package
