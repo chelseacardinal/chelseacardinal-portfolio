@@ -21,7 +21,7 @@ image_gallery:
   alt_text: magazine, daddario, built to compete, arcadia, chelsea cardinal
   caption: ''
 - image: "../assets/daddario-built-to-compete-magazine-instruments.jpg"
-  featured_image: false
+  featured_image: true
   alt_text: magazine, daddario, built to compete, instruments, chelsea cardinal
   caption: ''
 - image: "../assets/daddario-built-to-compete-blue-devils.jpg"
