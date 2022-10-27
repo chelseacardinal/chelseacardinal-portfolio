@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/birthdate-book-covers.jpg"
+  featured_image: true
+  alt_text: birthdate book cover grid
+  caption: ''
 - image: "../assets/birthdate-book-first-page.jpg"
   featured_image: false
   alt_text: birthdate book cover and first page
@@ -42,10 +46,6 @@ image_gallery:
 - image: "../assets/birthdate-book-cover-stack.jpg"
   featured_image: false
   alt_text: birthdate book twisted stack of books
-  caption: ''
-- image: "../assets/birthdate-book-covers.jpg"
-  featured_image: true
-  alt_text: birthdate book cover grid
   caption: ''
 description: ''
 
