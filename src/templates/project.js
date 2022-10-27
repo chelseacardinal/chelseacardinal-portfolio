@@ -108,28 +108,31 @@ const Project = ({ data, pageContext }) => {
                       className="wrapper"
                       style={{
                         width:
-                          item.image.childImageSharp.gatsbyImageData &&
-                          item.image.childImageSharp.gatsbyImageData.height &&
+                          item?.image?.childImageSharp.gatsbyImageData &&
+                          item?.image?.childImageSharp?.gatsbyImageData
+                            .height &&
                           size.elheight &&
-                          (item.image.childImageSharp.gatsbyImageData.width /
-                            item.image.childImageSharp.gatsbyImageData.height) *
+                          (item?.image?.childImageSharp.gatsbyImageData.width /
+                            item?.image?.childImageSharp.gatsbyImageData
+                              .height) *
                             size.elheight,
                       }}
                     >
                       <GatsbyImage
-                        image={item.image.childImageSharp.gatsbyImageData}
-                        alt={item.alt_text}
+                        image={item?.image?.childImageSharp.gatsbyImageData}
+                        alt={item?.alt_text}
                       />
                     </div>
                     <figcaption
                       style={{
                         color: project.text_color || "#000000",
                         maxWidth:
-                          item.image.childImageSharp.gatsbyImageData &&
-                          item.image.childImageSharp.gatsbyImageData.height &&
+                          item?.image?.childImageSharp.gatsbyImageData &&
+                          item?.image?.childImageSharp.gatsbyImageData.height &&
                           size.elheight &&
-                          (item.image.childImageSharp.gatsbyImageData.width /
-                            item.image.childImageSharp.gatsbyImageData.height) *
+                          (item?.image?.childImageSharp.gatsbyImageData.width /
+                            item?.image?.childImageSharp.gatsbyImageData
+                              .height) *
                             size.elheight,
                       }}
                     >

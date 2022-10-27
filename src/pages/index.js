@@ -243,9 +243,10 @@ const Index = ({ data }) => {
                                 <div key={index} className="wrapper">
                                   <GatsbyImage
                                     image={
-                                      item.image.childImageSharp.gatsbyImageData
+                                      item?.image?.childImageSharp
+                                        .gatsbyImageData
                                     }
-                                    alt={item.alt_text}
+                                    alt={item?.alt_text}
                                   />
                                 </div>
                               )
