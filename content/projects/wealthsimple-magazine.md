@@ -1,5 +1,5 @@
 ---
-date: 2022-10-27T11:46:37-04:00
+date: 2022-10-27T11:46:37.000-04:00
 title: Wealthsimple Magazine
 project_line_color: "#9879B0"
 text_color: "#000000"
@@ -7,10 +7,10 @@ color: ''
 categories:
 - magazines
 image_gallery:
-- image: ''
+- image: "../assets/wealthsimple-magazine-spreads-death-taxes.jpg"
   featured_image: false
-  alt_text: Sample image alt text
-  caption: New image caption
+  alt_text: wealthsimple magazine spreads gig economy and taxes
+  caption: ''
 - image: "../assets/wealthsimple-magazine-cover.jpg"
   featured_image: false
   alt_text: wealthsimple magazine cover
