@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - covers
 image_gallery:
+- image: "../assets/distance-home-paula-saunders-cover-spine.jpg"
+  featured_image: false
+  alt_text: the distance home book cover and spine by paula saunders
+  caption: ''
 - image: "../assets/distance-home-paula-saunders-cover.jpg"
   featured_image: true
   alt_text: the distance home book cover by paula saunders
