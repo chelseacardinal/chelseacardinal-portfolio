@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/birthdate-book-first-page.jpg"
+  featured_image: false
+  alt_text: birthdate book cover and first page
+  caption: ''
 - image: "../assets/birthdate-book-scorpio-contents.jpg"
   featured_image: false
   alt_text: birthdate book sun sign chapter scorpio
