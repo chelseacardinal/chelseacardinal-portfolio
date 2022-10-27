@@ -1,5 +1,5 @@
 ---
-date: 2022-05-07T20:26:50-04:00
+date: 2022-05-07T20:26:50.000-04:00
 title: Rockefeller Center/Atlas
 project_line_color: "#9879B0"
 text_color: "#000000"
@@ -8,7 +8,7 @@ categories:
 - magazines
 image_gallery:
 - image: "../assets/rockefeller-center-magazine-cover.jpg"
-  featured_image: true
+  featured_image: false
   alt_text: Rockefeller Center, Magazine, Cover, Atlas
   caption: ''
 - image: "../assets/rockefeller-center-contents-spread.jpg"
