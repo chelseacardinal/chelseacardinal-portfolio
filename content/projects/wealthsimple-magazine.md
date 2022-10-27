@@ -7,6 +7,10 @@ color: ''
 categories:
 - magazines
 image_gallery:
+- image: "../assets/wealthsimple-magazine-spreads-bourdain.jpg"
+  featured_image: false
+  alt_text: wealthsimple magazine spreads anthony bourdain
+  caption: ''
 - image: "../assets/wealthsimple-magazine-buy-sell.jpg"
   featured_image: true
   alt_text: wealthsimple magazine spread buy sell
