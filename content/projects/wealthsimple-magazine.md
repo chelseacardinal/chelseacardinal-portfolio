@@ -7,10 +7,6 @@ color: ''
 categories:
 - magazines
 image_gallery:
-- image: "../assets/wealthsimple-magazine-tegan-sara.jpg"
-  featured_image: false
-  alt_text: wealthsimple magazine tegan and sara
-  caption: ''
 - image: "../assets/wealthsimple-magazine-cover.jpg"
   featured_image: false
   alt_text: wealthsimple magazine cover
@@ -46,6 +42,10 @@ image_gallery:
 - image: "../assets/wealthsimple-magazine-spreads-death-taxes.jpg"
   featured_image: false
   alt_text: wealthsimple magazine spreads gig economy and taxes
+  caption: ''
+- image: "../assets/wealthsimple-magazine-tegan-sara.jpg"
+  featured_image: false
+  alt_text: wealthsimple magazine tegan and sara
   caption: ''
 description: ''
 
