@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - magazines
 image_gallery:
+- image: "../assets/shopify-magazine-iconic-exterior.jpg"
+  featured_image: false
+  alt_text: 'iconic magazines exterior with shopify magazine '
+  caption: ''
 - image: "../assets/shopify-magazine-drag.jpg"
   featured_image: false
   alt_text: shopify magazine pile of magazines
