@@ -7,6 +7,10 @@ color: ''
 categories:
 - magazines
 image_gallery:
+- image: "../assets/wealthsimple-magazine-cover.jpg"
+  featured_image: false
+  alt_text: wealthsimple magazine cover
+  caption: ''
 - image: "../assets/wealthsimple-magazine-contents.jpg"
   featured_image: false
   alt_text: wealthsimple magazine table of contents
