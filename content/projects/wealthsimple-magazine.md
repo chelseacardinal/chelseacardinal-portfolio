@@ -7,9 +7,9 @@ color: ''
 categories:
 - magazines
 image_gallery:
-- image: "../assets/wealthsimple-magazine-sneakers.jpg"
+- image: "../assets/wealthsimple-magazine-spike-color-chart.jpg"
   featured_image: false
-  alt_text: wealthsimple magaine sneakers art travel spread
+  alt_text: wealthsimple magazine spike lee color chart mae musk
   caption: ''
 - image: "../assets/wealthsimple-magazine-cover.jpg"
   featured_image: false
@@ -30,6 +30,10 @@ image_gallery:
 - image: "../assets/wealthsimple-magazine-spreads-bourdain.jpg"
   featured_image: false
   alt_text: wealthsimple magazine spreads anthony bourdain
+  caption: ''
+- image: "../assets/wealthsimple-magazine-sneakers.jpg"
+  featured_image: false
+  alt_text: wealthsimple magaine sneakers art travel spread
   caption: ''
 description: ''
 
