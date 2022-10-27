@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - magazines
 image_gallery:
+- image: "../assets/shopify-magazine-folios.jpg"
+  featured_image: false
+  alt_text: shopify magazine revol undies and folios
+  caption: ''
 - image: "../assets/shopify-magazine-spreads.jpg"
   featured_image: false
   alt_text: shopify magazine contents coco and breezy
