@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - magazines
 image_gallery:
+- image: "../assets/shopify-magazine-drag.jpg"
+  featured_image: false
+  alt_text: shopify magazine pile of magazines
+  caption: ''
 - image: "../assets/shopify-magazine-folios.jpg"
   featured_image: false
   alt_text: shopify magazine revol undies and folios
