@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { navigate } from "@reach/router"
 import { graphql, Link } from "gatsby"
 import ProjectNav from "../components/projectNav"
 import { motion } from "framer-motion"
@@ -37,6 +38,13 @@ const Project = ({ data, pageContext }) => {
   const project = data.markdownRemark.frontmatter
   const site = data.siteJson
   const size = useWindowSize()
+  let checkWidth = size.width < 845 ? true : false
+
+  useEffect(() => {
+    if (checkWidth) {
+      navigate("/")
+    }
+  }, [checkWidth])
 
   return (
     <>

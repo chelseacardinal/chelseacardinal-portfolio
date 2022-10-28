@@ -3,7 +3,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 const FeatureImageOverlay = ({ projectList, imageIndex, featureSize }) => {
   const imageSize = featureSize.edges
-  console.log(imageSize)
   return (
     <div className="feature-image-overlay">
       {projectList &&

@@ -46,7 +46,6 @@ const variantsInner = {
 }
 
 const projectNav = props => {
-  console.log(props.lineColor)
   return (
     <motion.nav
       className="project"
