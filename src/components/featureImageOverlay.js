@@ -20,13 +20,13 @@ const FeatureImageOverlay = ({ projectList, imageIndex, featureSize }) => {
             >
               <GatsbyImage
                 image={
-                  project.node.frontmatter.image_gallery.find(
+                  project.node.frontmatter?.image_gallery.find(
                     item => item.featured_image
                   )
-                    ? project.node.frontmatter.image_gallery.find(
+                    ? project.node.frontmatter?.image_gallery.find(
                         item => item.featured_image
                       ).image.childImageSharp.gatsbyImageData
-                    : project.node.frontmatter.image_gallery[0].image
+                    : project.node.frontmatter?.image_gallery[0]?.image
                         .childImageSharp.gatsbyImageData
                 }
                 loading="eager"
