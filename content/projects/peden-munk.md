@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - branding/identity
 image_gallery:
+- image: "../assets/peden-munk-grid-2.jpg"
+  featured_image: false
+  alt_text: pages from peden and munk portfolio book
+  caption: ''
 - image: "../assets/peden-munk-book-tortilla-pink-popsicle.jpg"
   featured_image: false
   alt_text: peden and munk photo book popsicle and tortilla
