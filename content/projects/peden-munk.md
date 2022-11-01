@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - branding/identity
 image_gallery:
+- image: "../assets/peden-munk-covers-work-icons-life.jpg"
+  featured_image: false
+  alt_text: peden and munk portfolio books life icons work
+  caption: ''
 - image: "../assets/peden-munk-grid-2.jpg"
   featured_image: false
   alt_text: pages from peden and munk portfolio book
