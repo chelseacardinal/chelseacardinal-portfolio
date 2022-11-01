@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - branding/identity
 image_gallery:
+- image: "../assets/peden-munk-grid.jpg"
+  featured_image: false
+  alt_text: peden and munk pages from portfolio book citrus
+  caption: ''
 - image: "../assets/peden-munk-covers-work-icons-life.jpg"
   featured_image: false
   alt_text: peden and munk portfolio books life icons work
