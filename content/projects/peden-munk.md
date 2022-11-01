@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - branding/identity
 image_gallery:
+- image: "../assets/peden-munk-book-tortilla-pink-popsicle.jpg"
+  featured_image: false
+  alt_text: peden and munk photo book popsicle and tortilla
+  caption: ''
 - image: "../assets/peden-munk-book-char-eggs.jpg"
   featured_image: false
   alt_text: peden and munk photo book spread eggs char
