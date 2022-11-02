@@ -23,7 +23,7 @@ image_gallery:
   featured_image: false
   alt_text: peden and munk photo book covers icons work life
   caption: ''
-- image: "../assets/peden-munk-cover-work.jpg"
+- image: "../assets/peden-munk-cover-work-1.jpg"
   featured_image: false
   alt_text: 'peden and munk photo book cover '
   caption: ''
