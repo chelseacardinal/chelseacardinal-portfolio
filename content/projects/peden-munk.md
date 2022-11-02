@@ -7,10 +7,6 @@ color: "#FBFAF8"
 categories:
 - branding/identity
 image_gallery:
-- image: "../assets/peden-munk-photo-qrcodes-1.jpg"
-  featured_image: false
-  alt_text: peden and munk qr code sticky notes
-  caption: ''
 - image: "../assets/peden-munk-photo-promo5.jpg"
   featured_image: false
   alt_text: peden and munk photo promos japan morocco mexico
@@ -58,6 +54,10 @@ image_gallery:
 - image: "../assets/peden-munk-book-samin-nosrat.jpg"
   featured_image: false
   alt_text: samin nosrat shot by peden and munk
+  caption: ''
+- image: "../assets/peden-munk-photo-qrcodes-1.jpg"
+  featured_image: false
+  alt_text: peden and munk qr code sticky notes
   caption: ''
 - image: "../assets/peden-munk-stickers-promos-cards.jpg"
   featured_image: false
