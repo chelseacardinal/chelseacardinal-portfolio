@@ -1,8 +1,8 @@
 ---
 date: 2022-10-27T11:46:37.000-04:00
 title: Wealthsimple Magazine
-project_line_color: "#9879B0"
-text_color: "#000000"
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
 - magazines
@@ -47,7 +47,7 @@ image_gallery:
   featured_image: false
   alt_text: wealthsimple magazine tegan and sara
   caption: ''
-description: An oversized magazine designed for Wealthsimple featuring portrait illustrations
-  by Lauren Tamaki and photographs by KangHee Kim.
+description: Art direction and design for Wealthsimple Magazine featuring portrait
+  illustrations by Lauren Tamaki and photographs by KangHee Kim.
 
 ---
