@@ -1,11 +1,12 @@
 ---
-date: 2022-10-27T17:56:13-04:00
+date: 2022-10-27T17:56:13.000-04:00
 title: Lincoln in The Bardo
 project_line_color: "#9879B0"
 text_color: "#000000"
 color: "#FBFAF8"
 categories:
 - covers
+- 'custom type '
 image_gallery:
 - image: "../assets/saunders-george-incoln-bardo-cover1.jpg"
   featured_image: true
