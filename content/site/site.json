@@ -8,7 +8,6 @@
     "covers",
     "posters",
     "books",
-    "art",
     "illustration",
     "branding/identity",
     "custom type "
@@ -21,10 +20,6 @@
     {
       "select_category": "covers",
       "tag_color": "#718D7C"
-    },
-    {
-      "select_category": "art",
-      "tag_color": "#417505"
     },
     {
       "select_category": "branding/identity",
@@ -41,10 +36,6 @@
     {
       "select_category": "illustration",
       "tag_color": "#924B4B"
-    },
-    {
-      "select_category": "magazines",
-      "tag_color": "#BCA4C8"
     },
     {
       "select_category": "books",
