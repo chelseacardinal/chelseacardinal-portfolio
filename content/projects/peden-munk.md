@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - branding/identity
 image_gallery:
+- image: "../assets/peden-munk-photo-promo2-1.jpg"
+  featured_image: false
+  alt_text: peden and munk accordion fold photo promo
+  caption: ''
 - image: "../assets/peden-munk-grid.jpg"
   featured_image: false
   alt_text: peden and munk pages from portfolio book citrus
