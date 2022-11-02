@@ -8,7 +8,7 @@ categories:
 - magazines
 image_gallery:
 - image: "../assets/wealthsimple-magazine-cover.jpg"
-  featured_image: false
+  featured_image: true
   alt_text: wealthsimple magazine cover
   caption: ''
 - image: "../assets/wealthsimple-magazine-contents.jpg"
@@ -20,7 +20,7 @@ image_gallery:
   alt_text: 'wealthsimple magazine financial guide pink '
   caption: ''
 - image: "../assets/wealthsimple-magazine-buy-sell.jpg"
-  featured_image: true
+  featured_image: false
   alt_text: wealthsimple magazine spread buy sell
   caption: ''
 - image: "../assets/wealthsimple-magazine-spreads-bourdain.jpg"
