@@ -7,9 +7,9 @@ color: "#FBFAF8"
 categories:
 - branding/identity
 image_gallery:
-- image: "../assets/peden-munk-stickers-water-bottle.jpg"
+- image: "../assets/peden-munk-photo-qrcodes-1.jpg"
   featured_image: false
-  alt_text: 'peden and munk stickers on water bottle '
+  alt_text: peden and munk qr code sticky notes
   caption: ''
 - image: "../assets/peden-munk-photo-promo5.jpg"
   featured_image: false
@@ -39,6 +39,18 @@ image_gallery:
   featured_image: false
   alt_text: 'peden and munk photo book cover '
   caption: ''
+- image: "../assets/peden-munk-book-tortilla-pink-popsicle.jpg"
+  featured_image: false
+  alt_text: peden and munk photo book popsicle and tortilla
+  caption: ''
+- image: "../assets/peden-munk-grid-2.jpg"
+  featured_image: false
+  alt_text: pages from peden and munk portfolio book
+  caption: ''
+- image: "../assets/peden-munk-book-char-eggs.jpg"
+  featured_image: false
+  alt_text: peden and munk photo book spread eggs char
+  caption: ''
 - image: "../assets/peden-munk-grid.jpg"
   featured_image: false
   alt_text: peden and munk pages from portfolio book citrus
@@ -47,21 +59,13 @@ image_gallery:
   featured_image: false
   alt_text: samin nosrat shot by peden and munk
   caption: ''
-- image: "../assets/peden-munk-grid-2.jpg"
-  featured_image: false
-  alt_text: pages from peden and munk portfolio book
-  caption: ''
-- image: "../assets/peden-munk-book-tortilla-pink-popsicle.jpg"
-  featured_image: false
-  alt_text: peden and munk photo book popsicle and tortilla
-  caption: ''
-- image: "../assets/peden-munk-book-char-eggs.jpg"
-  featured_image: false
-  alt_text: peden and munk photo book spread eggs char
-  caption: ''
 - image: "../assets/peden-munk-stickers-promos-cards.jpg"
   featured_image: false
   alt_text: peden and munk promos and stickers
+  caption: ''
+- image: "../assets/peden-munk-stickers-water-bottle.jpg"
+  featured_image: false
+  alt_text: 'peden and munk stickers on water bottle '
   caption: ''
 description: ''
 
