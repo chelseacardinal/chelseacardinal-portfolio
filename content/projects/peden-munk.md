@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - branding/identity
 image_gallery:
+- image: ''
+  featured_image: false
+  alt_text: Sample image alt text
+  caption: New image caption
 - image: "../assets/peden-munk-covers-stacked-work-icons-life.jpg"
   featured_image: false
   alt_text: peden and munk photo book covers icons work life
@@ -23,7 +27,7 @@ image_gallery:
   featured_image: false
   alt_text: peden and munk accordion fold photo promo
   caption: ''
-- image: "../assets/peden-munk-covers-work-icons-life.jpg"
+- image: "../assets/peden-munk-covers-work-icons-life-1.jpg"
   featured_image: false
   alt_text: peden and munk portfolio books life icons work
   caption: ''
