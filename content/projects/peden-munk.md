@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - branding/identity
 image_gallery:
+- image: "../assets/peden-munk-photo-promo8.jpg"
+  featured_image: false
+  alt_text: peden and munk accordion fold photo promo
+  caption: ''
 - image: "../assets/peden-munk-photo-promo5.jpg"
   featured_image: false
   alt_text: peden and munk photo promos japan morocco mexico
