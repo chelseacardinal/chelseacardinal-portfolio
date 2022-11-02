@@ -6,6 +6,7 @@ text_color: "#243524"
 color: "#FBFAF8"
 categories:
 - covers
+- 'custom type '
 image_gallery:
 - image: "../assets/largesse-sea-maiden-denis-johnson-1.jpg"
   featured_image: true
