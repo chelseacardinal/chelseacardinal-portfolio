@@ -32,6 +32,7 @@ text_color: "#4F4F4F"
 categories:
 - books
 - covers
+- illustration
 project_line_color: "#4F4F4F"
 
 ---
