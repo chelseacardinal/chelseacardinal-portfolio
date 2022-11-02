@@ -5,6 +5,7 @@ project_line_color: "#9879B0"
 text_color: "#000000"
 color: ''
 categories:
+- 'custom type '
 - magazines
 image_gallery:
 - image: "../assets/rockefeller-center-magazine-cover.jpg"
