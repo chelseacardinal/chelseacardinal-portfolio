@@ -15,8 +15,8 @@
   ],
   "category_color": [
     {
-      "select_category": "",
-      "tag_color": ""
+      "select_category": "custom type ",
+      "tag_color": "#837588"
     },
     {
       "select_category": "covers",
