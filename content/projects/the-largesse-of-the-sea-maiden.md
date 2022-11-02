@@ -12,6 +12,6 @@ image_gallery:
   featured_image: true
   alt_text: the largesse of the sea maiden book cover by denis johnson
   caption: ''
-description: ''
+description: This was Denis Johnson's last book of short stories.
 
 ---
