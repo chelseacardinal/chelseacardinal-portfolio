@@ -9,18 +9,18 @@
     "posters",
     "books",
     "art",
-    "events/live",
     "illustration",
-    "branding/identity"
+    "branding/identity",
+    "custom type "
   ],
   "category_color": [
     {
-      "select_category": "covers",
-      "tag_color": "#718D7C"
+      "select_category": "",
+      "tag_color": ""
     },
     {
-      "select_category": "events/live",
-      "tag_color": "#8B572A"
+      "select_category": "covers",
+      "tag_color": "#718D7C"
     },
     {
       "select_category": "art",
