@@ -36,6 +36,6 @@ image_gallery:
   featured_image: false
   alt_text: Rockefeller Center, Magazine, Christmas Tree
   caption: ''
-description: A "magaz-ette" for Rockefeller Center's holiday program.
+description: A "magaz-ette" for Rockefeller Center's holiday events and programs.
 
 ---
