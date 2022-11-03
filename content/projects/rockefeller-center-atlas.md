@@ -1,9 +1,9 @@
 ---
 date: 2022-05-07T20:26:50.000-04:00
 title: Rockefeller Center/Atlas
-project_line_color: "#9879B0"
-text_color: "#000000"
-color: ''
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
+color: "#FBFAF8"
 categories:
 - 'custom type '
 - magazines
@@ -36,6 +36,6 @@ image_gallery:
   featured_image: false
   alt_text: Rockefeller Center, Magazine, Christmas Tree
   caption: ''
-description: ''
+description: A "magaz-ette" for Rockefeller Center's holiday program.
 
 ---
