@@ -1,17 +1,18 @@
 ---
 date: 2022-04-25T14:32:04.000-04:00
 title: A Swim in a Pond in the Rain
-project_line_color: "#000000"
-text_color: "#000000"
-color: "#FFFAE7"
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
+color: "#FBFAF8"
 categories:
 - covers
+- illustration
 - 'custom type '
 image_gallery:
 - image: "../assets/saunders-swim-pond-rain-cover.jpg"
   featured_image: true
-  alt_text: Sample image alt text
-  caption: Sample caption
+  alt_text: 'book cover for a swim in a pond in the rain by george saunders '
+  caption: ''
 - image: "../assets/saunders-swim-pond-rain-spine.jpg"
   featured_image: false
   alt_text: Sample image alt text
