@@ -2,7 +2,8 @@
 date: 2020-12-10T12:44:31.000-05:00
 title: Bon Appétit Special Issue
 color: "#FBFAF8"
-description: ''
+description: 'A special issue of Bon Appétit magazine to round up food trends of the
+  year. '
 image_gallery:
 - image: "../assets/bon-appetit-special-issue-cover-1.jpg"
   featured_image: false
