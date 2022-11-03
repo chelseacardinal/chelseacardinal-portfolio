@@ -1,12 +1,12 @@
 ---
-date: 2022-10-27T07:58:53-04:00
+date: 2022-10-27T07:58:53.000-04:00
 title: Birthdate Book
-project_line_color: "#9879B0"
-text_color: "#835D5D"
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
 - books
-- covers
+- illustration
 image_gallery:
 - image: "../assets/birthdate-book-covers.jpg"
   featured_image: true
@@ -48,6 +48,8 @@ image_gallery:
   featured_image: false
   alt_text: birthdate book twisted stack of books
   caption: ''
-description: ''
+description: The Birthdate Book is a horoscope book that is fully customized for each
+  person's birth chart, which is printed on the cover. Featuring amazing horoscope
+  illustrations by Ed Kwong.
 
 ---
