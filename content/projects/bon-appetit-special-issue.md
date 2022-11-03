@@ -26,7 +26,7 @@ image_gallery:
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-5.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: bon appetit special issue shaved salads
   caption: ''
 - image: "../assets/bon-appetit-special-issue-cover-2.jpg"
   featured_image: false
