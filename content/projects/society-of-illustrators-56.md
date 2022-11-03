@@ -1,8 +1,8 @@
 ---
-date: 2022-10-27T17:16:54-04:00
+date: 2022-10-27T17:16:54.000-04:00
 title: SOI 56 Call for Entries
-project_line_color: "#9879B0"
-text_color: "#000000"
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
 - posters
@@ -15,6 +15,7 @@ image_gallery:
   featured_image: true
   alt_text: society of illustrators 56 poster figure and circles
   caption: ''
-description: ''
+description: Society of Illustrators 56 Call for Entries poster. Illustrations by
+  Vivienne Flesher
 
 ---
