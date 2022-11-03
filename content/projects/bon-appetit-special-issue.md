@@ -1,16 +1,12 @@
 ---
 date: 2020-12-10T12:44:31.000-05:00
 title: Bon Appétit Special Issue
-color: "#CBF3EC"
-description: A long caption here maybe up to 100 words sometimes if necessary but
-  more likely will be about 30 words tops. A long caption here maybe up to 100 words
-  sometimes if necessary but more likely will be about 30 words tops. A long caption
-  here maybe up to 100 words sometimes if necessary but more likely will be about
-  30 words tops
+color: "#FBFAF8"
+description: ''
 image_gallery:
 - image: "../assets/bon-appetit-special-issue-cover-1.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: bon appetit special issue cover with illustrated ramen
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spread-1.jpg"
   featured_image: false
@@ -36,10 +32,10 @@ image_gallery:
   featured_image: false
   alt_text: Sample image alt text
   caption: ''
-text_color: "#3A4EFE"
+text_color: "#4F4F4F"
 categories:
 - magazines
 - illustration
-project_line_color: "#3A4EFE"
+project_line_color: "#4F4F4F"
 
 ---
