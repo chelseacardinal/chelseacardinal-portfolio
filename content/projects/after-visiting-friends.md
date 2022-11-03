@@ -18,7 +18,7 @@ image_gallery:
   caption: ''
 - image: "../assets/after-visiting-friends-hainey-spine.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: book spine for after visiting friends by michael hainey
   caption: ''
 description: ''
 
