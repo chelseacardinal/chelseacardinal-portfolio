@@ -1,8 +1,8 @@
 ---
 date: 2022-11-01T15:23:59-04:00
 title: Peden + Munk
-project_line_color: "#9879B0"
-text_color: "#000000"
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
 - branding/identity
@@ -67,6 +67,6 @@ image_gallery:
   featured_image: false
   alt_text: 'peden and munk stickers on water bottle '
   caption: ''
-description: ''
+description: 'New identity and portfolio for photography duo Peden + Munk. '
 
 ---
