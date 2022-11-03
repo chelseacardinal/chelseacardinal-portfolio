@@ -8,13 +8,13 @@ categories:
 - covers
 - illustration
 image_gallery:
-- image: "../assets/michael-paterniti-love-other-ways-detail-spine.jpg"
-  featured_image: false
-  alt_text: love and other ways of dying by michael paterniti cover and spine
-  caption: ''
 - image: "../assets/michael-paterniti-love-other-ways-cover.jpg"
   featured_image: true
   alt_text: love and other ways of dying by michael paterniti book cover
+  caption: ''
+- image: "../assets/michael-paterniti-love-other-ways-detail-spine.jpg"
+  featured_image: false
+  alt_text: love and other ways of dying by michael paterniti cover and spine
   caption: ''
 description: Cover for a collection of "devastating and hopeful" essays by Michael
   Paterniti. In thinking of a way to embody the title, flowers came immediately to
