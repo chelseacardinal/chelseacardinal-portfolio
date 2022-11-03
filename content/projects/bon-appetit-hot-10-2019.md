@@ -1,13 +1,10 @@
 ---
 date: 2021-04-22T00:00:00.000-04:00
 title: Bon Appétit/Hot 10
-color: "#D2DCDB"
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-  nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-  officia deserunt mollit anim id est laborum.
+color: "#FBFAF8"
+description: Bon Appétit's Best New restaurants in America (Hot 10) Issue from 2017.
+  Featuring blobs, spot illustrations and a free-wheeling use of Futura alternative
+  characters.
 image_gallery:
 - image: "../assets/bon-appetit-hot-10-cover.jpg"
   featured_image: false
@@ -37,9 +34,10 @@ image_gallery:
   featured_image: false
   alt_text: bon appetit, hot 10, magazine, spreads, chelsea cardinal
   caption: ''
-text_color: "#000000"
+text_color: "#4F4F4F"
 categories:
-- posters
-project_line_color: "#525252"
+- magazines
+- illustration
+project_line_color: "#4F4F4F"
 
 ---
