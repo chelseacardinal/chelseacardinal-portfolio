@@ -14,7 +14,7 @@ image_gallery:
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-2.jpg"
   featured_image: true
-  alt_text: Sample image alt text
+  alt_text: bon appetit special issue ice cream and chicken sandwich
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-3.jpg"
   featured_image: false
