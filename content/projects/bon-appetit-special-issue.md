@@ -30,7 +30,7 @@ image_gallery:
   caption: ''
 - image: "../assets/bon-appetit-special-issue-cover-2.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: bon appetit special issue cover stack
   caption: ''
 text_color: "#4F4F4F"
 categories:
