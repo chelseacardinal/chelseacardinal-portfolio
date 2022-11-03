@@ -17,6 +17,9 @@ image_gallery:
   featured_image: false
   alt_text: book cover and spine for a swim in a pond in the rain by george saunders
   caption: ''
-description: ''
+description: '<span class="a-size-extra-large">A Swim in a Pond in the Rain: In Which
+  Four Russians Give a Master Class on Writing, Reading, and Life. A fully illustrated
+  cover treatment inspired by Russian lithographs of old. Purple on purple is a hard
+  battle to win :)</span>'
 
 ---
