@@ -15,7 +15,7 @@ image_gallery:
   caption: ''
 - image: "../assets/saunders-swim-pond-rain-spine.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: book cover and spine for a swim in a pond in the rain by george saunders
   caption: ''
 description: ''
 
