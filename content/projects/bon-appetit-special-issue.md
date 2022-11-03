@@ -22,7 +22,7 @@ image_gallery:
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-4.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: bon appetit special issue super bowls
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-5.jpg"
   featured_image: false
