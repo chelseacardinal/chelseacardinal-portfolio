@@ -1,8 +1,8 @@
 ---
-date: 2022-10-27T16:41:24-04:00
+date: 2022-10-27T16:41:24.000-04:00
 title: Shopify Magazine
-project_line_color: "#9879B0"
-text_color: "#000000"
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
 - magazines
@@ -47,6 +47,8 @@ image_gallery:
   featured_image: false
   alt_text: shopify magazine stickers cha ching fuck it
   caption: ''
-description: ''
+description: Issue 1 of Shopify Magazine, an experimental editorial piece focused
+  on entrepreneurs in NYC. Featuring photographs by Kristina Dittmar, Matthew Pandolfe,
+  Sarah Pflug and Sarah Moussa. Illustrations by Anna Bu Kliewer and Silvia Asunis.
 
 ---
