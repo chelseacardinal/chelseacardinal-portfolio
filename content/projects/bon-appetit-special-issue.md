@@ -18,7 +18,7 @@ image_gallery:
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-3.jpg"
   featured_image: false
-  alt_text: Sample image alt text
+  alt_text: bon appetit special issue hummus
   caption: ''
 - image: "../assets/bon-appetit-special-issue-spreads-4.jpg"
   featured_image: false
