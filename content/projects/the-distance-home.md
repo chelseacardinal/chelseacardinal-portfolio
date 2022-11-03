@@ -1,8 +1,8 @@
 ---
-date: 2022-10-27T07:39:36-04:00
+date: 2022-10-27T07:39:36.000-04:00
 title: The Distance Home
-project_line_color: "#243524"
-text_color: "#243524"
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
 - covers
@@ -15,6 +15,8 @@ image_gallery:
   featured_image: false
   alt_text: the distance home book cover and spine by paula saunders
   caption: ''
-description: ''
+description: Paula Saunders' debut novel. A family saga set in 1960s South Dakota,
+  about flawed love, sibling rivalry and how our ideas of success and failure lead
+  us inevitably into various problems with empathy and caring for one another.
 
 ---
