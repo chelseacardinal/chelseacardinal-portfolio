@@ -20,6 +20,7 @@ image_gallery:
   featured_image: false
   alt_text: book spine for after visiting friends by michael hainey
   caption: ''
-description: ''
+description: 'Michael Hainey''s mystery memoir about his family, life in Chicago and
+  growing up after his father''s death. '
 
 ---
