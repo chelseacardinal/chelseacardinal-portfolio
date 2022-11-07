@@ -1,9 +1,9 @@
 ---
 date: 2020-12-10T13:31:21.000-05:00
-title: D’Addario/Built to Compete
+title: D’Addario Percussion
 color: "#FBFAF8"
-description: 'A print magazine for D''Addario''s "Built To Compete" campaign for high
-  school kids '
+description: D'Addario Percussion's magazine and product line for the inspiring members
+  of the marching arts.
 image_gallery:
 - image: "../assets/daddario-built-to-compete-magazine-cover-1.jpg"
   featured_image: false
