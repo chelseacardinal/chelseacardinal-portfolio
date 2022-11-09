@@ -8,7 +8,7 @@ const variants = {
     height: "0vh",
   },
   visible: {
-    height: "89vh",
+    height: "105vh",
     transition: {
       ease: "easeInOut",
       duration: 0.5,
@@ -73,7 +73,10 @@ const About = ({ width }) => {
           animate={width > 844 ? "visible" : "visibleMobile"}
           exit="out"
         >
-          <motion.p variants={variantsInner}>{data.siteJson.bio}</motion.p>
+          <motion.p
+            variants={variantsInner}
+            dangerouslySetInnerHTML={{ __html: data.siteJson.bio }}
+          />
         </motion.div>
       )}
     />
