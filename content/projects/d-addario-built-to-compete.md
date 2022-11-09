@@ -2,8 +2,8 @@
 date: 2020-12-10T13:31:21.000-05:00
 title: D’Addario Percussion
 color: "#FBFAF8"
-description: D'Addario Percussion's magazine and product line for the inspiring members
-  of the marching arts.
+description: Art direction and design for D'Addario Percussion's magazine and product
+  line for the inspiring members of the marching arts.
 image_gallery:
 - image: "../assets/daddario-built-to-compete-magazine-cover-1.jpg"
   featured_image: false
