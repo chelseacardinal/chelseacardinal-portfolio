@@ -16,7 +16,7 @@ const variants = {
     },
   },
   visibleMobile: {
-    height: "83vh",
+    height: "auto",
     transition: {
       ease: "easeInOut",
       duration: 0.5,
