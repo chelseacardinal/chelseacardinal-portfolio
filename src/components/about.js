@@ -8,7 +8,7 @@ const variants = {
     height: "0vh",
   },
   visible: {
-    height: "105vh",
+    height: "auto",
     transition: {
       ease: "easeInOut",
       duration: 0.5,
