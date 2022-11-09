@@ -106,8 +106,8 @@ const Project = ({ data, pageContext }) => {
               mousewheel
               grabCursor="true"
               keyboard
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={swiper => console.log(swiper)}
+              // onSlideChange={() => console.log("slide change")}
+              // onSwiper={swiper => console.log(swiper)}
             >
               {project.image_gallery.map((item, index) => {
                 return (

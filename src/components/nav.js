@@ -136,7 +136,11 @@ const Nav = ({
                 style={{ color: textColor }}
                 onClick={mobileMenu ? null : aboutHandler}
               >
-                {activeAbout ? <span>+</span> : "Studio of Chelsea Cardinal"}
+                {activeAbout && size.width < 845 ? (
+                  <span>+</span>
+                ) : (
+                  "Studio of Chelsea Cardinal"
+                )}
               </button>
             </h1>
           </motion.div>
