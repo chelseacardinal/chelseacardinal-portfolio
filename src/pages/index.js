@@ -308,7 +308,6 @@ export const data = graphql`
           frontmatter {
             image_gallery {
               alt_text
-              caption
               featured_image
               image {
                 childImageSharp {
