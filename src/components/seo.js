@@ -27,7 +27,7 @@ const Seo = ({ metaDescription, metaTitle }) => {
   }
 
   const title = metaTitle ? metaTitle : defaults.title
-  const description = metaDescription ? metaDescription : defaults.description
+  const description = defaults.description
   const url = new URL(defaults.siteUrl)
   const image = "/CCpreview.jpg"
 
