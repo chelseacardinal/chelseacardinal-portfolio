@@ -5,8 +5,8 @@ project_line_color: "#4F4F4F"
 text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
+- custom type
 - covers
-- 'custom type '
 image_gallery:
 - image: "../assets/saunders-george-incoln-bardo-cover1.jpg"
   featured_image: true
