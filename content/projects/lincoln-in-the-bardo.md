@@ -20,10 +20,10 @@ image_gallery:
   featured_image: false
   alt_text: lincoln in the bardo by george saunders book stack
   caption: ''
-description: "<em>A</em>n experimental novel by George Saunders.The novel takes place
-  during and after the death of Abraham Lincoln's son and deals with the president's
-  grief . The bulk of the novel, which takes place over the course of a single evening,
+description: An experimental novel by George Saunders.The novel takes place during
+  and after the death of Abraham Lincoln's son and deals with the president's grief
+  . The bulk of the novel, which takes place over the course of a single evening,
   is set in the<em> bardo</em>—an intermediate space between life and rebirth. Winner
-  of the 2017 Booker Prize."
+  of the 2017 Booker Prize.
 
 ---
