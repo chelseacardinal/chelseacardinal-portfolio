@@ -40,6 +40,7 @@ const variantsInner = {
 }
 
 const Index = ({ data }) => {
+  console.log(data)
   const [about, setAbout] = useState(false)
   const projects = data.allMarkdownRemark.edges
   const [projectList, setProjectList] = useState(projects)
@@ -226,7 +227,9 @@ const Index = ({ data }) => {
                           exit="out"
                           transition={{ duration: 0.5 }}
                         >
-                          <p>{project.node.frontmatter.categories}</p>
+                          <p>
+                            {project.node.frontmatter.categories.join(", ")}
+                          </p>
                           <h2>{project.node.frontmatter.title}</h2>
                         </motion.div>
                         <motion.div
