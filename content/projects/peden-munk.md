@@ -1,11 +1,11 @@
 ---
-date: 2022-11-01T15:23:59-04:00
+date: 2022-11-01T15:23:59.000-04:00
 title: Peden + Munk
 project_line_color: "#4F4F4F"
 text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
-- 'custom type '
+- custom type
 - branding/identity
 image_gallery:
 - image: "../assets/peden-munk-photo-promo5.jpg"
