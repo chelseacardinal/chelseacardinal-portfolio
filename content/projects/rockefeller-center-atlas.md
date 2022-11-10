@@ -5,8 +5,8 @@ project_line_color: "#4F4F4F"
 text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
-- 'custom type '
 - magazines
+- custom type
 image_gallery:
 - image: "../assets/rockefeller-center-magazine-cover.jpg"
   featured_image: false
