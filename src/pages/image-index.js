@@ -128,7 +128,7 @@ const ImageIndex = ({ data }) => {
                             tag =>
                               tag.select_category ===
                               project.node.frontmatter.categories[0]
-                          ).tag_color || "#000000"
+                          )?.tag_color || "#000000"
                         : "#000000",
                     }}
                   >

@@ -1,7 +1,7 @@
 .about {
   width: 100%;
   height: auto;
-  /* padding: 1em 0; */
+  /* min-height: 86vh; */
   /* display: flex;
   align-items: center; */
 }
@@ -17,7 +17,7 @@
   font-size: 30px;
   line-height: 38px;
   color: #303030;
-  padding: 1.5em 0 2em;
+  padding: 2.5em 0 2em;
 }
 
 .about p a {

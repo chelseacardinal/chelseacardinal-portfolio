@@ -40,7 +40,6 @@ const variantsInner = {
 }
 
 const Index = ({ data }) => {
-  console.log(data)
   const [about, setAbout] = useState(false)
   const projects = data.allMarkdownRemark.edges
   const [projectList, setProjectList] = useState(projects)
@@ -255,7 +254,11 @@ const Index = ({ data }) => {
                               )
                             }
                           )}
-                          <p>{project.node.frontmatter.description}</p>
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: project.node.frontmatter.description,
+                            }}
+                          />
                         </motion.div>
                       </li>
                     )

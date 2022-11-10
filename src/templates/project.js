@@ -73,7 +73,7 @@ const Project = ({ data, pageContext }) => {
             className="project-description"
             style={{ color: project.text_color || "#000000" }}
           >
-            <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
+            <p dangerouslySetInnerHTML={{ __html: project.description }} />
             <div className="project-paginator">
               <Link
                 onMouseEnter={() => setPaginator("previous")}
