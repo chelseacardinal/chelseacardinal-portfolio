@@ -9,6 +9,10 @@ categories:
 - books
 - covers
 image_gallery:
+- image: "../assets/fox-8-bedtime.jpg"
+  featured_image: false
+  alt_text: fox 8 by george saunders illustration of fox and house
+  caption: ''
 - image: "../assets/fox-8-cover.jpg"
   featured_image: false
   alt_text: book cover for fox 8 by george saunders
