@@ -10,7 +10,7 @@ categories:
 - covers
 image_gallery:
 - image: "../assets/fox-8-cover.jpg"
-  featured_image: false
+  featured_image: true
   alt_text: book cover for fox 8 by george saunders
   caption: ''
 - image: "../assets/fox-8-bedtime.jpg"
