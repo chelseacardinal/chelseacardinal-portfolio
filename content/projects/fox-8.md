@@ -9,6 +9,10 @@ categories:
 - books
 - covers
 image_gallery:
+- image: "../assets/fox-8-landscape.jpg"
+  featured_image: false
+  alt_text: fox 8 interior illustration landscape
+  caption: ''
 - image: "../assets/fox-8-parking.jpg"
   featured_image: false
   alt_text: fox 8 interior illustration foxes in parking lot
