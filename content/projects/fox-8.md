@@ -9,6 +9,10 @@ categories:
 - books
 - covers
 image_gallery:
+- image: "../assets/fox-8-shopper-fox.jpg"
+  featured_image: false
+  alt_text: fox 8 illustration fox with bag
+  caption: ''
 - image: "../assets/fox-8-wow.jpg"
   featured_image: false
   alt_text: fox 8 by george saunders interior illustration foxes talking
