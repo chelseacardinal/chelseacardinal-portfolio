@@ -7,9 +7,9 @@ color: "#FBFAF8"
 categories:
 - " products"
 image_gallery:
-- image: "../assets/tarot-trio-candles-unboxed.jpg"
+- image: "../assets/tarot-trio-box-upright.jpg"
   featured_image: false
-  alt_text: tarot trio candle set unboxed
+  alt_text: tarot trio box closed upright
   caption: ''
 - image: "../assets/tarot-trio-box.jpg"
   featured_image: false
@@ -18,6 +18,10 @@ image_gallery:
 - image: "../assets/tarot-trio-box-lid.jpg"
   featured_image: false
   alt_text: tarot trio candles set lid lifted
+  caption: ''
+- image: "../assets/tarot-trio-candles-unboxed.jpg"
+  featured_image: false
+  alt_text: tarot trio candle set unboxed
   caption: ''
 - image: "../assets/062121_tarot_trio1651.jpg"
   featured_image: true
