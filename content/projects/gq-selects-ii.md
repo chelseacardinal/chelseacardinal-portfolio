@@ -8,18 +8,6 @@ categories:
 - magazines
 - custom type
 image_gallery:
-- image: "../assets/gq-magazine-spread-noma-redzepi-2.jpg"
-  featured_image: false
-  alt_text: gq magazine spread design noma rene redzepi turn
-  caption: ''
-- image: "../assets/gq-magazine-spread-noma-redzepi-1.jpg"
-  featured_image: false
-  alt_text: gq magazine spread design noma rene redzepi
-  caption: ''
-- image: "../assets/gq-magazine-spread-larry-king.jpg"
-  featured_image: false
-  alt_text: gq magazine spread design larry king
-  caption: ''
 - image: "../assets/gq-magazine-spread-bill-murray.jpg"
   featured_image: false
   alt_text: gq magazine spread design bill murray comic bubbles
@@ -48,6 +36,18 @@ image_gallery:
   featured_image: false
   alt_text: gq magazine spread design japan tsunami schools
   caption: New image caption
+- image: "../assets/gq-magazine-spread-larry-king.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design larry king
+  caption: ''
+- image: "../assets/gq-magazine-spread-noma-redzepi-1.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design noma rene redzepi
+  caption: ''
+- image: "../assets/gq-magazine-spread-noma-redzepi-2.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design noma rene redzepi turn
+  caption: ''
 description: ''
 
 ---
