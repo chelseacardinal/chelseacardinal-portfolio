@@ -15,8 +15,8 @@
   ],
   "category_color": [
     {
-      "select_category": "",
-      "tag_color": ""
+      "select_category": " products",
+      "tag_color": "#8A819C"
     },
     {
       "select_category": "custom type",
