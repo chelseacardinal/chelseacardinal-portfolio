@@ -1,6 +1,6 @@
 ---
 date: 2023-02-03T12:36:02-05:00
-title: GQ Spread Selects
+title: GQ selected spreads
 project_line_color: "#4F4F4F"
 text_color: "#4F4F4F"
 color: "#FBFAF8"
@@ -8,10 +8,6 @@ categories:
 - magazines
 - custom type
 image_gallery:
-- image: "../assets/gq-magazine-spread-alaska.jpg"
-  featured_image: false
-  alt_text: gq magazine spread design alaska shipwreck
-  caption: ''
 - image: "../assets/gq-magazine-spread-lil-wayne.jpg"
   featured_image: true
   alt_text: gq magazine spread lil wayne custom type
@@ -27,6 +23,10 @@ image_gallery:
 - image: "../assets/gq-magazine-spread-cocktails-2.jpg"
   featured_image: false
   alt_text: 'gq magazine spread design cocktails '
+  caption: ''
+- image: "../assets/gq-magazine-spread-alaska.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design alaska shipwreck
   caption: ''
 - image: "../assets/gq-magazine-spread-zach-galafianakis.jpg"
   featured_image: false
