@@ -8,17 +8,21 @@ categories:
 - magazines
 - custom type
 image_gallery:
-- image: "../assets/gq-magazine-spread-american-grotesque-2.jpg"
+- image: "../assets/gq-magazine-spread-tsunami-japan-school.jpg"
   featured_image: false
-  alt_text: gq magazine spread design american grotesque
+  alt_text: gq magazine spread design japan tsunami schools
+  caption: ''
+- image: "../assets/gq-magazine-spread-bill-murray-2.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design bill murray golfing
   caption: ''
 - image: "../assets/gq-magazine-spread-american-grotesque-1.jpg"
   featured_image: false
   alt_text: gq magazine spread design american grotesque opener
   caption: ''
-- image: "../assets/gq-magazine-spread-bill-murray-2.jpg"
+- image: "../assets/gq-magazine-spread-american-grotesque-2.jpg"
   featured_image: false
-  alt_text: gq magazine spread design bill murray golfing
+  alt_text: gq magazine spread design american grotesque
   caption: ''
 description: ''
 
