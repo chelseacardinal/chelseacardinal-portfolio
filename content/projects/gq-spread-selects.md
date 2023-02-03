@@ -1,6 +1,6 @@
 ---
 date: 2023-02-03T12:36:02-05:00
-title: GQ selected spreads
+title: 'GQ Selects I '
 project_line_color: "#4F4F4F"
 text_color: "#4F4F4F"
 color: "#FBFAF8"
