@@ -1,13 +1,17 @@
 ---
 date: 2023-02-03T12:36:02-05:00
 title: GQ Spread Selects
-project_line_color: "#9879B0"
-text_color: "#000000"
-color: ''
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
+color: "#FBFAF8"
 categories:
 - magazines
 - custom type
 image_gallery:
+- image: "../assets/gq-magazine-spread-ricky-gervais.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design ricky gervais
+  caption: ''
 - image: "../assets/gq-magazine-spread-lil-wayne.jpg"
   featured_image: true
   alt_text: gq magazine spread lil wayne custom type
