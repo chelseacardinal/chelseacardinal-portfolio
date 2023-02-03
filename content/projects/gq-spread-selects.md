@@ -8,6 +8,10 @@ categories:
 - magazines
 - custom type
 image_gallery:
+- image: "../assets/gq-magazine-spread-galafianakis-2.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design zach galifianakis
+  caption: ''
 - image: "../assets/gq-magazine-spread-zach-galafianakis.jpg"
   featured_image: false
   alt_text: gq magazine spread design zach galifianakis
