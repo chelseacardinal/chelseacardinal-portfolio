@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - " products"
 image_gallery:
+- image: "../assets/tarot-trio-box.jpg"
+  featured_image: false
+  alt_text: tarot trio candle set.box exterior
+  caption: ''
 - image: "../assets/tarot-trio-candles-booklet-charms.jpg"
   featured_image: false
   alt_text: tarot trio candles past present and future and booklet with charms
