@@ -8,6 +8,10 @@ categories:
 - magazines
 - custom type
 image_gallery:
+- image: "../assets/gq-magazine-spread-american-grotesque-2.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design american grotesque
+  caption: ''
 - image: "../assets/gq-magazine-spread-american-grotesque-1.jpg"
   featured_image: false
   alt_text: gq magazine spread design american grotesque opener
