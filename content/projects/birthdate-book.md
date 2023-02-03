@@ -8,7 +8,6 @@ categories:
 - " products"
 - books
 - custom type
-- illustration
 image_gallery:
 - image: "../assets/birthdate-book-covers.jpg"
   featured_image: true
