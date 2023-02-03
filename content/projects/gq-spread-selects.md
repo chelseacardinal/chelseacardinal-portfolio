@@ -8,6 +8,10 @@ categories:
 - magazines
 - custom type
 image_gallery:
+- image: "../assets/gq-magazine-spread-cocktails-2.jpg"
+  featured_image: false
+  alt_text: 'gq magazine spread design cocktails '
+  caption: ''
 - image: "../assets/gq-magazine-spread-cocktails.jpg"
   featured_image: false
   alt_text: gq magazine spread design cocktails opener
