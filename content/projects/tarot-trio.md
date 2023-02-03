@@ -7,21 +7,25 @@ color: "#FBFAF8"
 categories:
 - " products"
 image_gallery:
-- image: "../assets/tarot-trio-box-lid.jpg"
+- image: "../assets/tarot-trio-candles-unboxed.jpg"
   featured_image: false
-  alt_text: tarot trio candles set lid lifted
+  alt_text: tarot trio candle set unboxed
   caption: ''
 - image: "../assets/tarot-trio-box.jpg"
   featured_image: false
   alt_text: tarot trio candle set box exterior
   caption: ''
-- image: "../assets/tarot-trio-candles-booklet-charms.jpg"
+- image: "../assets/tarot-trio-box-lid.jpg"
   featured_image: false
-  alt_text: tarot trio candles past present and future and booklet with charms
+  alt_text: tarot trio candles set lid lifted
   caption: ''
 - image: "../assets/062121_tarot_trio1651.jpg"
   featured_image: true
   alt_text: tarot trio candle set present
+  caption: ''
+- image: "../assets/tarot-trio-candles-booklet-charms.jpg"
+  featured_image: false
+  alt_text: tarot trio candles past present and future and booklet with charms
   caption: ''
 description: ''
 
