@@ -8,6 +8,10 @@ categories:
 - magazines
 - custom type
 image_gallery:
+- image: "../assets/gq-magazine-spread-leonardo-dicaprio.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design leonardo dicaprio
+  caption: ''
 - image: "../assets/gq-magazine-spread-bill-murray-2.jpg"
   featured_image: false
   alt_text: gq magazine spread design bill murray golfing
