@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - " products"
 image_gallery:
+- image: "../assets/tarot-trio-box-lid.jpg"
+  featured_image: false
+  alt_text: tarot trio candles set lid lifted
+  caption: ''
 - image: "../assets/tarot-trio-box.jpg"
   featured_image: false
   alt_text: tarot trio candle set box exterior
