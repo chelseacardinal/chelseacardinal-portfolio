@@ -8,13 +8,17 @@ categories:
 - magazines
 - custom type
 image_gallery:
-- image: "../assets/gq-magazine-spread-ricky-gervais.jpg"
+- image: "../assets/gq-magazine-spread-cocktails.jpg"
   featured_image: false
-  alt_text: gq magazine spread design ricky gervais
+  alt_text: gq magazine spread design cocktails opener
   caption: ''
 - image: "../assets/gq-magazine-spread-lil-wayne.jpg"
   featured_image: true
   alt_text: gq magazine spread lil wayne custom type
+  caption: ''
+- image: "../assets/gq-magazine-spread-ricky-gervais.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design ricky gervais
   caption: ''
 description: ''
 
