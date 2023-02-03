@@ -8,21 +8,9 @@ categories:
 - magazines
 - custom type
 image_gallery:
-- image: "../assets/gq-magazine-spread-galafianakis-2.jpg"
+- image: "../assets/gq-magazine-spread-suicide-catcher.jpg"
   featured_image: false
-  alt_text: gq magazine spread design zach galifianakis
-  caption: ''
-- image: "../assets/gq-magazine-spread-zach-galafianakis.jpg"
-  featured_image: false
-  alt_text: gq magazine spread design zach galifianakis
-  caption: ''
-- image: "../assets/gq-magazine-spread-cocktails-2.jpg"
-  featured_image: false
-  alt_text: 'gq magazine spread design cocktails '
-  caption: ''
-- image: "../assets/gq-magazine-spread-cocktails.jpg"
-  featured_image: false
-  alt_text: gq magazine spread design cocktails opener
+  alt_text: gq magazine spread design suicide catcher opener
   caption: ''
 - image: "../assets/gq-magazine-spread-lil-wayne.jpg"
   featured_image: true
@@ -31,6 +19,22 @@ image_gallery:
 - image: "../assets/gq-magazine-spread-ricky-gervais.jpg"
   featured_image: false
   alt_text: gq magazine spread design ricky gervais
+  caption: ''
+- image: "../assets/gq-magazine-spread-cocktails.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design cocktails opener
+  caption: ''
+- image: "../assets/gq-magazine-spread-cocktails-2.jpg"
+  featured_image: false
+  alt_text: 'gq magazine spread design cocktails '
+  caption: ''
+- image: "../assets/gq-magazine-spread-zach-galafianakis.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design zach galifianakis
+  caption: ''
+- image: "../assets/gq-magazine-spread-galafianakis-2.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design zach galifianakis
   caption: ''
 description: ''
 
