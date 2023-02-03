@@ -8,6 +8,10 @@ categories:
 - magazines
 - custom type
 image_gallery:
+- image: "../assets/gq-magazine-spread-suicide-catcher-2.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design suicide catcher
+  caption: ''
 - image: "../assets/gq-magazine-spread-suicide-catcher.jpg"
   featured_image: false
   alt_text: gq magazine spread design suicide catcher opener
