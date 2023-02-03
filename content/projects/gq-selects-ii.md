@@ -8,14 +8,6 @@ categories:
 - magazines
 - custom type
 image_gallery:
-- image: "../assets/gq-magazine-spread-tsunami-japan-school-2.jpg"
-  featured_image: false
-  alt_text: gq magazine spread design japan tsunami schools
-  caption: New image caption
-- image: "../assets/gq-magazine-spread-tsunami-japan-school.jpg"
-  featured_image: false
-  alt_text: gq magazine spread design japan tsunami schools
-  caption: ''
 - image: "../assets/gq-magazine-spread-bill-murray-2.jpg"
   featured_image: false
   alt_text: gq magazine spread design bill murray golfing
@@ -28,6 +20,14 @@ image_gallery:
   featured_image: false
   alt_text: gq magazine spread design american grotesque
   caption: ''
+- image: "../assets/gq-magazine-spread-tsunami-japan-school.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design japan tsunami schools
+  caption: ''
+- image: "../assets/gq-magazine-spread-tsunami-japan-school-2.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design japan tsunami schools
+  caption: New image caption
 description: ''
 
 ---
