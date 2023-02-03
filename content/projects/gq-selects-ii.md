@@ -8,6 +8,10 @@ categories:
 - magazines
 - custom type
 image_gallery:
+- image: "../assets/gq-magazine-spread-larry-king.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design larry king
+  caption: ''
 - image: "../assets/gq-magazine-spread-bill-murray.jpg"
   featured_image: false
   alt_text: gq magazine spread design bill murray comic bubbles
