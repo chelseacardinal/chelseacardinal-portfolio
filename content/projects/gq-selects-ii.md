@@ -8,9 +8,9 @@ categories:
 - magazines
 - custom type
 image_gallery:
-- image: "../assets/gq-magazine-spread-leonardo-dicaprio.jpg"
+- image: "../assets/gq-magazine-spread-bill-murray.jpg"
   featured_image: false
-  alt_text: gq magazine spread design leonardo dicaprio
+  alt_text: gq magazine spread design bill murray comic bubbles
   caption: ''
 - image: "../assets/gq-magazine-spread-bill-murray-2.jpg"
   featured_image: false
@@ -23,6 +23,10 @@ image_gallery:
 - image: "../assets/gq-magazine-spread-american-grotesque-2.jpg"
   featured_image: false
   alt_text: gq magazine spread design american grotesque
+  caption: ''
+- image: "../assets/gq-magazine-spread-leonardo-dicaprio.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design leonardo dicaprio
   caption: ''
 - image: "../assets/gq-magazine-spread-tsunami-japan-school.jpg"
   featured_image: false
