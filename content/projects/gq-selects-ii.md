@@ -8,6 +8,10 @@ categories:
 - magazines
 - custom type
 image_gallery:
+- image: "../assets/gq-magazine-spread-noma-redzepi-2.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design noma rene redzepi turn
+  caption: ''
 - image: "../assets/gq-magazine-spread-noma-redzepi-1.jpg"
   featured_image: false
   alt_text: gq magazine spread design noma rene redzepi
