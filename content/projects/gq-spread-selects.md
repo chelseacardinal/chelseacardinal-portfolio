@@ -8,6 +8,10 @@ categories:
 - magazines
 - custom type
 image_gallery:
+- image: "../assets/gq-magazine-spread-villans.jpg"
+  featured_image: false
+  alt_text: gq magazine spread design benicio del toro villans bad guys
+  caption: ''
 - image: "../assets/gq-magazine-spread-suicide-catcher-2.jpg"
   featured_image: false
   alt_text: gq magazine spread design suicide catcher
