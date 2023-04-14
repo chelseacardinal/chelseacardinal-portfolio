@@ -1,9 +1,9 @@
 ---
 date: 2023-04-14T18:01:05-04:00
 title: New York Times Opinion
-project_line_color: "#9879B0"
-text_color: "#000000"
-color: ''
+project_line_color: "#4F4F4F"
+text_color: "#4F4F4F"
+color: "#FBFAF8"
 categories:
 - custom type
 - illustration
