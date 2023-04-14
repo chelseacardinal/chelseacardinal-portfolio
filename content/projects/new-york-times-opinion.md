@@ -8,6 +8,10 @@ categories:
 - custom type
 - illustration
 image_gallery:
+- image: "../assets/new-york-times-knitted-fist.jpg"
+  featured_image: true
+  alt_text: knitted fist sculptural illustration photograph for new york times
+  caption: ''
 - image: "../assets/new-york-times-pro-choice-opinion-hardcopy.jpg"
   featured_image: false
   alt_text: my body my choice ripped banner illustration for new york times
