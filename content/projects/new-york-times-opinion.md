@@ -8,6 +8,10 @@ categories:
 - custom type
 - illustration
 image_gallery:
+- image: "../assets/new-york-times-pro-choice-opinion-hardcopy.jpg"
+  featured_image: false
+  alt_text: my body my choice ripped banner illustration for new york times
+  caption: ''
 - image: "../assets/new-york-times-knitted-fist-hardcopy.jpg"
   featured_image: false
   alt_text: knitted fist sculpture illustration for new york times
