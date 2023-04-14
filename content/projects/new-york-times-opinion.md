@@ -1,12 +1,12 @@
 ---
 date: 2023-04-14T18:01:05-04:00
-title: New York Times Opinion
+title: New York Times Opinion illustrations
 project_line_color: "#4F4F4F"
 text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
-- custom type
 - illustration
+- custom type
 image_gallery:
 - image: "../assets/new-york-times-supreme-court-opinion.jpg"
   featured_image: false
