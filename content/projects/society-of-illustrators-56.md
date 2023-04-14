@@ -16,6 +16,6 @@ image_gallery:
   alt_text: society of illustrators 56 poster figure and circles
   caption: ''
 description: Society of Illustrators 56 Call for Entries poster. Illustrations by
-  Vivienne Flesher
+  Vivienne Flesher. Art Directed by Jillian Tamaki.
 
 ---
