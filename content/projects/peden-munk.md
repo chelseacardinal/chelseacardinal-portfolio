@@ -20,10 +20,6 @@ image_gallery:
   featured_image: false
   alt_text: peden and munk accordion fold photo promo
   caption: ''
-- image: "../assets/peden-munk-covers-stacked-work-icons-life-1.jpg"
-  featured_image: false
-  alt_text: icons work life book covers peden and munk
-  caption: ''
 - image: "../assets/peden-munk-covers-stacked-work-icons-life.jpg"
   featured_image: false
   alt_text: peden and munk photo book covers icons work life
