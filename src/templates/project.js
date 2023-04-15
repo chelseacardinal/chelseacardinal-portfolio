@@ -191,7 +191,7 @@ export const data = graphql`
                 layout: CONSTRAINED
                 height: 813
                 placeholder: NONE
-                formats: [AUTO, WEBP, AVIF]
+                formats: [AUTO, WEBP]
                 quality: 75
               )
             }
