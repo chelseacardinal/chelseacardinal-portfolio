@@ -24,6 +24,6 @@ image_gallery:
   featured_image: false
   alt_text: my body my choice ripped banner illustration for new york times
   caption: ''
-description: ''
+description: 'Collection of illustrations for New York Times Opinion '
 
 ---
