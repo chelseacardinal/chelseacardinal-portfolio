@@ -31,7 +31,6 @@ image_gallery:
   featured_image: false
   alt_text: tarot trio box closed upright
   caption: ''
-description: 'A three part tarot reading pulled from molten wax. For<em> </em><a href="https://birthdate.co/?utm_source=google&amp;utm_medium=paid&amp;utm_campaign=7860612191&amp;utm_content=117532200853&amp;utm_term=birthdate%20co&amp;gadid=533108453748&amp;gad=1&amp;gclid=CjwKCAjw3POhBhBQEiwAqTCuBqOCpwhPM72I2WvYsz-liedZP3MfOMtuiMGqrD7of5_Gka-UbDGyVhoCZgYQAvD_BwE"
-  title=""><em><span style="text-decoration: underline;">Birthdate Co.</span></em></a>'
+description: 'A three-part tarot reading pulled from molten wax. '
 
 ---
