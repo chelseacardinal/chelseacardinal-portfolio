@@ -24,6 +24,6 @@ image_gallery:
   featured_image: false
   alt_text: my body my choice ripped banner illustration for new york times
   caption: ''
-description: ''
+description: New York Times Opinion pieces from 2021-2023
 
 ---
