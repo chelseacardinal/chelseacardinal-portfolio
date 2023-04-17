@@ -16,7 +16,8 @@ image_gallery:
 - image: "../assets/new-york-times-knitted-fist-hardcopy.jpg"
   featured_image: false
   alt_text: knitted fist sculpture illustration for new york times
-  caption: ''
+  caption: Ran in January 2022. Piece <a href="https://www.nytimes.com/2023/01/27/opinion/sunday/knitting-fabric-michelle-obama.html"
+    title="">here.</a>
 - image: "../assets/new-york-times-knitted-fist.jpg"
   featured_image: true
   alt_text: knitted fist sculptural illustration photograph for new york times
