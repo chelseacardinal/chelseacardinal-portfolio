@@ -204,7 +204,7 @@ export const data = graphql`
                   gatsbyImageData(
                     height: 189
                     placeholder: NONE
-                    formats: [AUTO, WEBP, AVIF]
+                    formats: [AUTO, WEBP]
                   )
                 }
               }

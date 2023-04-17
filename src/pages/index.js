@@ -297,7 +297,7 @@ export const data = graphql`
                   gatsbyImageData(
                     height: 246
                     placeholder: NONE
-                    formats: [AUTO, WEBP, AVIF]
+                    formats: [AUTO, WEBP]
                     quality: 75
                   )
                 }
@@ -320,7 +320,7 @@ export const data = graphql`
                   gatsbyImageData(
                     height: 504
                     placeholder: NONE
-                    formats: [AUTO, WEBP, AVIF]
+                    formats: [AUTO, WEBP]
                     quality: 75
                   )
                 }
