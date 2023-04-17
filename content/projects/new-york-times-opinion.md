@@ -11,8 +11,8 @@ image_gallery:
 - image: "../assets/new-york-times-supreme-court-opinion.jpg"
   featured_image: false
   alt_text: pro choice female reproductive illustration for new york times
-  caption: Ran in June 2022. Piece <a href="https://www.nytimes.com/2022/07/31/opinion/disability-rights-anti-abortion.html"
-    title="">here</a>
+  caption: 'Ran in June 2022. Piece<em> </em><a href="https://www.nytimes.com/2022/07/31/opinion/disability-rights-anti-abortion.html"
+    title=""><em><span style="text-decoration: underline;">here</span></em></a>'
 - image: "../assets/new-york-times-knitted-fist-hardcopy.jpg"
   featured_image: false
   alt_text: knitted fist sculpture illustration for new york times
