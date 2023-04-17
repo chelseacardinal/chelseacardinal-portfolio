@@ -23,8 +23,7 @@ image_gallery:
 - image: "../assets/new-york-times-pro-choice-opinion-hardcopy.jpg"
   featured_image: false
   alt_text: my body my choice ripped banner illustration for new york times
-  caption: 'Ran in December 2021. Piece <a href="https://www.nytimes.com/2021/12/01/opinion/abortion-planned-parenthood-naral-roe-v-wade.html"
-    title="here"><em><span style="text-decoration: underline;">here</span></em></a>'
+  caption: 'Ran in December 2021. '
 description: New York Times Opinion pieces from 2021-2023
 
 ---
