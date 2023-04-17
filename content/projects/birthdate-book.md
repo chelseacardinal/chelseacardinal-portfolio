@@ -49,8 +49,8 @@ image_gallery:
   featured_image: false
   alt_text: birthdate book twisted stack of books
   caption: ''
-description: The Birthdate Book is a horoscope book that is fully customized for each
-  person's birth chart, which is printed on the cover. Featuring a hand drawn typeface
-  and amazing horoscope illustrations by Ed Kwong.
+description: 'The Birthdate Book is a horoscope book that is fully customized for
+  each person''s birth chart, which is printed on the cover. Featuring a hand drawn
+  typeface and amazing horoscope illustrations by Ed Kwong. '
 
 ---

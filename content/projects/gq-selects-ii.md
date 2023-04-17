@@ -1,5 +1,5 @@
 ---
-date: 2023-02-03T13:01:31-05:00
+date: 2023-02-03T13:01:31.000-05:00
 title: GQ Selects II
 project_line_color: "#4F4F4F"
 text_color: "#4F4F4F"
@@ -48,6 +48,7 @@ image_gallery:
   featured_image: false
   alt_text: gq magazine spread design noma rene redzepi turn
   caption: ''
-description: ''
+description: Some GQ feature favorites designed and art directed between 2008 and
+  2015.
 
 ---
