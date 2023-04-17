@@ -1,5 +1,5 @@
 ---
-date: 2023-04-14T18:01:05-04:00
+date: 2023-04-14T18:01:05.000-04:00
 title: New York Times Opinion illustrations
 project_line_color: "#4F4F4F"
 text_color: "#4F4F4F"
@@ -24,6 +24,6 @@ image_gallery:
   featured_image: false
   alt_text: my body my choice ripped banner illustration for new york times
   caption: ''
-description: 'Collection of illustrations for New York Times Opinion '
+description: ''
 
 ---
