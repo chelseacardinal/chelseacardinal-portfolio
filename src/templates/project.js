@@ -131,7 +131,7 @@ const Project = ({ data, pageContext }) => {
                         alt={item?.alt_text}
                       />
                     </div>
-                    <figcaption
+                    <figcaption dangerouslySetInnerHTML={{ __html: project.caption }}
                       style={{
                         color: project.text_color || "#000000",
                         maxWidth:
@@ -143,9 +143,7 @@ const Project = ({ data, pageContext }) => {
                               .height) *
                             size.elheight,
                       }}
-                    >
-                      {item.caption}
-                    </figcaption>
+                    />
                   </SwiperSlide>
                 )
               })}
