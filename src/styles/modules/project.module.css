@@ -65,3 +65,7 @@
 .project-container .image-overflow figure figcaption {
   margin: 7px 0 0;
 }
+
+.project-container .image-overflow figure figcaption a {
+  display: inline;
+}
