@@ -85,6 +85,18 @@
   max-width: 100%;
 }
 
+
+.swiper-slide figcaption > a {
+  display: inline;
+  white-space: normal;
+  align-self: center;
+  text-align: center;
+  width: auto;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: underline;
+}
+
 .swiper-slide.next-link {
   display: flex;
   height: 93%;
@@ -104,17 +116,6 @@
 .swiper-slide a span {
   display: inline-block;
   width: 4px;
-}
-
-.swiper-slide figure figcaption a {
-  display: inline;
-  white-space: normal;
-  align-self: center;
-  text-align: center;
-  width: auto;
-  font-size: 14px;
-  line-height: 14px;
-  text-decoration: underline;
 }
 
 @media only screen and (max-height: 846px) {
