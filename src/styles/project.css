@@ -106,6 +106,17 @@
   width: 4px;
 }
 
+.swiper-slide figure figcaption a {
+  display: inline;
+  white-space: normal;
+  align-self: center;
+  text-align: center;
+  width: auto;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: underline;
+}
+
 @media only screen and (max-height: 846px) {
   .swiper-slide {
     padding: 0 0 30px;
