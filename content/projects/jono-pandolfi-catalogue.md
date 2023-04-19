@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/jono-pandolfi-catalog-chef-quotes.jpg"
+  featured_image: false
+  alt_text: Jono Pandolfi ceramics hospitality catalog chef quotes
+  caption: ''
 - image: "../assets/jono-pandolfi-catalog-rimmed.jpg"
   featured_image: false
   alt_text: Jono Pandolfi ceramics hospitality catalog rimmed collection opener
