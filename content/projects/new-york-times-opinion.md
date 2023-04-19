@@ -6,7 +6,6 @@ text_color: "#4F4F4F"
 color: "#FBFAF8"
 categories:
 - illustration
-- custom type
 image_gallery:
 - image: "../assets/new-york-times-supreme-court-opinion.jpg"
   featured_image: false
