@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/jono-pandolfi-catalog-rimmed.jpg"
+  featured_image: false
+  alt_text: Jono Pandolfi ceramics hospitality catalog rimmed collection opener
+  caption: ''
 - image: "../assets/jono-pandolfi-catalog-rimmed-collection.jpg"
   featured_image: false
   alt_text: Jono Pandolfi ceramics hospitality catalog rimmed collection
