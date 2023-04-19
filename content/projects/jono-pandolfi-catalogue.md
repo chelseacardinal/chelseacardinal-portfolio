@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/jono-pandolfi-catalog-contents.jpg"
+  featured_image: false
+  alt_text: Jono Pandolfi ceramics hospitality catalog contents
+  caption: ''
 - image: "../assets/jono-pandolfi-catalog-coupe.jpg"
   featured_image: false
   alt_text: Jono Pandolfi ceramics hospitality catalog coupe collection
