@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/jono-pandolfi-catalog-cover.jpg"
+  featured_image: true
+  alt_text: Jono Pandolfi hospitality catalog cover
+  caption: ''
 - image: "../assets/jono-pandolfi-catalog-contents.jpg"
   featured_image: false
   alt_text: Jono Pandolfi ceramics hospitality catalog contents
@@ -46,10 +50,6 @@ image_gallery:
 - image: "../assets/jono-pandolfi-catalog-doggyjeff.jpg"
   featured_image: false
   alt_text: Jono Pandolfi ceramics hospitality catalog last page shepperd dog
-  caption: ''
-- image: "../assets/jono-pandolfi-catalog-cover.jpg"
-  featured_image: true
-  alt_text: Jono Pandolfi hospitality catalog cover
   caption: ''
 description: ''
 
