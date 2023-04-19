@@ -7,6 +7,10 @@ color: "#FBFAF8"
 categories:
 - books
 image_gallery:
+- image: "../assets/jono-pandolfi-catalog-customize.jpg"
+  featured_image: false
+  alt_text: Jono Pandolfi ceramics hospitality catalog customization page
+  caption: ''
 - image: "../assets/jono-pandolfi-catalog-tech.jpg"
   featured_image: false
   alt_text: Jono Pandolfi ceramics hospitality catalog tech page square sided collection
