@@ -1,6 +1,6 @@
 ---
 date: 2023-04-14T18:01:05.000-04:00
-title: New York Times Opinion illustrations
+title: New York Times Opinion Art
 project_line_color: "#4F4F4F"
 text_color: "#4F4F4F"
 color: "#FBFAF8"
