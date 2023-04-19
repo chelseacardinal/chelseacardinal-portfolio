@@ -51,7 +51,7 @@ image_gallery:
   featured_image: false
   alt_text: Jono Pandolfi ceramics hospitality catalog last page shepperd dog
   caption: ''
-description: Hospitality catalog highlighting ceramics collections, process and customization
-  for Jono Pandolfi Designs, 2022
+description: Hospitality catalog highlighting the ceramics collections, process and
+  customization for Jono Pandolfi Designs, 2022
 
 ---
